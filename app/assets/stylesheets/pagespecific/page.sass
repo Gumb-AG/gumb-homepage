@@ -1,0 +1,182 @@
+@import "../_general/_variables.sass"
+@import "../_mixins/_mixins.sass"
+
+header
+    border-bottom: 0
+    height: 680px
+    padding-bottom: 0
+    
+.heroimage
+    position: absolute
+    z-index: 0
+    min-height: 100%
+    width: auto
+    min-width: 100%
+    left: 0
+    top: 0
+    
+    @media (max-width: $smartphone)
+        margin-left: -210%
+
+.title
+    
+    & a
+        order: 1
+    
+    & h2
+        order: 2
+        margin-top: .5em
+        
+    & h1
+        order: 3
+        margin-bottom: 3em
+        
+.page
+    display: flex
+    flex-flow: column
+    max-width: 800px
+    width: 100%
+    margin: 0 auto
+    padding: 3.2em 11em 0 0
+    
+    @media (max-width: $protablet)
+        //height: 70%
+        padding: 2em 2em 0 2em
+        
+    @media (max-width: $smartphone--medium)
+        padding: 1.7em 1.3em 0 1.3em
+    
+    &__author, & p, & b
+        opacity: 1
+        
+    &__date
+        font-family: 'Montserrat'
+        color: #8e969a
+        text-transform: uppercase
+        font-size: .8em
+        letter-spacing: .05em
+            
+    &__imagetitle
+        line-height: 1.5em
+    
+    &__text
+        
+        & a
+            border-bottom: 2px solid $fog
+            color: $text
+            transition: 100ms
+            
+            &:hover
+                padding-bottom: .1em
+                border-color: $gold
+                color: $darkness
+                transition: 100ms
+                
+    &__image
+        margin-top: 1em
+        width: 100%
+        box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, .09)
+        
+        &--xlarge
+            width: 1370px
+            margin-left: -290px
+            
+            @media (max-width: $probook)
+                width: 1000px
+                margin-left: -100px
+                
+            @media (max-width: $tablet-landscape)
+                width: 100%
+                margin-left: 0
+            
+        &--large
+            width: 1000px
+            margin-left: -100px
+            
+            @media (max-width: $tablet-landscape)
+                width: 100%
+                margin-left: 0
+                
+        &--small
+            width: auto
+            
+        &--noshadow
+            box-shadow: unset
+            
+        &--wrapper
+            position: relative
+            
+            @media (max-width: $tablet-landscape)
+                overflow: hidden
+            
+            & div
+                display: flex
+                flex-flow: column
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: 625px
+                background-color: rgba(0, 0, 0, 0)
+                position: absolute
+                top: 0
+                left: 0
+                margin-top: 1em
+                width: 1000px
+                margin-left: -100px
+                @include animate()
+                    
+                @media (max-width: $tablet-landscape)
+                    width: 100%
+                    margin-left: 0
+                    height: 100%
+                
+                & h5
+                    color: rgba(255,255,255,0)
+            
+            &:hover
+            
+                & div
+                    background-color: rgba(0, 0, 0, .6)
+                    @include animate()
+                    
+                    & h5
+                        color: white
+                        
+                        @media (max-width: $phablet)
+                            margin: 1em 0
+                            font-size: 1.1em
+                            
+                        @media (max-width: $smartphone--large)
+                            margin: .8em 0
+                            font-size: .8em
+                        
+        &--link
+
+    .video
+        width: 100%
+        height: 351px
+
+.contentpage
+    
+    & h1
+        max-width: 802px
+        
+    & .title__cta
+        min-height: 34px
+    
+    // Sitespecific styling
+    &--ih
+        
+        .goldbar
+            background-color: #e63957
+            
+        ::selection
+            background: rgba(230, 57, 87, .8)
+        
+    &--oculus 
+        
+        .goldbar
+            background-color: #373944
+            
+        ::selection
+            background: rgba(55, 57, 68, .3)

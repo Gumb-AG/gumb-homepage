@@ -1,0 +1,16 @@
+mixin title(h2, h1, a, href, h2br, indexpage, claim)
+    section.title
+        h2= h2
+            if h2br
+                br
+                = h2br
+        h1 
+            if indexpage
+                if claim
+                    = claim
+                    br
+            = h1
+        if !invert
+            a.title__cta.btn(href=href)= a
+        else
+            a.title__cta.btn.btn--inverted(href=href)= a

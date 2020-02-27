@@ -1,0 +1,22 @@
+mixin card(id, meta, date, title, text, link, linkText, additionalClass, external, noimage, dribbble, dribbble_link, instagram, instagram_link)
+    div.card(id=id class=additionalClass)
+        if dribbble
+            div.card__dot
+                a.flex(href=dribbble_link target='_blank' title='Projekt auf Dribbble.com betrachten')
+                    svg.icon.icon--nomargin.icon--s
+                        use(xlink:href='#iconset--dribbble')
+        div.card__description
+            span.card__description__tag= meta
+                span.card__description__date= date
+            span.card__description__title= title
+            p= text
+            if link
+                div.card__description__anchor__wrapper
+                    svg.icon
+                        use(xlink:href='#iconset--eyeglasses')
+                    if external
+                         a.card__description__anchor(href= link, target='_blank')= linkText
+                    else
+                        a.card__description__anchor(href= link)= linkText
+        if noimage != 'noimage'
+            div.card__showcase

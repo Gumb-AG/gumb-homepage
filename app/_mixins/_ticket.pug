@@ -1,0 +1,10 @@
+mixin ticket(id, meta, title, link, linkText, additionalClass)
+    div.ticket(id=id class=additionalClass)
+        div.ticket__gradient
+        div.ticket__description
+            span.ticket__description__tag= meta
+            span.ticket__description__title= title
+            if link
+                div.ticket__description__anchor__wrapper
+                    img.icon(src='assets/images/vector/iconset/eyeglasses.svg')
+                    a.ticket__description__anchor(href= link, target='_blank')= linkText

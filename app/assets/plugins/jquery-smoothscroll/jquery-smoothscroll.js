@@ -1,0 +1,29 @@
+//! Source: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+//! Modified by @jonathanarbely
+
+$(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        //alert(this.hash);
+        //alert(this);
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top-90 // - to compensate the height of the topbar
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                //window.location.hash = hash; // this causes weird jumping in some Browsers (e.g. Chrome)
+            });
+        } // End if
+    });
+});

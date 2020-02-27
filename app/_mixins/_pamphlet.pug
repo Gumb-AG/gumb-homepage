@@ -1,0 +1,8 @@
+mixin pamphlet(id, meta, title, linkText, additionalClass)
+    div.pamphlet(id=id class=additionalClass)
+        div.pamphlet__description
+            span.pamphlet__description__tag= meta
+            span.pamphlet__description__title= title
+            div.pamphlet__description__anchor__wrapper
+                img.icon.icon--s(src='assets/images/vector/iconset/briefcase.svg')
+                span.pamphlet__description__anchor= linkText

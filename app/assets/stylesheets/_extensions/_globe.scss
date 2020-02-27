@@ -1,0 +1,158 @@
+// Colours
+
+$colour-cyan: #00FFD3;
+$colour-white: #FFFFFF;
+$colour-black: #000000;
+
+
+// Resets
+
+html,
+body,
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+//$colourStart: black;
+//$colourMid: black;
+//$colourEnd: #147D6C;
+
+$colourStart: #8D07C8;
+$colourMid: #260F77;
+$colourEnd: #030B3A;
+
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	font-family: "Cairo", sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga" on;
+	color: #FFFFFF;
+	overflow-x: hidden;
+	background: $colourStart;
+	background: -moz-linear-gradient(-45deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
+	background: -webkit-linear-gradient(-45deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
+	background: linear-gradient(135deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$colourStart}', endColorstr='${colourEnd}', GradientType=1);
+}
+
+
+
+// Globe
+
+@keyframes pulse {
+	0% { transform: scale(1); }
+	50% { opacity: .5; }
+	100% { opacity: 0; transform: scale(2); }
+}
+
+.globe {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+  
+  .globe-canvas {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.globe-list {
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  list-style: none;
+  transition: opacity 3s cubic-bezier(.175, .885, .320, 1.275);
+
+  &.active {
+    opacity: 1;
+  }
+
+  $dotSize: 16px;
+  $dotSizeLarge: $dotSize + ($dotSize / 2);
+
+  > li {
+    opacity: .4;
+    position: absolute;
+    margin-left: -($dotSize / 2);
+    margin-top: -($dotSize / 2);
+    width: $dotSize;
+    height: $dotSize;
+    border-radius: 50%;
+    background: $colour-cyan;
+    transition: opacity 1s cubic-bezier(.175, .885, .320, 1.275);
+    
+    &:before {
+      content: "";
+      opacity: .5;
+      pointer-events: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -($dotSize / 2);
+      margin-top: -($dotSize / 2);
+      width: $dotSize;
+      height: $dotSize;
+      border-radius: 50%;
+      background: $colour-cyan;
+      animation: 2s pulse infinite linear;
+    }
+
+    &.active {
+      opacity: 1;
+      margin-left: -($dotSizeLarge / 2);
+      margin-top: -($dotSizeLarge / 2);
+      width: $dotSizeLarge;
+      height: $dotSizeLarge;
+      background: $colour-white;
+      
+      &:before {
+        margin-left: -($dotSizeLarge / 2);
+        margin-top: -($dotSizeLarge / 2);
+        width: $dotSizeLarge;
+        height: $dotSizeLarge;
+        background: $colour-white;
+      }
+      
+      .text {
+        opacity: 1;
+        right: $dotSizeLarge + 5px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  
+  .text {
+    position: absolute;
+    opacity: .8;
+    right: $dotSize + 5px;
+    top: 50%;
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    text-align: right;
+    text-shadow: -1px -1px 0 $colour-black, 1px -1px 0 $colour-black, -1px 1px 0 $colour-black, 1px 1px 0 $colour-black;
+    color: $colour-white;
+    white-space: nowrap;
+    transform: translateY(-50%);
+  }
+}

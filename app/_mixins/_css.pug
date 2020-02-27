@@ -1,0 +1,8 @@
+mixin css(mode = 'page')
+        
+    link(rel='stylesheet', href='/assets/stylesheets/artofgumb.css')
+    
+    if(mode = 'index')
+         link(rel='stylesheet', href='/assets/stylesheets/pagespecific/index.css')
+    else
+        link(rel='stylesheet', href='/assets/stylesheets/pagespecific/page.css')

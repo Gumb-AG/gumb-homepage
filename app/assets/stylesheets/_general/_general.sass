@@ -1,0 +1,306 @@
+// REUSABLE GENERAL CLASSES & DEFINITIONS
+
+// Content Wrapper
+.c
+    display: flex
+    justify-content: center
+    flex-flow: row
+    flex-wrap: wrap
+    overflow: hidden
+    
+    &--nowrap
+        flex-wrap: nowrap
+        
+    &--overflow
+        overflow: visible
+    
+    &__inner
+        
+        &--xscrolling
+            display: flex
+            justify-content: center
+            overflow-x: auto
+            width: 1800px
+            
+            @media (max-width: $ultrabook)
+                justify-content: flex-start
+
+// Icons
+.icon
+    width: 1.6em
+    height: 1.65em
+    margin: 0 .5em 0 0
+    align-self: center
+    
+    &--m
+        width: 1.4em
+    
+    &--s
+        width: 1.3em
+        height: 1.7em
+    
+    &--xs
+        width: 1.2em
+        height: 1.3em
+        
+    &--rtl
+        margin: 0 0 0 .5em
+        
+    &--nomargin
+        margin: 0 0 0 0
+
+// Logo & TPB-Branding
+.logo
+    width: 142px
+
+.maennli
+    width: 20px
+
+// General formating
+.hide
+    display: none
+    
+    &--smartphone
+        
+        @media (max-width: $smartphone)
+            display: none
+    
+.flex
+    display: flex !important
+
+    &--items
+        align-items: center
+    
+.hide
+    display: hidden
+
+// General Padding
+.padding-right
+    padding-right: 8px
+
+.padding-left
+    padding-left: 8px
+
+.padding-top
+    padding-top: 8px
+        
+// String containing a link or ajax call
+.loadmore 
+    display: flex
+    //align-items: center
+    font-family: 'Georgia'
+    font-size: 1.2em
+    color: $nebula
+    //opacity: .95
+    cursor: pointer
+            
+    &__anime, &__anime--rtl
+        
+        & img
+            @include animate()
+        
+        &:hover
+        
+            & img
+                margin: 0 1em 0 0
+                @include animate()
+    
+    &__anime--rtl
+        
+        &:hover
+        
+            & img
+                margin: 0 0 0 1em
+
+// Takes an anchortag, creates a button 
+.btn
+    background-color: rgba(0,0,0,.6)
+    padding: 8px 16px 9px 16px // padding-right += letter-spacing
+    border-radius: 4px
+    overflow: hidden
+    //@include animate()
+    
+    &--light
+        background-color: #f1f1f1
+        
+        &:hover
+            background-color: rgba(0,0,0,.8)
+            color: white
+            @include animate()
+            
+    &--inverted, &__inverted
+        background-color: rgba(255,255,255,.2)
+            
+    &--glass
+        background-color: rgba(255,255,255,0)
+        
+    &--icon
+        display: flex
+        align-items: center
+
+// Styling of any category string (usually following h3)
+.filter
+    display: flex
+    justify-content: center
+    text-align: center
+    
+    &__item
+        color: $fog
+        font-family: 'Playfair Display'
+        font-size: 19px
+        margin: 0 1.9em 0 0
+        letter-spacing: .13em
+        text-transform: uppercase
+        @include animate()
+            
+        @media (max-width: 520px)
+            font-size: 17px
+            margin-right: 1.4em
+            
+        @media (max-width: 400px)
+            font-size: 15px
+        
+        &:last-child
+            margin: 0 0 0 0
+        
+        &:hover
+            color: $gold
+            @include animate()
+
+        &--active
+            @extend .filter__item
+            color: $darkness
+            
+            &:before
+                background-image: url(../images/pixel/petals/petals.png)
+                width: 9em
+                height: 6.5em
+                background-repeat: no-repeat
+                background-position: center
+                position: absolute
+                margin-left: -2.2em
+                margin-top: -2em
+                content: ""
+            
+// Styling of the category modules (usually following .filter)
+.category
+    display: flex
+    justify-content: center
+    margin-top: 1.8em
+    
+    @media (max-width: 790px)
+        margin-top: 1.3em
+        
+    @media (max-width: 620px)
+        margin-top: 1em
+        
+    @media (max-width: 500px)
+        margin-top: 0em
+    
+    &__item
+        align-items: center
+        display: flex
+        flex-flow: column
+        text-align: center
+        margin: 0 4em 0 0
+        cursor: pointer
+        user-select: none
+        
+        @media (max-width: 790px)
+            margin-right: 2.4em
+            
+        @media (max-width: 660px)
+            margin-right: 1.5em
+            
+        @media (max-width: 630px)
+            margin-right: 1em
+        
+        &:last-child
+            margin: 0 0 0 0
+        
+        &__meta
+            color: $fog
+            font-family: 'Georgia'
+            font-size: 11px
+            letter-spacing: .25em
+            text-transform: uppercase
+            
+            @media (max-width: 620px)
+                font-size: 10px
+            
+        & img, & svg
+            height: 55px
+            width: 79px
+            
+            @media (max-width: 620px)
+                height: 42px
+                
+            @media (max-width: 400px)
+                height: 40px
+            
+        & .goldbar
+            display: none
+            
+        &--active
+            
+            & .goldbar
+                display: block
+                
+        & a
+            display: flex
+            flex-flow: column
+            align-items: center
+                
+    &--inactive
+        display: none
+
+.subtitle
+    font-family: 'Georgia'
+    color: $fog
+    font-size: 1.2em
+    padding: 0 .8em
+    line-height: 1.5
+    
+    @media (max-width: 400px)
+        font-size: 1.05em
+    
+    &__wrapper
+        display: flex
+        justify-content: center
+        text-align: center
+        
+    & br
+         line-height: 2.3em
+        
+.factsdontcareaboutyourfeelings
+    display: flex
+    flex-flow: row
+    flex-wrap: wrap
+    width: 100%
+    border: 1px #EAEAEA solid
+    
+    &__inner
+        flex: 0 0 25%
+        text-align: center
+        padding: 2em 1.5em 1.7em 1.5em
+        
+        @media (max-width: 520px)
+            flex: 0 0 100% !important
+            padding-top: 1em
+            padding-bottom: 1em
+        
+        &:last-child
+            flex: 0 0 50%
+        
+    &__numeri
+        font-family: 'Playfair Display SC'
+        font-size: 2.5em
+        
+    &__title
+        font-size: 1.1em
+
+// Gradient
+.gradient
+    background: linear-gradient(90deg, #147D6C, #1EFFFF)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
