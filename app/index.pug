@@ -12,9 +12,7 @@ html(lang="de")
         include _includes/_js.pug
         link(href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet")
     
-    body
-        //-include /_includes/_globalbody.pug
-    
+    body    
         header
             include _includes/_nav.pug
             +nav('index')
@@ -73,14 +71,20 @@ html(lang="de")
                         p Die jährliche Anwesenheit, Termine und unentschuldigtes Fernbleiben können mit dem Teamplanbuch mühelos ausgewertet werden. Diese Statistiken erleichtern das Erstellen von Jahresberichten und Abrechnungen.
                     .appshowcase__img
                         img(src='/assets/images/mockups/surfacestudio-tpb.png')
-        
-        include _includes/_footer.pug
-        //-+footer()
 
-        // Scripts that should run at the end of the body tag
-        script(type='module' src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js')
-        script(nomodule='' src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js')
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js')
-        script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/617753/ThreeOrbitControls.js')
-        script(src='https://rawgit.com/spite/THREE.MeshLine/master/src/THREE.MeshLine.js')
-        script(src="/assets/javascript/globe.js")
+            - var n = 1;
+            ul(id="integration-list" class="integration-list")
+                while n < 20
+                    li
+                        img(src="/assets/images/clubs/" +n++ +".png")
+
+            section
+                .section__title
+                    span iOS, Android &amp; im Web
+                    h4 Teamplanbuch, auf all Deinen Geräten.
+                    p Lade die App und teste 40 Tage kostenlos.
+
+        include /_includes/_endofbody.pug
+
+    //-include _includes/_footer.pug
+    //-+footer()
