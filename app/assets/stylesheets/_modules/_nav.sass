@@ -4,11 +4,10 @@
     position: relative
     flex: 0 0 100%
     display: flex
-    //justify-content: space-between
     height: 75px
     z-index: 1
     
-    @media (max-width: 520px)
+    //@media (max-width: 520px)
         height: 30%
     
     &__brand
@@ -75,28 +74,37 @@
     &--fixed
         position: fixed
         justify-content: center
+        align-items: center
         width: 100%
-        height: 57px
+        height: 65px
         padding: 0 5em
         top: 0
         left: 0
-        background: linear-gradient(#f1f1f1 0%, rgba(255,255,255,0) 172%)
-        -webkit-backdrop-filter: saturate(120%) blur(20px)
-        backdrop-filter: saturate(120%) blur(20px)
-        z-index: 99999999
+        background: #ffffffc9
+        -webkit-backdrop-filter: blur(30px)
+        backdrop-filter: blur(30px)
+        z-index: 9999
+
+        & .nav__social
+            display: none
+
+            //& *
+                color: #2f2f2f !important
         
         & .nav__navigation
             height: 55px
         
             &__item
                 color: #2f2f2f
-                display: block !important;
+                display: block !important
                 
-                &--cta:hover
-                    color: white
-                
-                &:last-child
-                    display: none
+                &--cta
+                    background: #FFFFFF 0% 0% no-repeat padding-box
+                    box-shadow: 0px 2px 20px #3046591A
+                    padding: .9em 1.3em
+                    
+                    &:hover
+                        
                 
                 @media (max-width: 630px)
                     font-size: 11px
