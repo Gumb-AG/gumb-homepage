@@ -74,7 +74,7 @@ html(lang="de")
 
             - var n = 1;
             ul(id="integration-list" class="integration-list")
-                while n < 20
+                while n <= 20
                     li
                         img(src="/assets/images/clubs/" +n++ +".png")
 
@@ -83,6 +83,33 @@ html(lang="de")
                     span iOS, Android &amp; im Web
                     h4 Teamplanbuch, auf all Deinen Geräten.
                     p Lade die App und teste 40 Tage kostenlos.
+                .flex
+                    a(href='#')
+                        img.apps(src='/assets/vector/apps/ios.svg')
+                    a(href='#')
+                        img.apps(src='/assets/vector/apps/droid.svg')
+                    a(href='#')
+                        img.apps(src='/assets/vector/apps/web.svg')
+
+            section.section__spacer
+                .section__title
+                    span Für Wen wir das machen
+                    h4 Im Mittelpunkt bei uns stehst 
+                        span.gradient Du
+                        |  und alle
+                .flex
+                    .category
+                        h4.gradient Vereine
+                    .category
+                        h4.gradient Gruppen
+                    .category
+                        h4.gradient Mann-schaften
+                    .category
+                        h4.gradient Verbände
+                .section__title
+                    span Team- & Eventmanagement
+                    h5 Sind Sie ein Unternehmen?
+                    p Ganz gleich ob im Verein oder im großen Unternehmen. Durch unsere Softwarelösungen & Apps wird Team- & Eventmanagement mühelos und einfach. Auch in Ihrer Organisation!
 
         include /_includes/_endofbody.pug
 
