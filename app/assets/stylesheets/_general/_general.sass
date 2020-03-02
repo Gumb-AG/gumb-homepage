@@ -40,6 +40,10 @@
     &__spacer
         margin-top: 400px
 
+    &__content
+        margin-top: 120px
+        margin-bottom: 140px
+
 // Icons
 .icon
     width: 1.6em
@@ -194,35 +198,43 @@
         max-width: 180px
         text-align: center
         
-.factsdontcareaboutyourfeelings
-    display: flex
-    flex-flow: row
-    flex-wrap: wrap
-    width: 100%
-    border: 1px #EAEAEA solid
+.facts
+    flex-flow: column
+    align-items: center
+    max-width: 140px
+    text-align: center
+    margin: 0 60px
+
+    &--nomargin
+        margin: 0 0
+
+// Timeline
+.timeline
+    height: 2px
+    width: 140px
+    background: #ebedef
+    margin-top: 70px
+    margin-left: -45px
+    margin-right: -25px
+
+    &--mod
+        margin-left: -27px
+        margin-right: -45px
+
+    &__item
+        border: 3px solid #ebedef
+        border-radius: 50%
+        padding: 7px;
+        margin-bottom: 8px
     
-    &__inner
-        flex: 0 0 25%
-        text-align: center
-        padding: 2em 1.5em 1.7em 1.5em
-        
-        @media (max-width: 520px)
-            flex: 0 0 100% !important
-            padding-top: 1em
-            padding-bottom: 1em
-        
-        &:last-child
-            flex: 0 0 50%
-        
-    &__numeri
-        font-family: 'Playfair Display SC'
-        font-size: 2.5em
-        
-    &__title
-        font-size: 1.1em
+    &__dot
+        width: 10px
+        height: 10px
+        background: $nebula
+        border-radius: 50%
 
 // Gradient
 .gradient
-    background: linear-gradient(90deg, #147D6C, #1EFFFF)
+    background: $gradient
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
