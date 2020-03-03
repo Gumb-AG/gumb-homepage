@@ -92,10 +92,10 @@ gulp.task('copyLibraries', gulp.series(function (done) {
     done();
 }));
 
-gulp.task('copyVideo', gulp.series(function (done) {
+/*gulp.task('copyVideo', gulp.series(function (done) {
     gulp.src(['app/assets/video/*']).pipe(gulp.dest('dist/assets/video'));
     done();
-}));
+}));*/
 
 gulp.task('c', gulp.series(function (done) {
     connect.server({
