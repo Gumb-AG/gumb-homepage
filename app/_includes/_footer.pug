@@ -1,142 +1,23 @@
 mixin footer(lang)
     if !lang
-        footer.c
-            .footer__inner
-
-                div.footer__adress
-                    span.ticket__description__title Anschrift
-                    br
-                    br
-                    p Jonathan Arbely B.Sc.
-                    p Vogtsweg 3
-                    p 79312 Emmendingen
-                    p Baden-Württemberg, DE
-                    p.footer__tax / Diese Adresse dient dem Erhalt physischer Post und ist nicht Standort unseres Büros. Siehe 
-                        a(href='#kontakt') Kontaktdaten
-                        | .
-                    br
-                    br
-                    //-span.ticket__description__title titel
-                    //-br
-                    a(href='https://www.unicef.de/spenden/unicef-pate', target='_blank', title='UNICEF-Pate werden!')
-                        svg.footer__more--logo
-                            use(xlink:href='#logos--unicef')
-                    p Magellan ist UNICEF-Pate und unterstützt UNICEF monatlich mit einer Spende.
-                    br
-                    a.footer__tax(href='/impressum.html') / Impressum
-
-                div.footer__aboutmagellan
-                    span.ticket__description__title Ziel & Anspruch
-                    br
-                    br
-                    p Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten. Das wird durch aktive Kommunikation und einer hingebungsvollen Umsetzung Ihrer Anforderungen & Wünsche erreicht. Grundlagen dafür bilden ein breites Spektrum an medientechnischem Know-how und langjährige Erfahrung sowie ständige Weiterentwicklung & Verbesserung.
-                    br
-                    p Die Zufriedenheit unserer Kunden und Projektpartner steht an erster Stelle.
-                    p Dafür gehen wir die Extrameile.
-                    br
-                    br
-                    div.factsdontcareaboutyourfeelings
-                        div.factsdontcareaboutyourfeelings__inner
-                            span.factsdontcareaboutyourfeelings__numeri(title='Interchalet Freiburg, Messmer Pen, Grundschule Windenreute-Maleck, Juristische Studiengesellschaft Karlsruhe e.V., Tariffuxx GmbH, Jüdische Gemeinde Emmendingen, Jüdisches Museum Emmendingen, Ferienwohnung Gutjahr, BEST Büro Express Services, AH Consult, Bies Büdie 05 eV., Südkurier Medienhaus GmbH, Metzger Kältetechnik, Codematch, CJS-CDKeys, Marx Reinigungs Service, Derwisch Pizza Döner, Gedenkstaettenverbund, Musikverein Buchholz, Connys Hundekensmanufaktur, Autohaus Mayer Renault/Dacia, start-trading.de, Nationale Naturlandschaften') 23
-                            p.factsdontcareaboutyourfeelings__title Zufriedene Kunden
-                        div.factsdontcareaboutyourfeelings__inner
-                            span.factsdontcareaboutyourfeelings__numeri 6
-                            p.factsdontcareaboutyourfeelings__title Jahre Erfahrung
-                        div.factsdontcareaboutyourfeelings__inner
-                            span.factsdontcareaboutyourfeelings__numeri 2
-                            p.factsdontcareaboutyourfeelings__title Faktor Verschlüsselung aller Kundendaten durch Kensington® VeriMark™ und Microsoft BitLocker
-
-                div.footer__hr
-                    hr
-
-                div.footer__branding.footer__more
-                    a(href='/') Magellan Code & Design Consulting - est. 2013
-                    span.liluzivert.liluzivert--s
-                    a(href='https://github.com/jonathanarbely' target='_blank' title='Der gesamte Code dieser Website ist OpenSource und in einem Git-Repository einsehbar.')
-                        svg
-                            use(xlink:href='#github')
-
-                div.footer__more
-                    a(href='https://medium.com/@jonathanarbely' target='_blank')
-                        svg
-                            use(xlink:href='#medium')
-                    a#sorep(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')
-                        svg
-                            use(xlink:href='#so')
-                    a(href='https://dribbble.com/jarbely' target='_blank')
-                        svg
-                            use(xlink:href='#dribbble')
-                    a(href='https://www.instagram.com/jonathanoffroad' target='_blank')
-                        svg
-                            use(xlink:href='#instagram')
-    
-    else
-        footer.c
-            .footer__inner
-
-                div.footer__adress
-                    span.ticket__description__title Address
-                    br
-                    br
-                    p Jonathan Arbely
-                    p Vogtsweg 3
-                    p 79312 Emmendingen
-                    p Baden-Württemberg, Germany
-                    p.footer__tax / This address is for the receipt of physical post and is not the location of our office. Reach out us by 
-                        a(href='#kontakt') clicking here
-                        | .
-                    br
-                    //-br
-                    //-span.ticket__description__title titel
-                    //-br
-                    //-a(href='https://www.unicef.de/spenden/unicef-pate', target='_blank', title='UNICEF-Pate werden!')
-                        svg.footer__more--logo
-                            use(xlink:href='#logos--unicef')
-                    //-p Magellan ist UNICEF-Pate und unterstützt UNICEF monatlich mit einer Spende.
-                    //-br
-                    a.footer__tax(href='/impressum.html') / Legal Information
-
-                div.footer__aboutmagellan
-                    span.ticket__description__title Claim
-                    br
-                    br
-                    p The goal and aspiration of Magellan is to provide best-in-class web development, design & consulting services in the south-west German region and worldwide. This is achieved through active communication and a dedicated implementation of your requirements and wishes. All built using a broad spectrum of media- & web-technology skills and know-how as well as many years of experience and constant self-development and -improvement.
-                    br
-                    p The satisfaction of our customers and project partners comes first.
-                    p For that we go the extra mile.
-                    br
-                    br
-                    div.factsdontcareaboutyourfeelings
-                        div.factsdontcareaboutyourfeelings__inner
-                            span.factsdontcareaboutyourfeelings__numeri(title='Interchalet Freiburg, Messmer Pen, Grundschule Windenreute-Maleck, Juristische Studiengesellschaft Karlsruhe e.V., Tariffuxx GmbH, Jüdische Gemeinde Emmendingen, Jüdisches Museum Emmendingen, Ferienwohnung Gutjahr, BEST Büro Express Services, AH Consult, Bies Büdie 05 eV., Südkurier Medienhaus GmbH, Metzger Kältetechnik, Codematch, CJS-CDKeys, Marx Reinigungs Service, Derwisch Pizza Döner, Gedenkstaettenverbund, Musikverein Buchholz, Connys Hundekensmanufaktur, Autohaus Mayer Renault/Dacia, start-trading.de, Nationale Naturlandschaften') 23
-                            p.factsdontcareaboutyourfeelings__title Satisfied Customers
-                        div.factsdontcareaboutyourfeelings__inner
-                            span.factsdontcareaboutyourfeelings__numeri 6
-                            p.factsdontcareaboutyourfeelings__title Years of Experience
-                        div.factsdontcareaboutyourfeelings__inner
-                            span.factsdontcareaboutyourfeelings__numeri 2
-                            p.factsdontcareaboutyourfeelings__title Factor encryption of all customer data via Kensington® VeriMark™ and Microsoft BitLocker
-
-                div.footer__hr
-                    hr
-
-                div.footer__branding.footer__more
-                    a(href='/') Magellan Code & Design Consulting - est. 2013
-                    span.liluzivert.liluzivert--s
-                    a(href='https://github.com/jonathanarbely' target='_blank' title='The complete codebase of this Website is Open Source and can be found in this Git-Repository.')
-                        svg
-                            use(xlink:href='#github')
-
-                div.footer__more
-                    a(href='https://medium.com/@jonathanarbely' target='_blank')
-                        svg
-                            use(xlink:href='#medium')
-                    a#sorep(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')
-                        svg
-                            use(xlink:href='#so')
-                    a(href='https://dribbble.com/jarbely' target='_blank')
-                        svg
-                            use(xlink:href='#dribbble')
-                    a(href='https://www.instagram.com/jonathanoffroad' target='_blank')
-                        svg
-                            use(xlink:href='#instagram')
+        footer.darkmode
+            .contact
+                .contact__nav
+                    a.contact__navItem.contact__navItem--active(href='#') Kontakt
+                    a.contact__navItem(href='#') Anfahrt
+                .contact__inner
+                    div
+                        b.padding-bottom Adresse
+                        p Büsingerstrasse 5
+                        p 8203 Schaffhausen
+                        p Schweiz
+                    div
+                        b.padding-bottom E-Mail
+                        p
+                            a(href='mailto:info@gumb.ch') info@gumb.ch
+                    div
+                        b.padding-bottom Phone
+                        p
+                            a(href='tel:+41445867002') +41 44 586 70 02
+                    div
+                        b.padding-bottom Kontaktiere uns direkt

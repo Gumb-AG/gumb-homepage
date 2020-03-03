@@ -49,14 +49,15 @@ p
     letter-spacing: 0
     color: #8298AB
     max-width: 550px
-    
         
 a
     display: inline-block
     color: $text
 
 b
-    color: white
+    display: inline-block
+    font: 700 17px/25px Lato
+    color: #F5F9FC
 
 span
     display: inline-block
@@ -65,6 +66,12 @@ span
     color: #8298AB
     text-transform: uppercase
     padding-bottom: 20px
+
+// DOM-Textelements on dark background
+.darkmode
+
+    & p, & a
+        color: #E0E0E0
     
 // DOM-Sections and Divisions
 
@@ -103,10 +110,6 @@ main
         display: flex
         flex-flow: column
         align-items: center
-
-footer
-    background-color: #f7f7f7
-    padding: 4.5em 0 3.5em 0
             
 // DOM Misc.
 

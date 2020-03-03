@@ -1,81 +1,42 @@
-.footer
-    
+.contact
+    min-height: 288px
+    width: 1340px
+    background: black
+
+    &__nav
+        display: flex
+        justify-content: center
+        border-bottom: 1px solid #3c3c3cb8
+
+        &Item
+            font: 700 13px/20px Lato
+            letter-spacing: 1px
+            color: #BCBCBC
+            text-transform: uppercase
+            padding: 30px 0
+            margin: 0 25px
+
+            &--active
+                color: #F5F9FC
+                border-bottom: #F5F9FC 3px solid
+
     &__inner
         display: flex
-        flex-wrap: wrap
-        max-width: 1000px
+        justify-content: center
+        padding: 44px 0
         margin: 0 auto
-        
-        @media (max-width: 1040px)
-            padding: 0 2em
-    
-    &__adress
-        flex: 0 0 33.33%
-        
-        @media (max-width: 740px)
-            flex: 0 0 100%
-        
-    &__tax
-        opacity: .6
-        padding: .6em .6em 0 0
-        
-    &__aboutmagellan
-        flex: 0 0 66.66%
-        
-        @media (max-width: 1040px)
-            padding-left: 2em
-            
-        @media (max-width: 740px)
-            flex: 0 0 100%
-            padding-left: 0
-            padding-top: 2em
-        
-    &__hr
-        flex: 0 0 100%
-        margin: 1.5em 0
-        
-    &__branding
-        display: flex
-        flex: 0 0 50%
-        
-        & a
-            font-family: 'Playfair Display','Playfair Display SC'
-            color: $grey
-            padding-right: 1.25em
-        
-    //&__octocat
-        flex: 0 0 50%
-        text-align: right
-        
-        & img
-            width: 27px
-            height: 27px
-        
-    &__more
-        flex: 0 0 50%
-    
-        @media (max-width: 735px)
-            flex: 0 0 100%
-            text-align: center !important
-            justify-content: center
-            margin-bottom: 2em
-    
-        &:last-child
-            text-align: right
-        
-        & img, & svg
-            width: 21px
-            height: 21px
-            margin: 0 .75em
-            
-        &--logo
-            margin-top: .5em
-            margin-bottom: .3em
-            width: 100px !important // 100px is the min-width of the UNICEF Brand (https://www.unicef.org/ethiopia/BrandToolKit_EN_September2012.pdf)
-            height: 30px
+        max-width: 840px
+
+        & div
+            flex: 0 0 25%
 
 footer
-    
+    background: white
+    padding-top: 350px
+    display: flex
+    flex-flow: column
+    align-items: center
+
     & p, & a
         color: #535353
         margin: 0
