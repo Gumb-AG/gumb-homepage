@@ -1,30 +1,5 @@
 // REUSABLE GENERAL CLASSES & DEFINITIONS
 
-// Content Wrapper
-.c
-    display: flex
-    justify-content: center
-    flex-flow: row
-    flex-wrap: wrap
-    overflow: hidden
-    
-    &--nowrap
-        flex-wrap: nowrap
-        
-    &--overflow
-        overflow: visible
-    
-    &__inner
-        
-        &--xscrolling
-            display: flex
-            justify-content: center
-            overflow-x: auto
-            width: 1800px
-            
-            @media (max-width: $ultrabook)
-                justify-content: flex-start
-
 // Section Title
 .section
 
@@ -70,7 +45,7 @@
 
 // Logo & TPB-Branding
 .logo
-    width: 142px
+    height: 45px
 
 .maennli
     width: 20px
@@ -112,7 +87,7 @@
 // Takes an anchortag, creates a button 
 .btn
     background-color: $primary
-    padding: 8px 16px 9px 16px // padding-right += letter-spacing
+    padding: 9px 18px 9px 18px
     overflow: hidden
     @include animate()
     
@@ -129,6 +104,13 @@
             
     &--glass
         background-color: rgba(255,255,255,0)
+
+    &--shadow
+        box-shadow: 0px 2px 20px #141d2538
+        background-color: white
+
+        &:hover
+            color: white
         
     &--icon
         display: flex

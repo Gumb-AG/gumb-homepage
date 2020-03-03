@@ -1,0 +1,27 @@
+include _mixins/_css.pug
+include _includes/_nav.pug
+include _includes/_footer.pug
+
+doctype html
+html(lang="de")
+    head
+        include _includes/_meta.pug
+        +css()
+        include _includes/_js.pug
+    
+    body    
+        header
+            +nav('page', 'dark')
+
+        main
+            include _includes/_extensions/_integrations.pug
+            
+            section
+                .section__title
+                    h6 Community
+                    h3 Unsere User-Stories
+                    p Gumb hinterlässt Eindruck. Schau Dir an, was über uns im Netz gesagt wird.
+
+        include /_includes/_endofbody.pug
+
+    //-+footer()

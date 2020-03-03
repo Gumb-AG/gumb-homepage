@@ -51,6 +51,9 @@
                 background-color: rgba(255, 255, 255, 0.07)
                 @include animate()
 
+            &--dark
+                color: $dark
+
             &--cta
                 white-space: nowrap
             
@@ -59,8 +62,11 @@
                     background-color: black
 
         &__lang
-            adding-bottom: 4px
-            font-size: 12px
+            display: flex
+            font-size: 13px
+
+            & ion-icon
+                font-size: 14px
 
     &__social
         display: flex
@@ -70,6 +76,9 @@
 
         & a
             color: white !important
+
+        &--dark a
+            color: $dark !important
 
     &--fixed
         position: fixed

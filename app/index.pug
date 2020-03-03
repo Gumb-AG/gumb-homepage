@@ -68,11 +68,7 @@ html(lang="de")
                     .appshowcase__img
                         img(src='/assets/images/mockups/surfacestudio-tpb.png')
 
-            - var n = 1;
-            ul(id="integration-list" class="integration-list")
-                while n <= 20
-                    li
-                        img(src="/assets/images/clubs/" +n++ +".png")
+            include _includes/_extensions/_integrations.pug
 
             section
                 .section__title
@@ -152,5 +148,9 @@ html(lang="de")
                         h6 Senden sich täglich Über 2k Nachrichten
 
         include /_includes/_endofbody.pug
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js')
+        script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/617753/ThreeOrbitControls.js')
+        script(src='https://rawgit.com/spite/THREE.MeshLine/master/src/THREE.MeshLine.js')
+        script(src="/assets/javascript/globe.js")
 
     +footer()

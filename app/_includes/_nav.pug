@@ -1,17 +1,38 @@
-mixin nav(page, lang)
-    if !lang
-        if page='index'
+mixin nav(page, theme)
+
+    if page == 'index'
+        nav.nav
+            a.nav__brand(href='#')
+                img.logo(src='/assets/vector/gumb.svg')
+            nav.nav__navigation.nav__navigation--de
+                a.nav__navigation__item.btn.btn--glass(href='#') Home
+                a.nav__navigation__item.btn.btn--glass(href='#impressionen') Unsere Apps
+                a.nav__navigation__item.btn.btn--glass(href='#team') Warum & Wie
+                a.nav__navigation__item.btn.btn--glass(href='#blog') Über uns
+                a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
+                a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Kontakt
+            nav.nav__social
+                a.padding-right(href='#') 
+                    ion-icon(name="logo-facebook" size="small")
+                a.padding-right(href='#') 
+                    ion-icon(name="logo-linkedin" size="small")
+                a.padding-right(href='#') 
+                    ion-icon(name="logo-twitter" size="small")
+                a.nav__navigation__lang.padding-left(href='/en' title='Switch to English') EN
+                    ion-icon(name="ios-arrow-round-forward")
+    else
+        if theme == 'dark'
             nav.nav
                 a.nav__brand(href='#')
-                    img.logo(src='/assets/vector/gumb.svg')
+                    img.logo(src='/assets/vector/gumb-brand-dark.svg')
                 nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.btn.btn--glass(href='#kompetenzen') Home
-                    a.nav__navigation__item.btn.btn--glass(href='#impressionen') Unsere Apps
-                    a.nav__navigation__item.btn.btn--glass(href='#team') Warum & Wie
-                    a.nav__navigation__item.btn.btn--glass(href='#blog') Über uns
-                    a.nav__navigation__item.btn.btn--glass(href='#blog') Community
-                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Kontakt
-                nav.nav__social
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#impressionen') Unsere Apps
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#team') Warum & Wie
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#blog') Über uns
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#blog') Community
+                    a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow(href='#kontakt') Kontakt
+                nav.nav__social.nav__social--dark
                     a.padding-right(href='#') 
                         ion-icon(name="logo-facebook" size="small")
                     a.padding-right(href='#') 
@@ -19,40 +40,4 @@ mixin nav(page, lang)
                     a.padding-right(href='#') 
                         ion-icon(name="logo-twitter" size="small")
                     a.nav__navigation__lang.padding-left(href='/en' title='Switch to English') EN
-                        ion-icon(name="ios-arrow-down")
-        //-else
-            nav.nav
-                a(href='/')
-                    img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
-                nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.btn.btn--glass(href='/#kompetenzen') Kompetenzen
-                    a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Impressionen
-                    a.nav__navigation__item.btn.btn--glass(href='/#team') Über uns
-                    a.nav__navigation__item.btn.btn--glass(href='/#blog') Blog
-                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Beauftragen.
-                    a.nav__navigation__item.lang(href='/en' title='Switch to English') EN
-                    
-    //-else
-        if page=='index'
-            nav.nav
-                a(href='#')
-                    svg.nav__brand
-                        use(xlink:href='#magellan-brand')
-                nav.nav__navigation
-                    a.nav__navigation__item.btn.btn--glass(href='#kompetenzen') Skills
-                    a.nav__navigation__item.btn.btn--glass(href='#impressionen') Work
-                    a.nav__navigation__item.btn.btn--glass(href='#team') About
-                    a.nav__navigation__item.btn.btn--glass(href='#blog') Blog
-                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Hire us.
-                    a.nav__navigation__item.lang(href='/' title='Zur deutschsprachigen Website') DE
-        else
-            nav.nav
-                a(href='/')
-                    img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
-                nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.btn.btn--glass(href='/#kompetenzen') Skills
-                    a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Work
-                    a.nav__navigation__item.btn.btn--glass(href='/#team') About
-                    a.nav__navigation__item.btn.btn--glass(href='/#blog') Blog
-                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='/en/#kontakt') Hire us.
-                    a.nav__navigation__item.lang(href='/' title='Zur deutschsprachigen Website') DE
+                        ion-icon(name="ios-arrow-round-forward")
