@@ -79,11 +79,6 @@
 .hide
     display: none
     
-    &--smartphone
-        
-        @media (max-width: $smartphone)
-            display: none
-    
 .flex
     display: flex !important
 
@@ -105,36 +100,12 @@
 
 .padding-bottom
     padding-bottom: 8px
-        
-// String containing a link or ajax call
-.loadmore 
-    display: flex
-    //align-items: center
-    font-family: 'Georgia'
-    font-size: 1.2em
-    color: $nebula
-    //opacity: .95
-    cursor: pointer
-            
-    &__anime, &__anime--rtl
-        
-        & img
-            @include animate()
-        
-        &:hover
-        
-            & img
-                margin: 0 1em 0 0
-                @include animate()
-    
-    &__anime--rtl
-        
-        &:hover
-        
-            & img
-                margin: 0 0 0 1em
 
-// Apps
+// General Margin
+.margin-right
+    margin-right: 8px
+
+// Appstore logos
 .apps
     padding: 40px 15px
 
@@ -184,7 +155,8 @@
 
         & img
             height: 520px
-            
+
+// Category         
 .category
     margin: 120px 5px 140px 5px
     background-image: url('../vector/gumb-solarsystem.svg')
@@ -199,7 +171,8 @@
     & h4
         max-width: 180px
         text-align: center
-        
+
+// Facts       
 .facts
     flex-flow: column
     align-items: center
@@ -226,7 +199,7 @@
     &__item
         border: 3px solid #ebedef
         border-radius: 50%
-        padding: 7px;
+        padding: 7px
         margin-bottom: 8px
     
     &__dot
@@ -247,3 +220,8 @@
     width: 100%
     height: 725px
     margin-top: -204px
+
+// Content dividers
+.wall
+    border: 1px solid #262626
+    height: 18px

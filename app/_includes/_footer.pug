@@ -23,3 +23,59 @@ mixin footer(lang)
                         b.padding-bottom Kontaktiere uns direkt
 
             iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85931.51112417133!2d8.58887475655959!3d47.696853279190854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a81c3d5d8a25d%3A0xc5743cbccb70dd4f!2sB%C3%BCsingerstrasse%205%2C%208203%20Schaffhausen%2C%20Switzerland!5e0!3m2!1sen!2sde!4v1583261342082!5m2!1sen!2sde" frameborder="0" allowfullscreen="")
+
+            .footer
+                .footer__inner
+                    div
+                        a.nav__brand.padding-bottom(href='#')
+                            img.logo.padding-bottom(src='/assets/vector/gumb.svg')
+                        p.footer__meta Alle Rechte vorbehalten.
+                        p.footer__meta © Gumb AG
+                    div
+                        b.padding-bottom Navigation
+                        p
+                            a(href='#') Home
+                        p
+                            a(href='#') Über uns
+                        p
+                            a(href='#') Warum & Wie
+                        p
+                            a(href='#') Community
+                    div
+                        b.padding-bottom Über Gumb
+                        p
+                            a(href='#') Unser Team
+                        p
+                            a(href='#') Mission & Vision
+                        p
+                            a(href='#') Unsere Geschichte
+                    div
+                        b.padding-bottom Kontakt & Feedback
+                        p
+                            a(href='#') Soziale Kanäle
+                        p
+                            a(href='#') Schreibe uns
+                        p
+                            a(href='#') Besuche uns in Schaffhausen, CH
+                    div
+                        b.padding-bottom Unsere Mailingliste
+                .footer__social
+                    a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
+                        ion-icon(name="logo-facebook")
+                    a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
+                        ion-icon(name="logo-linkedin")
+                    a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
+                        ion-icon(name="logo-twitter")
+                    a.padding-right(href='#' target='_blank')
+                        ion-icon(name="logo-xing")
+                        //img(src='/assets/vector/icons/xing.svg')
+                    a.padding-right(href='https://www.instagram.com/gumbapp/' target='_blank') 
+                        ion-icon(name="logo-instagram")
+                    .wall.margin-right
+                    a.padding-right(href='#' target='_blank')
+                        ion-icon(name="logo-dribbble")
+                    a.padding-right(href='https://github.com/jonathanarbely/gumbag' target='_blank') 
+                        ion-icon(name="logo-github")
+
+                .footer__legal
+                    a.footer__meta(href="") AGB & Datenschutz
