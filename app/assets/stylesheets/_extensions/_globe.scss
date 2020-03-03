@@ -29,9 +29,9 @@ $colourEnd: #030B3A;
 
 body {
 	position: relative;
-	width: 100vw;
-	height: 100vh;
-	font-family: "Cairo", sans-serif;
+	//width: 100vw;
+	//height: 100vh;
+	//font-family: "Cairo", sans-serif;
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: 400;
@@ -47,7 +47,6 @@ body {
 	background: linear-gradient(135deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$colourStart}', endColorstr='${colourEnd}', GradientType=1);
 }
-
 
 
 // Globe
