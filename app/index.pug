@@ -1,20 +1,16 @@
 include _mixins/_css.pug
+include _includes/_nav.pug
 include _includes/_footer.pug
 
 doctype html
 html(lang="de")
     head
         include _includes/_meta.pug
-        +meta()
-
         +css('index')
-
         include _includes/_js.pug
-        link(href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet")
     
     body    
         header
-            include _includes/_nav.pug
             +nav('index')
 
             .hero__globe
