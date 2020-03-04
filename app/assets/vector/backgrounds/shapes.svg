@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2344.784" height="1402.62" viewBox="0 0 2344.784 1402.62">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.63" y1="1" x2="0.508" y2="0.316" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#147d6c"/>
+      <stop offset="1" stop-color="#1effff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2465" data-name="Group 2465" transform="translate(425 -2105.183)">
+    <g id="Dashing-Landing-Page" transform="translate(1028.571 2105.183)" opacity="0.75">
+      <g id="Dashing-landing-v1" transform="translate(0 0)">
+        <path id="Rectangle" d="M739.412,2862.454q204.812,95.533,335.521,95.533,150.1,0,493.28-125.987V4234.62q-295.745-128.494-493.28-128.495T677,4234.62V2902.209a43.868,43.868,0,0,1,62.412-39.755Z" transform="translate(-677 -2832)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Dashing-Landing-Page-2" data-name="Dashing-Landing-Page" transform="translate(-373 2536)" opacity="0.14">
+      <g id="Dashing-landing-v1-2" data-name="Dashing-landing-v1" transform="translate(-21 -3647)">
+        <path id="Rectangle-2" data-name="Rectangle" d="M-31,3595q52.927,135.6,284.346,135.6T1134,3681l-49.421,575.437a100,100,0,0,1-97.355,91.417Q503.7,4358.874,295.212,4399,67.882,4442.753-13.71,4556Z" fill="#6de5eb" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>
