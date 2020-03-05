@@ -260,9 +260,9 @@ const addGlobe = () => {
 	const canvasContext = textureCanvas.getContext('2d');
 	canvasContext.rect(0, 0, canvasSize, canvasSize);
 	const canvasGradient = canvasContext.createLinearGradient(0, 0, 0, canvasSize);
-	canvasGradient.addColorStop(0, '#5B0BA0');
-	canvasGradient.addColorStop(.5, '#260F76');
-	canvasGradient.addColorStop(1, '#130D56');
+	canvasGradient.addColorStop(0, '#000000');
+	canvasGradient.addColorStop(.5, '#000000');
+	canvasGradient.addColorStop(1, '#147D6C');
 	canvasContext.fillStyle = canvasGradient;
 	canvasContext.fill();
 

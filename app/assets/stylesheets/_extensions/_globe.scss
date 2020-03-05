@@ -19,13 +19,13 @@ body,
 	-webkit-font-smoothing: antialiased;
 }
 
-//$colourStart: black;
-//$colourMid: black;
-//$colourEnd: #147D6C;
+$colourStart: black;
+$colourMid: #147D6C;
+$colourEnd: #1df8f77a; 
 
-$colourStart: #8D07C8;
-$colourMid: #260F77;
-$colourEnd: #030B3A;
+//$colourStart: #8D07C8;
+//$colourMid: #260F77;
+//$colourEnd: #030B3A;
 
 body {
 	position: relative;
@@ -42,9 +42,9 @@ body {
 	color: #FFFFFF;
 	overflow-x: hidden;
 	background: $colourStart;
-	background: -moz-linear-gradient(-45deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
-	background: -webkit-linear-gradient(-45deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
-	background: linear-gradient(135deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
+	//background: -moz-linear-gradient(-45deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
+	//background: -webkit-linear-gradient(-45deg, $colourStart 0%, $colourMid 50%, $colourEnd 100%);
+	background: linear-gradient(135deg, black 40%, #147D6C 80%, #1EFFFF 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$colourStart}', endColorstr='${colourEnd}', GradientType=1);
 }
 
