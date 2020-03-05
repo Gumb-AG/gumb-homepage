@@ -1,4 +1,5 @@
 include _mixins/_css.pug
+include _mixins/_extensions/_integrations.pug
 include _includes/_nav.pug
 include _includes/_footer.pug
 
@@ -24,16 +25,6 @@ html(lang="de")
                     h2 Wir sind 
                         b.gradient Gumb
                         | , ein junges Software- Start-up. Wir bauen einzigartige Online- Erlebnisse für Dich und Deine Gruppen!
-                    br
-                    //-.card
-                        .card__image
-                            img(src='/assets/images/mockups/iphone-overview-cut.png')
-                        .card__text
-                            b Teamplanbuch
-                            p ...und Dein Team ist organisiert!
-                            a.flex.flex--items(href='#') 
-                                img.maennli.padding-right(src='/assets/images/tpb-maennli.png')
-                                b Direkt zur App
             
         main
             section
@@ -68,7 +59,7 @@ html(lang="de")
                     .appshowcase__img
                         img(src='/assets/images/mockups/surfacestudio-tpb.png')
 
-            include _includes/_extensions/_integrations.pug
+            +integrations(1)
 
             section
                 .section__title

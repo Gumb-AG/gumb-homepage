@@ -1,0 +1,8 @@
+mixin integrations(n, i)
+        ul(id="integration-list" class="integration-list")
+            while n <= 20
+                li
+                    img(src="/assets/images/clubs/" +n++ +".png")
+                if(i > 0)
+                    li
+                        img(src="/assets/images/clubs/" +i-- +".png")

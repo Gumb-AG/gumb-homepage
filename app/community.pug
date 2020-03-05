@@ -1,4 +1,5 @@
 include _mixins/_css.pug
+include _mixins/_extensions/_integrations.pug
 include _includes/_nav.pug
 include _includes/_footer.pug
 
@@ -14,7 +15,7 @@ html(lang="de")
             +nav('page', 'dark')
 
         main
-            include _includes/_extensions/_integrations.pug
+            +integrations(1,20)
             
             section
                 .section__title
@@ -85,33 +86,33 @@ html(lang="de")
                             .section__title.section__title--ltr
                                 h6 Soziale Kanäle
                                 h3 Teile deine Meinung mit der Welt und hinterlasse Feedback
-                                p Verbinde Dich mit uns auf den verschiedenen Kanälen. Schreibe uns jederzeit gerne eine Nachricht und lass uns wissen, wie unsere Apps Dir und Deinem Verein weiterhelfen! 
+                                p Verbinde Dich mit uns auf den verschiedenen Kanälen. Schreibe uns jederzeit gerne eine Nachricht und lass uns wissen, wie unsere Apps Dir und Deinem Verein weiterhelfen!
                                 b.nebula.padding-top Wir freuen uns, wenn Du dich mit uns vernetzt!
                         .section__content.section__content--50.padding-left--64
                             .section__tube
                                 a(href="https://www.facebook.com/gumbapp/" target='_blank')
                                     .tile
                                         ion-icon.fb(name="logo-facebook")
-                                        h6.padding-top 1337 Follower
+                                        h6.padding-top 1.385 Likes
                                 a(href="https://www.instagram.com/gumbapp/" target='_blank')
                                     .tile.margin-top--30
-                                        ion-icon.in(name="logo-instagram")
-                                        h6.padding-top 1337 Follower
+                                        img(src="/assets/vector/icons/insta.svg")
+                                        h6.padding-top 9 Abonnenten
                             .section__tube
-                                a(href="https://github.com/jonathanarbely/gumbag" target='_blank').margin-top--55
+                                a(href="https://www.linkedin.com/company/gumb/" target='_blank').margin-top--55
                                     .tile
-                                        ion-icon.gh(name="logo-github")
-                                        h6.padding-top 1337 Follower
+                                        ion-icon.li(name="logo-linkedin")
+                                        h6.padding-top 3 Follower
                                 a(href="https://twitter.com/GumbApp" target='_blank').margin-top--30
                                     .tile
                                         ion-icon.tw(name="logo-twitter")
-                                        h6.padding-top 1337 Follower
+                                        h6.padding-top 5 Follower
                             .section__tube
-                                a(href="https://www.linkedin.com/company/gumb/" target='_blank')
+                                a(href="https://github.com/jonathanarbely/gumbag" target='_blank')
                                     .tile
-                                        ion-icon.li(name="logo-linkedin")
-                                        h6.padding-top 1337 Follower
-                                a(href="#" target='_blank').margin-top--30
+                                        ion-icon.gh(name="logo-github")
+                                        h6.padding-top 24 Commits
+                                //-a(href="#" target='_blank').margin-top--30
                                     .tile
                                         ion-icon.xi(name="logo-xing")
                                         h6.padding-top 1337 Follower
