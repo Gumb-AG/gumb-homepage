@@ -3,10 +3,21 @@
     background: black
     z-index: 1
 
+    &--bright
+        background: #FFFFFF
+        box-shadow: 0px 2px 30px #30465926
+
     &__nav
         display: flex
         justify-content: center
         border-bottom: 1px solid #3c3c3cb8
+
+        &--bright
+            border-color: $fog
+            
+            & a
+                color: $nebula
+                border-color: $nebula
 
         &Item
             font: 700 13px/20px Lato
@@ -47,6 +58,9 @@ footer
     flex-flow: column
     align-items: center
     padding: 105px 0 70px 0
+
+    &--bright
+        background: #FFFFFF
 
     &__inner
         display: flex
