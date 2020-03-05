@@ -1,4 +1,4 @@
-mixin nav(page, theme)
+mixin nav(page, theme, brand)
 
     if page == 'index'
         nav.nav
@@ -8,7 +8,7 @@ mixin nav(page, theme)
                 a.nav__navigation__item.btn.btn--glass(href='#') Home
                 a.nav__navigation__item.btn.btn--glass(href='#impressionen') Unsere Apps
                 a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                a.nav__navigation__item.btn.btn--glass(href='#blog') Über uns
+                a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
                 a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
                 a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Kontakt
             nav.nav__social
@@ -29,7 +29,7 @@ mixin nav(page, theme)
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#impressionen') Unsere Apps
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#blog') Über uns
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.html') Über uns
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow(href='#kontakt') Kontakt
                 nav.nav__social.nav__social--dark
@@ -44,12 +44,15 @@ mixin nav(page, theme)
         else
             nav.nav
                 a.nav__brand(href='#')
-                    img.logo(src='/assets/vector/gumb-brand.svg')
+                    if brand == 'white'
+                        img.logo(src='/assets/vector/gumb-brand-white.svg')
+                    else
+                        img.logo(src='/assets/vector/gumb-brand.svg')
                 nav.nav__navigation.nav__navigation--de
                     a.nav__navigation__item.btn.btn--glass(href='/') Home
                     a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Unsere Apps
                     a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                    a.nav__navigation__item.btn.btn--glass(href='/#blog') Über uns
+                    a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
                     a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
                     a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Kontakt
                 nav.nav__social

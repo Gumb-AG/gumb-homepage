@@ -1,0 +1,66 @@
+include _mixins/_css.pug
+include _includes/_nav.pug
+include _includes/_footer.pug
+
+doctype html
+html(lang="de")
+    head
+        include _includes/_meta.pug
+        +css()
+        include _includes/_js.pug
+    
+    body
+        video(playsinline autoplay muted loop)
+            source(src="/assets/video/backvid.mp4" type="video/mp4")
+        header.header--media
+            +nav('page','bright','white')
+            .section__title.padding-top--100
+                h3.white Zusammensein fördern
+                p.white Gumb hilft Vereinen jeder Art &amp; Größe, mit einem einzigartigem Online-Erlebnis und innovativen Tools auf einer einzigen Plattform, zu wachsen und die besten Ergebnisse zu erzielen.
+
+        main
+            section
+                .section__inner
+                    .g33
+                        .persona
+                            .persona__text
+                                h3 Dominik
+                                h3 Frei
+                                p Gründer & Geschäftsführer
+                                br
+                                .flex
+                                    a.padding-right(href='https://www.linkedin.com/in/dominikfrei/' target='_blank') 
+                                        ion-icon(name="logo-linkedin")
+                                    a.padding-right(href='https://twitter.com/FridayFrei' target='_blank') 
+                                        ion-icon(name="logo-twitter")
+                                    a.padding-right(href='https://www.xing.com/profile/Dominik_Frei3/cv' target='_blank') 
+                                        ion-icon(name="logo-xing")
+                                    a.padding-right(href='https://www.facebook.com/dominik.frei.14' target='_blank') 
+                                        ion-icon(name="logo-facebook")
+                                    a.padding-right(href='https://www.instagram.com/dominilicious/' target='_blank') 
+                                        ion-icon(name="logo-instagram")
+                    .g33
+                        .persona
+                            .persona__text
+                                h3 Jonathan
+                                h3 Arbely
+                                p IT-Leiter
+                                br
+                                .flex
+                                    a.padding-right(href='https://www.linkedin.com/in/jonathan-arbely-547565190/' target='_blank') 
+                                        ion-icon(name="logo-linkedin")
+                                    a.padding-right(href='https://github.com/jonathanarbely' target='_blank') 
+                                        ion-icon(name="logo-github")
+                                    a.padding-right(href='https://dribbble.com/jarbely' target='_blank') 
+                                        ion-icon(name="logo-dribbble")
+                    .g33
+                        .persona
+                            .persona__text
+                                h3 Barbara
+                                h3 Ruschinski
+                                p Buchhaltung & Rechnungswesen
+                        
+
+        include /_includes/_endofbody.pug
+
+    //+footer('de', 'bright')
