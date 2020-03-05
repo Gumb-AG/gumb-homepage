@@ -1,0 +1,38 @@
+include _mixins/_css.pug
+include _includes/_nav.pug
+include _includes/_footer.pug
+
+doctype html
+html(lang="de").page--dark
+    head
+        include _includes/_meta.pug
+        +css()
+        include _includes/_js.pug
+    
+    body
+        header
+            +nav('page')
+
+        main
+            
+            section.margin-top--55
+                .section__inner.section__inner--card.margin-top--55
+                    .section__title.section__title--ltr
+                        h6.whitewater Unser Warum
+                        h3.white Es ist 
+                            span.gradient unsere Mission
+                            | , die Clubs und Vereine der Welt zu inspirieren, digital auszurüsten und zu mobilisieren, damit sie wachsen und das Tempo der sozialen Innovation bestimmen können.
+            
+            section.margin-top--370
+                .section__inner.section__inner--card
+                    .section__title.section__title--ltr
+                        h6.whitewater Unser Wie
+                        h3.white 
+                            span.gradient Unsere Vision
+                            |  ist es, eine globale und mobile Plattform zu bauen, die jedes Mitglied eines Clubs und Vereins gerne nutzt.
+                        p.whitewater.widetext Wir verstehen uns als Dienstleister für ein modernes Vereinswesen und Zusammensein. Wir nehmen die Herausforderungen an, dir als Mitglied, Vorstand, Ehrenamtliche/r, Gönner und Veranstalter zu helfen, sich digital zu vernetzen, zu organisieren und zu wachsen. Wir begrüßen Menschen aus allen Bereichen, die die Möglichkeit suchen, eine Zukunft mitzugestalten, in der jeder Verein und jedes Mitglied ein starkes Zugehörigkeitsgefühl fördern kann. Wenn du Neugier, Leidenschaft und Teamgeist hast, arbeite mit uns zusammen und lass uns die Menschen zusammenbringen, gemeinsam.
+                        
+
+        include /_includes/_endofbody.pug
+
+    +footer()

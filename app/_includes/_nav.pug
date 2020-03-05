@@ -7,7 +7,7 @@ mixin nav(page, theme)
             nav.nav__navigation.nav__navigation--de
                 a.nav__navigation__item.btn.btn--glass(href='#') Home
                 a.nav__navigation__item.btn.btn--glass(href='#impressionen') Unsere Apps
-                a.nav__navigation__item.btn.btn--glass(href='#team') Warum & Wie
+                a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                 a.nav__navigation__item.btn.btn--glass(href='#blog') Über uns
                 a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
                 a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Kontakt
@@ -28,11 +28,31 @@ mixin nav(page, theme)
                 nav.nav__navigation.nav__navigation--de
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#impressionen') Unsere Apps
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#team') Warum & Wie
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                     a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#blog') Über uns
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#blog') Community
+                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow(href='#kontakt') Kontakt
                 nav.nav__social.nav__social--dark
+                    a.padding-right(href='#') 
+                        ion-icon(name="logo-facebook" size="small")
+                    a.padding-right(href='#') 
+                        ion-icon(name="logo-linkedin" size="small")
+                    a.padding-right(href='#') 
+                        ion-icon(name="logo-twitter" size="small")
+                    a.nav__navigation__lang.padding-left(href='/en' title='Switch to English') EN
+                        ion-icon(name="ios-arrow-round-forward")
+        else
+            nav.nav
+                a.nav__brand(href='#')
+                    img.logo(src='/assets/vector/gumb-brand.svg')
+                nav.nav__navigation.nav__navigation--de
+                    a.nav__navigation__item.btn.btn--glass(href='/') Home
+                    a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Unsere Apps
+                    a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
+                    a.nav__navigation__item.btn.btn--glass(href='/#blog') Über uns
+                    a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
+                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Kontakt
+                nav.nav__social
                     a.padding-right(href='#') 
                         ion-icon(name="logo-facebook" size="small")
                     a.padding-right(href='#') 
