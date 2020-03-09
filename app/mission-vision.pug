@@ -10,6 +10,8 @@ html(lang="de").page--dark
         include _includes/_js.pug
     
     body
+        include _includes/_globalbody.pug
+        
         header
             +nav('page')
 
@@ -36,4 +38,4 @@ html(lang="de").page--dark
                         
         include /_includes/_endofbody.pug
 
-    +footer('de', 'bright')
+    +footer('de')
