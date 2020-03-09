@@ -61,8 +61,70 @@ html(lang="de")
                                 h3 Barbara
                                 h3 Ruschinski
                                 p Buchhaltung & Rechnungswesen
+            
+            section
+                .section__spacer
+                .section__title
+                    h3 Was sind unsere 
+                        span.gradient Grundwerte
+                        | ?
+                    p Das Fundament all unserer Entscheidungen
+                .section__inner
+                        .section__content.section__content--50.padding-right--128.alignitems--center
+                            .section__title.section__title--ltr
+                                h3.gradient.clickable.value#value1(data-value="1") Benutzerorientiert
+                                br
+                                br
+                                h3.clickable.value#value2(data-value="2") Offen
+                                br
+                                br
+                                h3.clickable.value#value3(data-value="3") Ständige Verbesserung
+                                br
+                                br
+                                h3.clickable.value#value4(data-value="4") Global & Lokal
                         
+                        .section__content.section__content--50.padding-left--64
+                            .section__title.section__title--ltr.valueText#value1Text
+                                img.icon.padding-bottom--16(src="assets/vector/gumb-brand-dark.svg")
+                                h3 Wir fokussieren uns auf den Nutzer
+                                p Alles, was wir tun, beginnt und endet mit dem Blick auf unsere Nutzer. Wir setzen uns für dich, dein Verein, deine Mannschaft und deine Gruppe ein und sind bestrebt, Deine Erwartungen mit allem, was wir tun, zu übertreffen.
+                            .section__title.section__title--ltr.valueText.hide#value2Text
+                                img.icon.padding-bottom--16(src="assets/vector/gumb-brand-dark.svg")
+                                h3 Wir sind immer offen
+                                p Mit unseren Nutzern und untereinander. Wir sind offen für neue Ideen, neue Arbeitsmethoden und offen dafür, herausgefordert zu werden.
+                            .section__title.section__title--ltr.valueText.hide#value3Text
+                                img.icon.padding-bottom--16(src="assets/vector/gumb-brand-dark.svg")
+                                h3 Wir verbessern uns ständig
+                                p Wir stehen nicht still. Wir verbessern ständig alles; Das Produkt, die Erfahrung, den Support. Wir lieben das Feedback von Nutzern und Vereinen jeder Art.
+                            .section__title.section__title--ltr.valueText.hide#value4Text
+                                img.icon.padding-bottom--16(src="assets/vector/gumb-brand-dark.svg")
+                                h3 Wir denken global, wir handeln lokal
+                        
+            section
+                .section__spacer
+                .quote
+                    h5 «Wir sehen uns als Dienstleister für Dich und Dein Vereinsleben.»
+                    p - Dominik, CEO
+
+            section
+                .section__spacer
+                .section__title
+                    h3 Was wir bereits erreicht haben
+                    p Unsere Meilensteine
+                .section__inner
+                    .showcase
+                        .showcase__image
+                        .showcase__card
+                            h6 Februar 2020
+                            h4 Gründung Gumb AG & Einzug neues Büro
+                            p When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward.
+                        .showcase__ui
+                            p.padding-right--48 01/02
+                            .flex.flex--items
+                                b.clickable.padding-right.nebula Weiter
+                                ion-icon.nebula(name="ios-arrow-forward" size="small")
+
 
         include /_includes/_endofbody.pug
 
-    //+footer('de', 'bright')
+        +footer('de', 'bright')

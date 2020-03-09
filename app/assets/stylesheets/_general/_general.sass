@@ -23,11 +23,6 @@
         & p
             padding-top: 10px
 
-    //&__tube
-        display: flex
-        justify-content: center
-        flex-flow: column
-
     &__spacer
         margin-top: 350px
 
@@ -59,13 +54,13 @@
 
     &--items
         align-items: center
-    
-.hide
-    display: hidden
 
 // General Padding
 .padding-right
     padding-right: 8px
+
+    &--48
+        padding-right: 48px
 
     &--128
         padding-right: 128px
@@ -84,6 +79,9 @@
 
 .padding-bottom
     padding-bottom: 8px
+
+    &--16
+        padding-bottom: 16px
 
 // General Margin
 .margin-right
@@ -106,6 +104,10 @@
     
     &--center
         align-items: center !important
+
+// Icons
+.icon
+    width: 50px
 
 // Appstore logos
 .apps
@@ -242,6 +244,16 @@
         background-image: url('/assets/vector/backgrounds/shapes.svg')
         background-repeat: no-repeat
         background-size: 100%
+
+// Quote
+.quote
+    background: white
+    box-shadow: $boxshadow
+    padding: 30px
+
+// Misc
+.clickable
+    cursor: pointer
 
 // Google Maps integration
 .map
