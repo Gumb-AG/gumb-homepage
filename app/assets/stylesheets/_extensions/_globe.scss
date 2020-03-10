@@ -79,6 +79,11 @@ body {
       width: 1300px !important;
       margin-left: 300px;
     }
+
+    @media (max-width: 1500px) {
+      width: 1100px !important;
+      margin-left: 400px;
+    }
   }
 }
 
@@ -97,6 +102,10 @@ body {
 
   @media (max-width: 1760px) {
     margin-left: 300px;
+  }
+
+  @media (max-width: 1500px) {
+    margin-left: 400px;
   }
 
   &.active {
