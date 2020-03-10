@@ -12,14 +12,10 @@ html(lang="en")
     
     body
         include _includes/_globalbody.pug
-        
+        include _includes/_extensions/_globe.pug
+
         header
             +nav('en', 'index')
-
-            .hero__globe
-                div.globe.js-globe
-                    ul.globe-list.js-list
-                    canvas.globe-canvas.js-canvas
 
             .hero
                 .hero__text
@@ -70,11 +66,11 @@ html(lang="en")
                     p Lade die App und teste 40 Tage kostenlos.
                 .flex
                     a(href='#')
-                        img.apps(src='/assets/vector/apps/ios.svg')
+                        img.apps(src='/assets/vector/apps/en/ios.svg')
                     a(href='#')
-                        img.apps(src='/assets/vector/apps/droid.svg')
+                        img.apps(src='/assets/vector/apps/en/droid.svg')
                     a(href='#')
-                        img.apps(src='/assets/vector/apps/web.svg')
+                        img.apps(src='/assets/vector/apps/en/web.svg')
 
             section.section__spacer
                 .section__title
