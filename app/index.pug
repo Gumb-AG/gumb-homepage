@@ -13,14 +13,14 @@ html(lang="de")
     body
         include _includes/_globalbody.pug
         
-        header
-            +nav('de','index')
-
+        .hero__globe__wrapper
             .hero__globe
-                div.globe.js-globe
+                .globe.js-globe
                     ul.globe-list.js-list
                     canvas.globe-canvas.js-canvas
 
+        header
+            +nav('de','index')
             .hero
                 .hero__text
                     h1 Einswerden, Zusammen.

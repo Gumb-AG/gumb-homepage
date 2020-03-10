@@ -67,6 +67,18 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    width: 2060px !important;
+    height: auto !important;
+
+    @media (max-width: 2000px) {
+      width: 1560px !important;
+      margin-left: 200px;
+    }
+
+    @media (max-width: 1760px) {
+      width: 1300px !important;
+      margin-left: 300px;
+    }
   }
 }
 
@@ -78,6 +90,14 @@ body {
   top: 0;
   list-style: none;
   transition: opacity 3s cubic-bezier(.175, .885, .320, 1.275);
+
+  @media (max-width: 2000px) {
+    margin-left: 200px;
+  }
+
+  @media (max-width: 1760px) {
+    margin-left: 300px;
+  }
 
   &.active {
     opacity: 1;
