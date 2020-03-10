@@ -29,7 +29,7 @@ const props = {
 		height: 1024 / 2,
 	},
 	globeRadius: 200, // Radius of the globe (used for many calculations)
-	dotsAmount: 20, // Amount of dots to generate and animate randomly across the lines
+	dotsAmount: 16, // Amount of dots to generate and animate randomly across the lines
 	startingCountry: 'ch', // The key of the country to rotate the camera to during the introduction animation (and which country to start the cycle at)
 	colours: {
 		// Cache the colours
