@@ -113,14 +113,26 @@ html(lang="de")
                     p Unsere Meilensteine
                 .section__inner
                     .showcase
-                        .showcase__image
-                        .showcase__card
+                        .showcase__image(style="background-image: url('/assets/images/showcase/slide1.png')")#scImg1
+                        .showcase__card#scCrd1
                             h6 Februar 2020
-                            h4 Gründung Gumb AG & Einzug neues Büro
-                            p When applied to building block a website or similar work product, a Visual Guide can be an intermediate step toward.
+                            h4 Gründung Gumb AG &amp; Einzug neues Büro
+                            p Wir sind im Februar ins neue Büro gezogen. Jetzt kann's losgehen!
+
+                        .showcase__image.hide(style="background-image: url('/assets/images/showcase/slide2.jpg')")#scImg2
+                        .showcase__card.hide#scCrd2
+                            h6 März 2020
+                            h4 Unser erster Praktikant Juri ist schon fleißig am helfen
+
                         .showcase__ui
-                            p.padding-right--48 01/02
-                            .flex.flex--items
+                            .flex.flex--items.hide#showcaseBack
+                                ion-icon.nebula(name="ios-arrow-back" size="small")
+                                b.clickable.nebula.padding-left.padding-right--16 Zurück
+                            p.padding-right--16
+                                span#showcaseCounter 1
+                                span /
+                                span#showcaseLength 03
+                            .flex.flex--items(data-value="1")#showcaseNext
                                 b.clickable.padding-right.nebula Weiter
                                 ion-icon.nebula(name="ios-arrow-forward" size="small")
 
