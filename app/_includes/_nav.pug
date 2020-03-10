@@ -1,56 +1,13 @@
-mixin nav(page, theme, brand)
+mixin nav(lang, page, theme, brand)
 
-    if page == 'index'
-        nav.nav
-            a.nav__brand(href='#')
-                img.logo(src='/assets/vector/gumb.svg')
-            nav.nav__navigation.nav__navigation--de
-                a.nav__navigation__item.btn.btn--glass(href='#') Home
-                a.nav__navigation__item.btn.btn--glass(href='#impressionen') Unsere Apps
-                a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
-                a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
-                a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kontakt
-            nav.nav__social
-                a.padding-right(href='#') 
-                    ion-icon(name="logo-facebook" size="small")
-                a.padding-right(href='#') 
-                    ion-icon(name="logo-linkedin" size="small")
-                a.padding-right(href='#') 
-                    ion-icon(name="logo-twitter" size="small")
-                a.nav__navigation__lang.padding-left(href='/en' title='Switch to English') EN
-                    ion-icon(name="ios-arrow-round-forward")
-    else
-        if theme == 'dark'
+    if lang == 'de'
+        if page == 'index'
             nav.nav
                 a.nav__brand(href='#')
-                    img.logo(src='/assets/vector/gumb-brand-dark.svg')
+                    img.logo(src='/assets/vector/gumb.svg')
                 nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#impressionen') Unsere Apps
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.html') Über uns
-                    a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
-                    a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Kontakt
-                nav.nav__social.nav__social--dark
-                    a.padding-right(href='#') 
-                        ion-icon(name="logo-facebook" size="small")
-                    a.padding-right(href='#') 
-                        ion-icon(name="logo-linkedin" size="small")
-                    a.padding-right(href='#') 
-                        ion-icon(name="logo-twitter" size="small")
-                    a.nav__navigation__lang.padding-left(href='/en' title='Switch to English') EN
-                        ion-icon(name="ios-arrow-round-forward")
-        else
-            nav.nav
-                a.nav__brand(href='#')
-                    if brand == 'white'
-                        img.logo(src='/assets/vector/gumb-brand-white.svg')
-                    else
-                        img.logo(src='/assets/vector/gumb-brand.svg')
-                nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.btn.btn--glass(href='/') Home
-                    a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Unsere Apps
+                    a.nav__navigation__item.btn.btn--glass(href='#') Home
+                    a.nav__navigation__item.btn.btn--glass(href='#tpb') Unsere Apps
                     a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                     a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
                     a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
@@ -62,5 +19,114 @@ mixin nav(page, theme, brand)
                         ion-icon(name="logo-linkedin" size="small")
                     a.padding-right(href='#') 
                         ion-icon(name="logo-twitter" size="small")
-                    a.nav__navigation__lang.padding-left(href='/en' title='Switch to English') EN
+                    a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
                         ion-icon(name="ios-arrow-round-forward")
+        else
+            if theme == 'dark'
+                nav.nav
+                    a.nav__brand(href='#')
+                        img.logo(src='/assets/vector/gumb-brand-dark.svg')
+                    nav.nav__navigation.nav__navigation--de
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#tpb') Unsere Apps
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.html') Über uns
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
+                        a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Kontakt
+                    nav.nav__social.nav__social--dark
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-facebook" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-linkedin" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-twitter" size="small")
+                        a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
+                            ion-icon(name="ios-arrow-round-forward")
+            else
+                nav.nav
+                    a.nav__brand(href='#')
+                        if brand == 'white'
+                            img.logo(src='/assets/vector/gumb-brand-white.svg')
+                        else
+                            img.logo(src='/assets/vector/gumb-brand.svg')
+                    nav.nav__navigation.nav__navigation--de
+                        a.nav__navigation__item.btn.btn--glass(href='/') Home
+                        a.nav__navigation__item.btn.btn--glass(href='/#tpb') Unsere Apps
+                        a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
+                        a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
+                        a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
+                        a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kontakt
+                    nav.nav__social
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-facebook" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-linkedin" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-twitter" size="small")
+                        a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
+                            ion-icon(name="ios-arrow-round-forward")
+    else
+        if page == 'index'
+            nav.nav
+                a.nav__brand(href='#')
+                    img.logo(src='/assets/vector/gumb.svg')
+                nav.nav__navigation.nav__navigation--de
+                    a.nav__navigation__item.btn.btn--glass(href='/index.en.html') Home
+                    a.nav__navigation__item.btn.btn--glass(href='#tpb') Our Apps
+                    a.nav__navigation__item.btn.btn--glass(href='/mission-vision.en.html') Why & How
+                    a.nav__navigation__item.btn.btn--glass(href='/about.en.html') About us
+                    a.nav__navigation__item.btn.btn--glass(href='/community.en.html') Community
+                    a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Get in touch
+                nav.nav__social
+                    a.padding-right(href='#') 
+                        ion-icon(name="logo-facebook" size="small")
+                    a.padding-right(href='#') 
+                        ion-icon(name="logo-linkedin" size="small")
+                    a.padding-right(href='#') 
+                        ion-icon(name="logo-twitter" size="small")
+                    a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
+                        ion-icon(name="ios-arrow-round-forward")
+        else
+            if theme == 'dark'
+                nav.nav
+                    a.nav__brand(href='#')
+                        img.logo(src='/assets/vector/gumb-brand-dark.svg')
+                    nav.nav__navigation.nav__navigation--de
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/index.en.html') Home
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#tpb') Our Apps
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.en.html') Why & How
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.en.html') About us
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.en.html') Community
+                        a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Get in touch
+                    nav.nav__social.nav__social--dark
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-facebook" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-linkedin" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-twitter" size="small")
+                        a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
+                            ion-icon(name="ios-arrow-round-forward")
+            else
+                nav.nav
+                    a.nav__brand(href='#')
+                        if brand == 'white'
+                            img.logo(src='/assets/vector/gumb-brand-white.svg')
+                        else
+                            img.logo(src='/assets/vector/gumb-brand.svg')
+                    nav.nav__navigation.nav__navigation--de
+                        a.nav__navigation__item.btn.btn--glass(href='/index.en.html') Home
+                        a.nav__navigation__item.btn.btn--glass(href='/#tpb') Our Apps
+                        a.nav__navigation__item.btn.btn--glass(href='/mission-vision.en.html') Why & How
+                        a.nav__navigation__item.btn.btn--glass(href='/about.en.html') About us
+                        a.nav__navigation__item.btn.btn--glass(href='/community.en.html') Community
+                        a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Get in touch
+                    nav.nav__social
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-facebook" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-linkedin" size="small")
+                        a.padding-right(href='#') 
+                            ion-icon(name="logo-twitter" size="small")
+                        a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
+                            ion-icon(name="ios-arrow-round-forward")
