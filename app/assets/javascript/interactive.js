@@ -10,7 +10,7 @@ $(function() {
 
         // Set active Text
         $('.valueText').hide();
-        $('#value' +v +'Text').show();
+        $('#value' +v +'Text').removeClass('hide').show();
     });
 
     // Showcase UI logic
