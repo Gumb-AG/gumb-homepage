@@ -75,4 +75,7 @@ $(function() {
         // Return current slide number (v)
         $('#showcaseNext').attr('data-value', v);
     });
+
+    // Simulate Realtime Users
+    $('#rtUsers').text( Math.round( Math.random() * (250 - 70) + 70) );
 });
