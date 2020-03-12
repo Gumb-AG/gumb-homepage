@@ -3,7 +3,7 @@ include _includes/_nav.pug
 include _includes/_footer.pug
 
 doctype html
-html(lang="de")
+html(lang="en")
     head
         include _includes/_meta.pug
         +css()
@@ -13,13 +13,14 @@ html(lang="de")
         include _includes/_globalbody.pug
         
         header
-            +nav('de', 'page', 'dark')
+            +nav('en', 'page', 'dark')
 
         main 
             section
                 .section__title
                     h5 👋🏼
-                    h3 Impressum
+                    h3 Imprint
+                    p.tw Note: All the following text is published and maintained in German only.
                     br
                     b.nebula Webdesign und Verantwortlich für den Inhalt: 
                     p Gumb AG
@@ -41,7 +42,7 @@ html(lang="de")
             section
                 .section__title
                     h5 🔐
-                    h3 Datenschutzerklärung
+                    h3 Data protection
                     br
                     p Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen. Datenschutz hat einen besonders hohen Stellenwert für die Gumb AG. Eine Nutzung der Internetseiten der Gumb AG ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.
                     br
