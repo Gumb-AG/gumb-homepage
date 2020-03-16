@@ -105,3 +105,4 @@ dist
 
 # Custom ignores
 ._gumb.code-workspace
+._*
