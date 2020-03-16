@@ -1,15 +1,13 @@
-include _mixins/_css.pug
+include _includes/_global.pug
 include _mixins/_extensions/_integrations.pug
-include _includes/_extensions/_beacon.pug
-include _includes/_nav.pug
-include _includes/_footer.pug
 
 doctype html
 html(lang="en")
     head
-        include _includes/_meta.pug
-        +css('index')
         include _includes/_js.pug
+
+        +css('index')
+        +meta('en','Become One, Together')
     
     body
         +beacon('en')

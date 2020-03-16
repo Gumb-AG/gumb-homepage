@@ -1,38 +1,38 @@
 meta(charset='utf-8')
 meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
 
-meta(name="theme-color" content="#1b1b1c")
+meta(name="theme-color" content="#1fc2c2")
 
 meta(name='mobile-web-app-capable' content='yes')
 meta(name='apple-mobile-web-app-capable' content='yes')
 meta(name='application-name' content='Gumb')
 meta(name='apple-mobile-web-app-status-bar-style' content='black')
 meta(name='apple-mobile-web-app-title' content='Gumb')
-link(rel='icon' sizes='192x192' href='/assets/images/pixel/appicon/m-192.png')
-link(rel='apple-touch-icon' href='/assets/images/pixel/appicon/m-192.png')
-meta(name='msapplication-TileImage' content='/assets/images/pixel/appicon/m-144.png')
+//-link(rel='icon' sizes='192x192' href='/assets/images/pixel/appicon/m-192.png')
+//-link(rel='apple-touch-icon' href='/assets/images/pixel/appicon/m-192.png')
+//-meta(name='msapplication-TileImage' content='/assets/images/pixel/appicon/m-144.png')
 meta(name='msapplication-TileColor' content='#1b1b1c')
-meta(name='theme-color' content='#1b1b1c')
+meta(name='theme-color' content='#1fc2c2')
 meta(property='og:title' content='Gumb')
 meta(property='og:type' content='website')
-meta(property='og:image' content='/assets/images/pixel/appicon/m-192.png')
+//-meta(property='og:image' content='/assets/images/pixel/appicon/m-192.png')
 meta(property='og:url' content='https://gumb.ch/')
 
 mixin meta(lang, title)
 
     if title
-        title= title
+        title= title + ' | Gumb'
     else
-        title Gumb
+        title Gumb AG
     
     if !lang
-        meta(name='description' content='Deutsche Beschreibung')
+        meta(name='description' content='Wir sind Gumb, ein junges Software- Start-up. Wir bauen einzigartige Online- Erlebnisse für Dich und Deine Gruppen!')
         meta(name='keywords' content='Deutsche Stichwörter')
-        meta(property='og:description' content='Deutsche Beschreibung')
+        meta(property='og:description' content='Wir sind Gumb, ein junges Software- Start-up. Wir bauen einzigartige Online- Erlebnisse für Dich und Deine Gruppen!')
         
     else
-        meta(name='description' content='English description')
+        meta(name='description' content='We are Gumb, a young software start-up. We build unique online experiences for you and your groups!')
         meta(name='keywords' content='English keywords')
-        meta(property='og:description' content='English description')
+        meta(property='og:description' content='We are Gumb, a young software start-up. We build unique online experiences for you and your groups!')
         
 link(rel="icon" type="image/png" href="/assets/images/pixel/favicon.png")

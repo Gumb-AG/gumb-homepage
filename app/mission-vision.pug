@@ -1,14 +1,12 @@
-include _mixins/_css.pug
-include _includes/_extensions/_beacon.pug
-include _includes/_nav.pug
-include _includes/_footer.pug
+include _includes/_global.pug
 
 doctype html
 html(lang="de").page--dark
     head
-        include _includes/_meta.pug
-        +css()
         include _includes/_js.pug
+
+        +css()
+        +meta('de','Unsere Mission & Vision')
     
     body
         +beacon('de')
