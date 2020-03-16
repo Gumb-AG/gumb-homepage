@@ -1,4 +1,5 @@
 include _mixins/_css.pug
+include _includes/_extensions/_beacon.pug
 include _includes/_nav.pug
 include _includes/_footer.pug
 
@@ -10,7 +11,7 @@ html(lang="en")
         include _includes/_js.pug
     
     body
-        include _includes/_globalbody.pug
+        +beacon('en')
         
         header
             +nav('en', 'page', 'dark')

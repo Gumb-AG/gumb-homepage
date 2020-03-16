@@ -1,5 +1,6 @@
 include _mixins/_css.pug
 include _mixins/_extensions/_integrations.pug
+include _includes/_extensions/_beacon.pug
 include _includes/_nav.pug
 include _includes/_footer.pug
 
@@ -11,7 +12,7 @@ html(lang="de")
         include _includes/_js.pug
     
     body
-        include _includes/_globalbody.pug
+        +beacon('de')
         include _includes/_extensions/_globe.pug
 
         header
