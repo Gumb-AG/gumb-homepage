@@ -1,6 +1,6 @@
 mixin map(theme)
     
-    div.map#map
+    .map#map
 
     if theme == 'dark'
         script.
@@ -355,7 +355,6 @@ mixin map(theme)
                 }
             ]
 
-    
     script.
         function initMap() {
             var myLatLng = {lat: 47.69680416745027, lng: 8.658911600000012};
