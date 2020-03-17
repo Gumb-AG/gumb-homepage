@@ -1,3 +1,5 @@
+@import "../_general/_variables.sass"
+    
 // index.sass
 body
     background: linear-gradient(135deg, black 40%, #147D6C 80%, #1EFFFF 100%) !important
@@ -8,9 +10,31 @@ body
     margin: 0 auto
     margin-top: 150px
 
-    &__text
-        flex: 0 0 38%
-        padding-right: 70px
+    &__inner
+        display: flex
+        flex-flow: column
+        max-width: 530px
+
+    &__card
+        display: flex
+        max-width: 430px
+        background-color: $gotham
+        padding: 15px 15px 0 15px
+        margin-top: 50px
+
+        &__app
+            display: flex
+            flex: 0 0 33.33%
+
+            & img
+                width: 115px
+
+        &__text
+            flex: 0 0 66.66%
+            padding: 0 10px
+            
+            & .flex
+                padding-top: 12px
 
     &__globe
 
@@ -18,5 +42,5 @@ body
             width: 1340px
             margin: 0 auto
             display: flex
-            height: 20px
+            height: 0
             position: relative
