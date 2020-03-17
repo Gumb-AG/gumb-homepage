@@ -106,3 +106,5 @@ dist
 # Custom ignores
 ._gumb.code-workspace
 ._*
+*._*
+*.DS_Store
