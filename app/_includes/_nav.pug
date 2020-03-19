@@ -5,12 +5,20 @@ mixin nav(lang, page, theme, brand)
             nav.nav
                 a.nav__brand(href='#')
                     img.logo(src='/assets/vector/gumb.svg')
+                    img.logo.hide(src='/assets/vector/gumb-brand.svg')
                 nav.nav__navigation.nav__navigation--de
                     a.nav__navigation__item.btn.btn--glass(href='#') Home
                     a.nav__navigation__item.btn.btn--glass(href='#tpb') Unsere Apps
                     a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                     a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
                     a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
+                    select.nav__navigation__select.nav__navigation__item#mobileNav
+                        option(value='#' selected) Navigation
+                        option(value='#') Home
+                        option(value='#tpb') Unsere Apps
+                        option(value='/mission-vision.html') Warum & Wie
+                        option(value='/about.html') Über uns
+                        option(value='/community.html') Community
                     a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kontakt
                 nav.nav__social
                     a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
@@ -32,6 +40,13 @@ mixin nav(lang, page, theme, brand)
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.html') Über uns
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
+                        select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
+                            option(value='#' selected) Navigation
+                            option(value='/') Home
+                            option(value='/#tpb') Unsere Apps
+                            option(value='/mission-vision.html') Warum & Wie
+                            option(value='/about.html') Über uns
+                            option(value='/community.html') Community
                         a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Kontakt
                     nav.nav__social.nav__social--dark
                         a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
@@ -55,6 +70,13 @@ mixin nav(lang, page, theme, brand)
                         a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                         a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
                         a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
+                        select.nav__navigation__select.nav__navigation__item#mobileNav
+                            option(value='#' selected) Navigation
+                            option(value='/') Home
+                            option(value='/#tpb') Unsere Apps
+                            option(value='/mission-vision.html') Warum & Wie
+                            option(value='/about.html') Über uns
+                            option(value='/community.html') Community
                         a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kontakt
                     nav.nav__social
                         a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 

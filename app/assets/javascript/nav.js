@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+/*jQuery(document).ready(function () {
     
     // Scrollmenu
     fixedNav();
@@ -18,4 +18,11 @@ function fixedNav() {
         jQuery('.nav__brand').show();
         jQuery('nav .btn').removeClass('btn--inverted');
     }
-}
+}*/
+
+// Mobile Nav
+$(function() {
+    $('#mobileNav').change(function() {
+        window.location.replace( $("#mobileNav option:selected").val() );
+    });
+});
