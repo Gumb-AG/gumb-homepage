@@ -9,6 +9,17 @@ body
     max-width: 1340px
     margin: 0 auto
     margin-top: 150px
+    position: relative
+    z-index: 100
+
+    @media (max-height: 800px)
+        margin-top: 80px
+
+    @media (max-width: 550px)
+        margin-top: 220px
+
+    @media (max-width: 550px) and (max-height: 850px)
+        margin-top: 200px
 
     &__inner
         display: flex
@@ -22,9 +33,16 @@ body
         padding: 15px 15px 0 15px
         margin-top: 50px
 
+        @media (max-width: 425px)
+            margin-top: 25px
+
+        @media (max-width: 340px)
+            padding-left: 0
+
         &__app
             display: flex
             flex: 0 0 33.33%
+            align-items: flex-end
 
             & img
                 width: 115px
@@ -32,7 +50,10 @@ body
 
         &__text
             flex: 0 0 66.66%
-            padding: 0 10px
+            padding: 0 10px 15px 10px
+
+            @media (max-width: 340px)
+                padding-left: 5px
             
             & .flex
                 padding-top: 12px
@@ -45,3 +66,8 @@ body
             display: flex
             height: 0
             position: relative
+
+.business
+
+    @media (max-width: 800px)
+        margin-top: 150px

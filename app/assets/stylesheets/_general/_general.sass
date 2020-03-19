@@ -160,6 +160,19 @@
 .apps
     padding: 40px 15px
 
+    @media (max-width: 520px)
+        padding-left: 7px
+        padding-right: 7px
+
+    @media (max-width: 470px)
+        padding: 10px 0
+
+    &__wrapper
+
+        @media (max-width: 470px)
+            flex-flow: column
+            padding-top: 30px
+
 // Takes an anchortag, creates a button 
 .btn
     background-color: $primary
@@ -202,6 +215,17 @@
     margin-top: 125px
     overflow: hidden
 
+    @media (max-width: 775px)
+        flex-flow: column-reverse
+
+    @media (max-width: 570px)
+        width: 100%
+
+    &--reverse
+
+        @media (max-width: 775px)
+            flex-flow: column
+
     &__text
         flex: 0 0 50%
         display: flex
@@ -216,6 +240,10 @@
         & img
             height: 520px
 
+            @media (max-width: 775px)
+                height: 420px
+                padding-bottom: 20px
+
 // Category         
 .category
     margin: 120px 5px 140px 5px
@@ -225,8 +253,31 @@
     justify-content: center
     height: 280px
     width: 280px
+    background-size: cover
     background-repeat: no-repeat
     background-position: center
+
+    @media (max-width: 1220px)
+        height: 220px
+        width: 220px
+
+    @media (max-width: 966px)
+        max-height: 180px
+        max-width: 180px
+
+    @media (max-width: 800px)
+        margin-top: 50px
+        margin-bottom: 0
+
+    &__wrapper
+
+        @media (max-width: 800px)
+            width: 70%
+            flex-wrap: wrap
+            justify-content: center
+
+        @media (max-width: 623px)
+            width: 100%
 
     & h4
         max-width: 235px
@@ -242,8 +293,20 @@
     min-height: 115px
     justify-content: flex-start
 
+    @media (max-width: 1190px)
+        margin: 0 25px
+        max-width: initial
+
+    @media (max-width: 460px)
+        max-width: 100px
+
+    &__wrapper
+        flex-wrap: wrap
+        justify-content: center
+
     &--nomargin
         margin: 0 0
+        max-width: 140px
 
 // Timeline
 .timeline
@@ -253,6 +316,17 @@
     margin-top: 70px
     margin-left: -45px
     margin-right: -25px
+
+    @media (max-width: 580px)
+        width: 100px
+
+    @media (max-width: 500px)
+        display: none
+
+    &__wrapper
+
+        @media (max-width: 500px)
+            flex-flow: column
 
     &--mod
         margin-left: -27px
