@@ -97,7 +97,7 @@ const getData = async () => {
     data = await results.json();
     return setupScene();
   } catch (error) {
-    return alert('Unable to get data');
+    return console.warn('Unable to get globe data');
   }
 };
 
@@ -803,7 +803,7 @@ const returnCameraAngles = (latitude, longitude) => {
 /* INITIALISATION */
 
 if (!window.WebGLRenderingContext) {
-	alert('WebGL not supported, please use a browser that supports WebGL')
+	console.warn('WebGL not supported, please use a browser that supports WebGL')
 } else {
 	getData();
 }
