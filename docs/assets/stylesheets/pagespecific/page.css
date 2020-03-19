@@ -1,0 +1,111 @@
+body {
+  background: white !important; }
+
+header {
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 0px; }
+
+.header--media {
+  height: 80%;
+  background: rgba(0, 0, 0, 0.3); }
+
+.page--dark {
+  background: black !important; }
+  .page--dark body, .page--dark main {
+    background: black !important; }
+
+@media (max-width: 1390px) {
+  .team .section__inner {
+    flex-flow: column;
+    flex-wrap: wrap; } }
+
+@media (max-width: 1390px) {
+  .team .g33:first-child {
+    padding-left: 150px; } }
+
+@media (max-width: 1210px) {
+  .team .g33:first-child {
+    padding-left: 100px; } }
+
+@media (max-width: 1074px) {
+  .team .g33:first-child {
+    padding-left: 0; } }
+
+@media (max-width: 1390px) {
+  .team .g33:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+    margin-top: -100px; } }
+
+@media (max-width: 914px) {
+  .team .g33:nth-child(2) {
+    margin-top: -30px; } }
+
+@media (max-width: 1390px) {
+  .team .g33:last-child {
+    padding-left: 150px;
+    margin-top: -100px; } }
+
+@media (max-width: 1210px) {
+  .team .g33:last-child {
+    padding-left: 100px; } }
+
+@media (max-width: 1074px) {
+  .team .g33:last-child {
+    padding-left: 0; } }
+
+@media (max-width: 914px) {
+  .team .g33:last-child {
+    margin-top: -30px; } }
+
+@media (max-width: 790px) {
+  .team .g33 {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-top: 25px !important; } }
+
+@media (max-width: 600px) {
+  .team .g33 {
+    align-self: flex-start; } }
+
+@media (max-width: 790px) {
+  .team .g33 .persona {
+    margin-left: -100px; } }
+
+@media (max-width: 600px) {
+  .team .g33 .persona {
+    margin-left: 0px; } }
+
+@media (max-width: 880px) {
+  .values h3 {
+    font-size: 35px;
+    line-height: 40px; } }
+
+@media (max-width: 1188px) {
+  .social {
+    flex-flow: column;
+    align-items: center; } }
+
+@media (max-width: 1188px) {
+  .social__text {
+    margin-bottom: 0;
+    padding-right: 0; } }
+
+@media (max-width: 1188px) {
+  .social__text div {
+    text-align: center;
+    align-items: center; } }
+
+@media (max-width: 650px) {
+  .social__networks {
+    transform: scale(0.8); } }
+
+@media (max-width: 425px) {
+  .social__networks {
+    transform: scale(0.6);
+    margin-top: 0; } }
+
+/*# sourceMappingURL=page.css.map */

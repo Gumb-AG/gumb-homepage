@@ -19,7 +19,7 @@ gulp.task('pug', gulp.series(function (done) {
             pretty: true,
             basedir: __dirname + '/app'
         }))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./docs/'));
     done();
 }));
 
@@ -29,7 +29,7 @@ gulp.task('sass', gulp.series(function (done) {
         .pipe(maps.init())
         .pipe(sass({}).on('error', sass.logError))
         .pipe(maps.write('./'))
-        .pipe(gulp.dest('dist/assets/stylesheets'));
+        .pipe(gulp.dest('docs/assets/stylesheets'));
 }));
 
 gulp.task('buildsass', gulp.series(function (done) {
@@ -38,70 +38,70 @@ gulp.task('buildsass', gulp.series(function (done) {
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(gulp.dest('dist/assets/stylesheets'));
+        .pipe(gulp.dest('docs/assets/stylesheets'));
 }));
 
 gulp.task('clean-folders', gulp.series(function (done) {
-    return gulp.src('dist/*/*', {
+    return gulp.src('docs/*/*', {
             read: false
         })
         .pipe(clean());
 }));
 
 gulp.task('clean-html', gulp.series(function (done) {
-    return gulp.src('dist/*.html', {
+    return gulp.src('docs/*.html', {
             read: false
         })
         .pipe(clean());
 }));
 
 gulp.task('clean-js', gulp.series(function (done) {
-    return gulp.src('dist/**/*.js*', {
+    return gulp.src('docs/**/*.js*', {
             read: false
         })
         .pipe(clean());
 }));
 
 gulp.task('clean', gulp.series('clean-html', 'clean-js', 'clean-folders', function (done) {
-    console.log('Successfully cleaned dist.');
+    console.log('Successfully cleaned docs.');
     done();
 }));
 
 gulp.task('copyImages', gulp.series(function (done) {
-    gulp.src(['app/assets/images/**/*']).pipe(gulp.dest('dist/assets/images'));
+    gulp.src(['app/assets/images/**/*']).pipe(gulp.dest('docs/assets/images'));
     done();
 }));
 
 gulp.task('copyVector', gulp.series(function (done) {
-    gulp.src(['app/assets/vector/**/!(_)*.svg']).pipe(gulp.dest('dist/assets/vector'));
+    gulp.src(['app/assets/vector/**/!(_)*.svg']).pipe(gulp.dest('docs/assets/vector'));
     done();
 }));
 
 gulp.task('copyJS', gulp.series(function (done) {
-    gulp.src(['app/assets/javascript/**/!(_)*.js*']).pipe(gulp.dest('dist/assets/javascript'));
+    gulp.src(['app/assets/javascript/**/!(_)*.js*']).pipe(gulp.dest('docs/assets/javascript'));
     done();
 }));
 
 gulp.task('copyFrameworks', gulp.series(function (done) {
-    gulp.src(['app/assets/frameworks/**/!(_)*.js']).pipe(gulp.dest('dist/assets/frameworks'));
+    gulp.src(['app/assets/frameworks/**/!(_)*.js']).pipe(gulp.dest('docs/assets/frameworks'));
     done();
 }));
 
 gulp.task('copyLibraries', gulp.series(function (done) {
-    gulp.src(['app/assets/libraries/**/!(_)*.js']).pipe(gulp.dest('dist/assets/libraries'));
+    gulp.src(['app/assets/libraries/**/!(_)*.js']).pipe(gulp.dest('docs/assets/libraries'));
     done();
 }));
 
 gulp.task('copyVideo', gulp.series(function (done) {
-    gulp.src(['app/assets/video/*']).pipe(gulp.dest('dist/assets/video'));
+    gulp.src(['app/assets/video/*']).pipe(gulp.dest('docs/assets/video'));
     done();
 }));
 
 gulp.task('c', gulp.series(function (done) {
     connect.server({
-        root: 'dist',
+        root: 'docs',
         livereload: false,
-        fallback: 'dist/fallback.html'
+        fallback: 'docs/fallback.html'
     });
     done();
 }));
@@ -114,7 +114,7 @@ gulp.task('compress', gulp.series(function (done) {
                 min: '.min.js'
             }
         }))
-        .pipe(gulp.dest('dist/assets/javascript/'));
+        .pipe(gulp.dest('docs/assets/javascript/'));
     done();
 }));
 
