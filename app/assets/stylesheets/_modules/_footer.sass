@@ -6,6 +6,9 @@
     margin-top: 300px
     border: 1px #2b2b2b solid
 
+    @media (max-width: 1340px)
+        width: 100%
+
     &--bright
         background: #FFFFFF
         box-shadow: 0px 2px 30px #30465926
@@ -42,8 +45,23 @@
         margin: 0 auto
         max-width: 840px
 
+        @media (max-width: 1340px)
+            padding-left: 44px
+            padding-right: 44px
+            flex-wrap: wrap
+
         & div
             flex: 0 0 25%
+            min-width: 210px
+
+            & .btn
+                display: inline-block !important
+
+            @media (max-width: 1340px)
+                padding-right: 25px
+
+            @media (max-width: 507px)
+                padding-top: 25px
 
 footer
     background: white
@@ -74,9 +92,19 @@ footer
         width: 1340px
         justify-content: center
 
+        @media (max-width: 1340px)
+            padding-left: 44px
+            padding-right: 44px
+            flex-wrap: wrap
+            width: 100%
+
         & div
             flex: 0 0 20%
             padding-right: 15px
+            min-width: 268px
+
+            @media (max-width: 1159px)
+                padding-top: 25px
 
     &__meta
         font: 400 15px/20px Lato
