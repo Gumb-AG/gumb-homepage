@@ -1,7 +1,6 @@
 // STYLEGUIDE - for DOM styling
 
 // DOM-Textelements
-
 h1
     color: white
     opacity: 1
@@ -25,6 +24,10 @@ h3
     font: 700 45px/55px Lato
     color: #304659
     z-index: 1
+
+    @media (max-width: 460px)
+        font-size: 35px
+        line-height: 40px
 
 h4
     font: 700 40px/45px Lato
@@ -80,10 +83,8 @@ b
         color: #E0E0E0
     
 // DOM-Sections and Divisions
-
 header
     position: relative
-    //background-color: rgb(12, 12, 12)
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
@@ -96,13 +97,8 @@ header
         padding-right: 3em
         
     @media (max-width: 520px)
-        padding-left: 1.5em
-        padding-right: 1.5em
-        padding-bottom: 1em
-        
-    @media (max-width: 400px)
-        padding-left: 1.2em
-        padding-right: 1.2em
+        padding-left: 2em
+        padding-right: 2em
     
 main
     position: relative
@@ -117,9 +113,19 @@ main
         display: flex
         flex-flow: column
         align-items: center
+
+        @media (max-width: 1390px)
+            width: 100%
+            padding: 0 80px
+
+        @media (max-width: 1210px)
+            padding: 0 40px
+            margin: 40px 0 40px 0
+
+        @media (max-width: 460px)
+            padding: 0 20px
             
 // DOM Misc.
-
 hr
     border: 0px
     border-top: 1px #EAEAEA solid
@@ -145,6 +151,27 @@ video
     left: 0
     width: 100%
     z-index: 0
+
+    @media (max-width: 1680px)
+        width: 120%
+        margin-left: -10%
+
+    @media (max-width: 1100px)
+            height: 80%
+            width: auto
+            top: 0
+
+    @media (max-width: 700px)
+        margin-left: -30%
+
+// Select
+select
+    margin-right: 16px
+    padding: 0 3px 0 0 !important
+    height: 32px
+    border: 0
+    cursor: pointer
+    background: transparent
         
 // Text Selector
 

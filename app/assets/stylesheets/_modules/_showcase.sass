@@ -15,6 +15,9 @@
         background-position-x: center
         box-shadow: $boxshadow
 
+        @media (max-width: 888px)
+            align-self: auto
+
     &__card
         background: white
         box-shadow: $boxshadow
@@ -23,7 +26,15 @@
         margin-top: -100px
         min-height: 260px
 
+        @media (max-width: 888px)
+            align-self: auto
+
     &__ui
         display: flex
         align-self: flex-end
         user-select: none
+
+        @media (max-width: 888px)
+            margin-top: 50px
+            width: 100%
+            justify-content: center

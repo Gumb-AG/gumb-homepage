@@ -7,6 +7,14 @@
         display: flex
         width: 1340px
 
+        @media (max-width: 1390px)
+            width: 100%
+
+        @media (max-width: 700px)
+            flex-flow: column
+            justify-content: center
+            align-items: center
+
         &--card
             padding: 150px 100px
 
@@ -20,6 +28,10 @@
             text-align: left
             align-items: flex-start
 
+            @media (max-width: 700px)
+                align-items: center
+                text-align: center
+
         & p
             padding-top: 10px
 
@@ -30,6 +42,10 @@
         display: flex
         margin-top: 120px
         margin-bottom: 140px
+
+        @media (max-width: 700px)
+            margin-top: 50px
+            margin-bottom: 50px
 
         &--50
             flex: 0 0 50%
@@ -45,6 +61,9 @@
 // Logo & TPB-Branding
 .logo
     height: 45px
+
+    @media (max-width: 480px)
+        height: 35px
 
 .maennli
     width: 20px
@@ -75,11 +94,23 @@
     &--128
         padding-right: 128px
 
+        @media (max-width: 1060px)
+            padding-right: 25px
+
+        @media (max-width: 700px)
+            padding-right: 0
+
 .padding-left
     padding-left: 8px
 
     &--64
         padding-left: 64px
+
+        @media (max-width: 1060px)
+            padding-left: 25px
+
+        @media (max-width: 700px)
+            padding-left: 0
 
 .padding-top
     padding-top: 8px

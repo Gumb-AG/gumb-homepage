@@ -19,3 +19,76 @@ header
 
         & body, & main
             background: black !important
+
+// Page specific modules (in the interest of time, i put the code here)
+.team
+
+    & .section__inner
+        
+        @media (max-width: 1390px)
+            flex-flow: column
+            flex-wrap: wrap
+
+    & .g33
+
+        &:first-child
+            
+            @media (max-width: 1390px)
+                padding-left: 150px
+
+            @media (max-width: 1210px)
+                padding-left: 100px
+
+            @media (max-width: 1074px)
+                padding-left: 0
+
+        &:nth-child(2)
+            
+            @media (max-width: 1390px)
+                display: flex
+                justify-content: flex-end
+                padding-right: 150px
+                margin-top: -100px
+
+            @media (max-width: 914px)
+                margin-top: -30px
+
+        &:last-child
+            
+            @media (max-width: 1390px)
+                padding-left: 150px
+                margin-top: -100px
+
+            @media (max-width: 1210px)
+                padding-left: 100px
+
+            @media (max-width: 1074px)
+                padding-left: 0
+
+            @media (max-width: 914px)
+                margin-top: -30px
+
+        @media (max-width: 790px)
+            display: flex !important
+            justify-content: center !important
+            padding: 0 !important
+            margin-top: 25px !important
+
+        @media (max-width: 600px)
+            justify-content: flex-start !important
+
+        & .persona
+
+            @media (max-width: 790px)
+                margin-left: -100px
+
+            @media (max-width: 600px)
+                margin-left: 0px
+
+.values
+
+    & h3
+
+        @media (max-width: 880px)
+            font-size: 35px
+            line-height: 40px
