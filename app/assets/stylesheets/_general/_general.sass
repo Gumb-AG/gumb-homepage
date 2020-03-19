@@ -60,9 +60,15 @@
             display: flex
             width: 100%
 
+            @media (max-width: 1160px)
+                flex-flow: column
+
     &__tube
         display: flex
         flex-flow: column
+
+        @media (max-width: 1160px)
+            align-items: center
 
 // Logo & TPB-Branding
 .logo
@@ -100,6 +106,9 @@
     &--128
         padding-right: 128px
 
+        @media (max-width: 1420px)
+            padding-right: 50px
+
         @media (max-width: 1060px)
             padding-right: 25px
 
@@ -112,10 +121,13 @@
     &--64
         padding-left: 64px
 
-        @media (max-width: 1060px)
+        @media (max-width: 1390px)
+            padding-left: 0px
+
+        //@media (max-width: 1060px)
             padding-left: 25px
 
-        @media (max-width: 700px)
+        //@media (max-width: 700px)
             padding-left: 0
 
 .padding-top
@@ -374,6 +386,13 @@
         background-repeat: no-repeat
         background-size: 100%
 
+        @media (max-width: 1420px)
+            min-height: 1100px
+            background-size: 120%
+
+        @media (max-width: 850px)
+            background-size: 0
+
 // Quote
 .quote
     background: white
@@ -401,3 +420,6 @@
 .twitter-tweet, .fb-post, .instagram-media
     margin: 0 25px 50px 25px !important
     max-width: 500px !important
+
+    @media (max-width: 570px)
+        width: 100% !important
