@@ -168,10 +168,13 @@ quote
 // DOM Media
 video
     position: absolute
-    top: -25px
+    top: -50px
     left: 0
     width: 100%
     z-index: 0
+
+    @media (max-width: 1900px)
+        top: -30px
 
     @media (max-width: 1680px)
         width: 120%
@@ -181,9 +184,10 @@ video
             height: 80%
             width: auto
             top: 0
+            margin-left: 0
 
     @media (max-width: 700px)
-        margin-left: -30%
+        margin-left: -60%
 
 // Select
 select

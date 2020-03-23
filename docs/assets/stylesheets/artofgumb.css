@@ -182,6 +182,9 @@ a, a:hover, a:active, a:focus {
 .alignitems--center {
   align-items: center !important; }
 
+.bold {
+  font-weight: 600; }
+
 .icon {
   width: 50px; }
   .icon--m {
@@ -550,10 +553,13 @@ quote {
 
 video {
   position: absolute;
-  top: -25px;
+  top: -50px;
   left: 0;
   width: 100%;
   z-index: 0; }
+  @media (max-width: 1900px) {
+    video {
+      top: -30px; } }
   @media (max-width: 1680px) {
     video {
       width: 120%;
@@ -562,10 +568,11 @@ video {
     video {
       height: 80%;
       width: auto;
-      top: 0; } }
+      top: 0;
+      margin-left: 0; } }
   @media (max-width: 700px) {
     video {
-      margin-left: -30%; } }
+      margin-left: -60%; } }
 
 select {
   margin-right: 16px;
@@ -1036,13 +1043,9 @@ body,
 
 body {
   position: relative;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
   color: #FFFFFF;
   overflow-x: hidden;
   background: black;

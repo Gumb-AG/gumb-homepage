@@ -28,35 +28,38 @@ body
 
     &__card
         display: flex
-        max-width: 430px
-        background-color: $gotham
-        padding: 15px 15px 0 15px
+        max-width: 365px
+        //background-color: $gotham
+        padding: 15px 0 0 0
         margin-top: 50px
 
         @media (max-width: 425px)
             margin-top: 25px
 
-        @media (max-width: 340px)
+        //@media (max-width: 340px)
             padding-left: 0
 
         &__app
             display: flex
             flex: 0 0 33.33%
-            align-items: flex-end
+            //align-items: flex-end
 
             & img
                 width: 115px
                 max-height: 130px
 
         &__text
+            display: flex
+            flex-flow: column
+            justify-content: center
             flex: 0 0 66.66%
-            padding: 0 10px 15px 10px
-
-            @media (max-width: 340px)
-                padding-left: 5px
+            padding: 0 0 0 10px
             
             & .flex
                 padding-top: 12px
+
+                @media (max-width: 410px)
+                    padding-top: 6px
 
     &__globe
 

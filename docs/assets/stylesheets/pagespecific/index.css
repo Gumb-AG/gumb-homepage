@@ -56,31 +56,29 @@ body {
     max-width: 530px; }
   .hero__card {
     display: flex;
-    max-width: 430px;
-    background-color: #1C1C1C;
-    padding: 15px 15px 0 15px;
+    max-width: 365px;
+    padding: 15px 0 0 0;
     margin-top: 50px; }
     @media (max-width: 425px) {
       .hero__card {
         margin-top: 25px; } }
-    @media (max-width: 340px) {
-      .hero__card {
-        padding-left: 0; } }
     .hero__card__app {
       display: flex;
-      flex: 0 0 33.33%;
-      align-items: flex-end; }
+      flex: 0 0 33.33%; }
       .hero__card__app img {
         width: 115px;
         max-height: 130px; }
     .hero__card__text {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
       flex: 0 0 66.66%;
-      padding: 0 10px 15px 10px; }
-      @media (max-width: 340px) {
-        .hero__card__text {
-          padding-left: 5px; } }
+      padding: 0 0 0 10px; }
       .hero__card__text .flex {
         padding-top: 12px; }
+        @media (max-width: 410px) {
+          .hero__card__text .flex {
+            padding-top: 6px; } }
   .hero__globe__wrapper {
     width: 1340px;
     margin: 0 auto;
