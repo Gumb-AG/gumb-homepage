@@ -12,6 +12,9 @@ header
         height: 80%
         background: rgba(0,0,0,.3)
 
+        @media (max-width: 340px)
+            height: 90%
+
 .page
 
     &--dark
@@ -92,6 +95,15 @@ header
         @media (max-width: 880px)
             font-size: 35px
             line-height: 40px
+
+    &__text
+        min-height: 295px
+
+        @media (max-width: 1200px)
+            min-height: 340px
+
+        @media (max-width: 700px)
+            min-height: 0
 
 .social
 
