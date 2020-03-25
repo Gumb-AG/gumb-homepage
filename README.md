@@ -1,6 +1,6 @@
 # Gumb AG
 
-This repository contains the werbsite found at [gumb.ch](https://gumb.ch) and is served via GitHub Pages
+This repository contains the website found at [gumb.ch](https://gumb.ch) and is served via GitHub Pages
 
 ### Getting Started
 
@@ -20,7 +20,7 @@ npm install
 gulp
 ```
 
-Run to build the complete website from app/ to dist/.
+Run to build the complete website from app/ to docs/.
 
 ### Running locally
 
