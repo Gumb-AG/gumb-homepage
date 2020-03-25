@@ -9,6 +9,9 @@ header {
 .header--media {
   height: 80%;
   background: rgba(0, 0, 0, 0.3); }
+  @media (max-width: 340px) {
+    .header--media {
+      height: 90%; } }
 
 .page--dark {
   background: black !important; }
@@ -83,6 +86,15 @@ header {
   .values h3 {
     font-size: 35px;
     line-height: 40px; } }
+
+.values__text {
+  min-height: 295px; }
+  @media (max-width: 1200px) {
+    .values__text {
+      min-height: 340px; } }
+  @media (max-width: 700px) {
+    .values__text {
+      min-height: 0; } }
 
 @media (max-width: 1188px) {
   .social {

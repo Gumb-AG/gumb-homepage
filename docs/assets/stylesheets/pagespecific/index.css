@@ -74,6 +74,11 @@ body {
       justify-content: center;
       flex: 0 0 66.66%;
       padding: 0 0 0 10px; }
+      .hero__card__text p {
+        color: white;
+        margin-top: 0; }
+      .hero__card__text b {
+        color: white; }
       .hero__card__text .flex {
         padding-top: 12px; }
         @media (max-width: 410px) {
