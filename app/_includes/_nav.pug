@@ -2,78 +2,21 @@ mixin nav(lang, page, theme, brand)
 
     if lang == 'de'
         if page == 'index'
-            nav.nav
-                a.nav__brand(href='#')
-                    img.logo(src='/assets/vector/gumb.svg')
-                    img.logo.hide(src='/assets/vector/gumb-brand.svg')
-                nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.btn.btn--glass(href='#') Home
-                    a.nav__navigation__item.btn.btn--glass(href='#teamplanbuch') Unsere Apps
-                    a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                    a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
-                    a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
-                    select.nav__navigation__select.nav__navigation__item#mobileNav
-                        option(value='#' selected) Navigation
-                        option(value='#') Home
-                        option(value='#teamplanbuch') Unsere Apps
-                        option(value='/mission-vision.html') Warum & Wie
-                        option(value='/about.html') Über uns
-                        option(value='/community.html') Community
-                    a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kontakt
-                nav.nav__social
-                    a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
-                        ion-icon(name="logo-facebook" size="small")
-                    a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
-                        ion-icon(name="logo-linkedin" size="small")
-                    a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
-                        ion-icon(name="logo-twitter" size="small")
-                    a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
-                        ion-icon(name="ios-arrow-round-forward")
-        else
-            if theme == 'dark'
+            .nav__wrapper.nav__wrapper--dark
                 nav.nav
-                    a.nav__brand(href='/')
-                        img.logo(src='/assets/vector/gumb-brand-dark.svg')
+                    a.nav__brand(href='#')
+                        img.logo(src='/assets/vector/gumb.svg')
+                        img.logo.hide(src='/assets/vector/gumb-brand.svg')
                     nav.nav__navigation.nav__navigation--de
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#teamplanbuch') Unsere Apps
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.html') Über uns
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
-                        select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
-                            option(value='#' selected) Navigation
-                            option(value='/') Home
-                            option(value='/#teamplanbuch') Unsere Apps
-                            option(value='/mission-vision.html') Warum & Wie
-                            option(value='/about.html') Über uns
-                            option(value='/community.html') Community
-                        a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Kontakt
-                    nav.nav__social.nav__social--dark
-                        a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
-                            ion-icon(name="logo-facebook" size="small")
-                        a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
-                            ion-icon(name="logo-linkedin" size="small")
-                        a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
-                            ion-icon(name="logo-twitter" size="small")
-                        a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
-                            ion-icon(name="ios-arrow-round-forward")
-            else
-                nav.nav
-                    a.nav__brand(href='/')
-                        if brand == 'white'
-                            img.logo(src='/assets/vector/gumb-brand-white.svg')
-                        else
-                            img.logo(src='/assets/vector/gumb-brand.svg')
-                    nav.nav__navigation.nav__navigation--de
-                        a.nav__navigation__item.btn.btn--glass(href='/') Home
-                        a.nav__navigation__item.btn.btn--glass(href='/#teamplanbuch') Unsere Apps
+                        a.nav__navigation__item.btn.btn--glass(href='#') Home
+                        a.nav__navigation__item.btn.btn--glass(href='#teamplanbuch') Unsere Apps
                         a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
                         a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
                         a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
                         select.nav__navigation__select.nav__navigation__item#mobileNav
                             option(value='#' selected) Navigation
-                            option(value='/') Home
-                            option(value='/#teamplanbuch') Unsere Apps
+                            option(value='#') Home
+                            option(value='#teamplanbuch') Unsere Apps
                             option(value='/mission-vision.html') Warum & Wie
                             option(value='/about.html') Über uns
                             option(value='/community.html') Community
@@ -87,79 +30,82 @@ mixin nav(lang, page, theme, brand)
                             ion-icon(name="logo-twitter" size="small")
                         a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
                             ion-icon(name="ios-arrow-round-forward")
-    else
-        if page == 'index'
-            nav.nav
-                a.nav__brand(href='#')
-                    img.logo(src='/assets/vector/gumb.svg')
-                    img.logo.hide(src='/assets/vector/gumb-brand.svg')
-                nav.nav__navigation.nav__navigation--de
-                    a.nav__navigation__item.btn.btn--glass(href='#') Home
-                    a.nav__navigation__item.btn.btn--glass(href='/index.en.html#teamplanbuch') Our Apps
-                    a.nav__navigation__item.btn.btn--glass(href='/mission-vision.en.html') Why & How
-                    a.nav__navigation__item.btn.btn--glass(href='/about.en.html') About us
-                    a.nav__navigation__item.btn.btn--glass(href='/community.en.html') Community
-                    select.nav__navigation__select.nav__navigation__item#mobileNav
-                        option(value='#' selected) Navigation
-                        option(value='#') Home
-                        option(value='/index.en.html#teamplanbuch') Our Apps
-                        option(value='/mission-vision.en.html') Why & How
-                        option(value='/about.en.html') About us
-                        option(value='/community.en.html') Community
-                    a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Get in touch
-                nav.nav__social
-                    a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
-                        ion-icon(name="logo-facebook" size="small")
-                    a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
-                        ion-icon(name="logo-linkedin" size="small")
-                    a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
-                        ion-icon(name="logo-twitter" size="small")
-                    a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
-                        ion-icon(name="ios-arrow-round-forward")
         else
             if theme == 'dark'
-                nav.nav
-                    a.nav__brand(href='/')
-                        img.logo(src='/assets/vector/gumb-brand-dark.svg')
-                    nav.nav__navigation.nav__navigation--de
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/index.en.html') Home
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#teamplanbuch') Our Apps
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.en.html') Why & How
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.en.html') About us
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.en.html') Community
-                        select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
-                            option(value='#' selected) Navigation
-                            option(value='/index.en.html') Home
-                            option(value='/index.en.html#teamplanbuch') Our Apps
-                            option(value='/mission-vision.en.html') Why & How
-                            option(value='/about.en.html') About us
-                            option(value='/community.en.html') Community
-                        a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Get in touch
-                    nav.nav__social.nav__social--dark
-                        a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
-                            ion-icon(name="logo-facebook" size="small")
-                        a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
-                            ion-icon(name="logo-linkedin" size="small")
-                        a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
-                            ion-icon(name="logo-twitter" size="small")
-                        a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
-                            ion-icon(name="ios-arrow-round-forward")
+                .nav__wrapper
+                    nav.nav
+                        a.nav__brand(href='/')
+                            img.logo(src='/assets/vector/gumb-brand-dark.svg')
+                        nav.nav__navigation.nav__navigation--de
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/') Home
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#teamplanbuch') Unsere Apps
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.html') Warum & Wie
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.html') Über uns
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.html') Community
+                            select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
+                                option(value='#' selected) Navigation
+                                option(value='/') Home
+                                option(value='/#teamplanbuch') Unsere Apps
+                                option(value='/mission-vision.html') Warum & Wie
+                                option(value='/about.html') Über uns
+                                option(value='/community.html') Community
+                            a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Kontakt
+                        nav.nav__social.nav__social--dark
+                            a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
+                                ion-icon(name="logo-facebook" size="small")
+                            a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
+                                ion-icon(name="logo-linkedin" size="small")
+                            a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
+                                ion-icon(name="logo-twitter" size="small")
+                            a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
+                                ion-icon(name="ios-arrow-round-forward")
             else
+                .nav__wrapper.nav__wrapper--dark
+                    nav.nav
+                        a.nav__brand(href='/')
+                            if brand == 'white'
+                                img.logo(src='/assets/vector/gumb-brand-white.svg')
+                            else
+                                img.logo(src='/assets/vector/gumb-brand.svg')
+                        nav.nav__navigation.nav__navigation--de
+                            a.nav__navigation__item.btn.btn--glass(href='/') Home
+                            a.nav__navigation__item.btn.btn--glass(href='/#teamplanbuch') Unsere Apps
+                            a.nav__navigation__item.btn.btn--glass(href='/mission-vision.html') Warum & Wie
+                            a.nav__navigation__item.btn.btn--glass(href='/about.html') Über uns
+                            a.nav__navigation__item.btn.btn--glass(href='/community.html') Community
+                            select.nav__navigation__select.nav__navigation__item#mobileNav
+                                option(value='#' selected) Navigation
+                                option(value='/') Home
+                                option(value='/#teamplanbuch') Unsere Apps
+                                option(value='/mission-vision.html') Warum & Wie
+                                option(value='/about.html') Über uns
+                                option(value='/community.html') Community
+                            a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kontakt
+                        nav.nav__social
+                            a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
+                                ion-icon(name="logo-facebook" size="small")
+                            a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
+                                ion-icon(name="logo-linkedin" size="small")
+                            a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
+                                ion-icon(name="logo-twitter" size="small")
+                            a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
+                                ion-icon(name="ios-arrow-round-forward")
+    else
+        if page == 'index'
+            .nav__wrapper.nav__wrapper--dark
                 nav.nav
-                    a.nav__brand(href='/')
-                        if brand == 'white'
-                            img.logo(src='/assets/vector/gumb-brand-white.svg')
-                        else
-                            img.logo(src='/assets/vector/gumb-brand.svg')
+                    a.nav__brand(href='#')
+                        img.logo(src='/assets/vector/gumb.svg')
+                        img.logo.hide(src='/assets/vector/gumb-brand.svg')
                     nav.nav__navigation.nav__navigation--de
-                        a.nav__navigation__item.btn.btn--glass(href='/index.en.html') Home
+                        a.nav__navigation__item.btn.btn--glass(href='#') Home
                         a.nav__navigation__item.btn.btn--glass(href='/index.en.html#teamplanbuch') Our Apps
                         a.nav__navigation__item.btn.btn--glass(href='/mission-vision.en.html') Why & How
                         a.nav__navigation__item.btn.btn--glass(href='/about.en.html') About us
                         a.nav__navigation__item.btn.btn--glass(href='/community.en.html') Community
                         select.nav__navigation__select.nav__navigation__item#mobileNav
                             option(value='#' selected) Navigation
-                            option(value='/index.en.html') Home
+                            option(value='#') Home
                             option(value='/index.en.html#teamplanbuch') Our Apps
                             option(value='/mission-vision.en.html') Why & How
                             option(value='/about.en.html') About us
@@ -174,3 +120,63 @@ mixin nav(lang, page, theme, brand)
                             ion-icon(name="logo-twitter" size="small")
                         a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
                             ion-icon(name="ios-arrow-round-forward")
+        else
+            if theme == 'dark'
+                .nav__wrapper
+                    nav.nav
+                        a.nav__brand(href='/')
+                            img.logo(src='/assets/vector/gumb-brand-dark.svg')
+                        nav.nav__navigation.nav__navigation--de
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/index.en.html') Home
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/#teamplanbuch') Our Apps
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/mission-vision.en.html') Why & How
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/about.en.html') About us
+                            a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/community.en.html') Community
+                            select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
+                                option(value='#' selected) Navigation
+                                option(value='/index.en.html') Home
+                                option(value='/index.en.html#teamplanbuch') Our Apps
+                                option(value='/mission-vision.en.html') Why & How
+                                option(value='/about.en.html') About us
+                                option(value='/community.en.html') Community
+                            a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat Get in touch
+                        nav.nav__social.nav__social--dark
+                            a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
+                                ion-icon(name="logo-facebook" size="small")
+                            a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
+                                ion-icon(name="logo-linkedin" size="small")
+                            a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
+                                ion-icon(name="logo-twitter" size="small")
+                            a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
+                                ion-icon(name="ios-arrow-round-forward")
+            else
+                .nav__wrapper.nav__wrapper--dark
+                    nav.nav
+                        a.nav__brand(href='/')
+                            if brand == 'white'
+                                img.logo(src='/assets/vector/gumb-brand-white.svg')
+                            else
+                                img.logo(src='/assets/vector/gumb-brand.svg')
+                        nav.nav__navigation.nav__navigation--de
+                            a.nav__navigation__item.btn.btn--glass(href='/index.en.html') Home
+                            a.nav__navigation__item.btn.btn--glass(href='/index.en.html#teamplanbuch') Our Apps
+                            a.nav__navigation__item.btn.btn--glass(href='/mission-vision.en.html') Why & How
+                            a.nav__navigation__item.btn.btn--glass(href='/about.en.html') About us
+                            a.nav__navigation__item.btn.btn--glass(href='/community.en.html') Community
+                            select.nav__navigation__select.nav__navigation__item#mobileNav
+                                option(value='#' selected) Navigation
+                                option(value='/index.en.html') Home
+                                option(value='/index.en.html#teamplanbuch') Our Apps
+                                option(value='/mission-vision.en.html') Why & How
+                                option(value='/about.en.html') About us
+                                option(value='/community.en.html') Community
+                            a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Get in touch
+                        nav.nav__social
+                            a.padding-right(href='https://www.facebook.com/gumbapp/' target='_blank') 
+                                ion-icon(name="logo-facebook" size="small")
+                            a.padding-right(href='https://www.linkedin.com/company/gumb/' target='_blank') 
+                                ion-icon(name="logo-linkedin" size="small")
+                            a.padding-right(href='https://twitter.com/GumbApp' target='_blank') 
+                                ion-icon(name="logo-twitter" size="small")
+                            a.nav__navigation__lang.padding-left(href='/' title='Zu Deutsch wechseln') DE
+                                ion-icon(name="ios-arrow-round-forward")
