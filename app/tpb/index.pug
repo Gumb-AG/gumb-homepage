@@ -1,0 +1,163 @@
+include /_includes/_extensions/_beacon.pug
+
+include /_includes/_nav.pug
+include /_includes/_footer.pug
+
+include /_mixins/_extensions/_integrations.pug
+
+meta(charset='utf-8')
+meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+meta(name="theme-color" content="#1fc2c2")
+meta(name='mobile-web-app-capable' content='yes')
+meta(name='apple-mobile-web-app-capable' content='yes')
+meta(name='application-name' content='Teamplanbuch')
+meta(name='apple-mobile-web-app-status-bar-style' content='black')
+meta(name='apple-mobile-web-app-title' content='Teamplanbuch')
+meta(name='msapplication-TileColor' content='#1b1b1c')
+meta(name='theme-color' content='#1fc2c2')
+meta(property='og:title' content='Teamplanbuch')
+meta(property='og:type' content='website')
+meta(property='og:url' content='https://www3.teamplanbuch.ch')
+
+link(rel="icon" type="image/png" href="/assets/images/favicon-tpb.png")
+
+doctype html
+html(lang="de")
+    head
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+
+        script(src='/assets/javascript/interactive.js' type='text/javascript' async)
+        script(src='/assets/javascript/nav.js' type='text/javascript' async)
+
+        link(href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet")
+
+        link(rel='stylesheet' href='/assets/stylesheets/artofgumb.css')
+        title Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften · Teamplanbuch
+
+    body
+        +beacon('de')
+
+        header.header__tpb
+            .nav__wrapper
+                nav.nav
+                    a.nav__brand(href='#')
+                        img.logo(src='/assets/images/tpb-maennli.png')
+                    nav.nav__navigation.nav__navigation--de
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Start
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Apps
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Preise
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Statistiken
+                        
+                        select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
+                            option(value='#' selected) Navigation
+                            option(value='#') Home
+
+                        a.nav__navigation__item.nav__navigation__item--cta.btn.startChat Kostenlos ausprobieren
+                        a.nav__navigation__item.nav__navigation__login.nav__navigation__item--dark.btn.btn--glass(href='#') Login
+                            ion-icon.padding-right--4(name="ios-lock" size="small")
+                        
+                    nav.nav__social.nav__social--dark
+                        a.padding-right(href='https://www.facebook.com/teamplanbuch/' target='_blank') 
+                            ion-icon(name="logo-facebook" size="small")
+                        a.nav__navigation__lang.padding-left(href='/index.en.html' title='Switch to English') EN
+                            ion-icon(name="ios-arrow-round-forward")
+            
+        main#teamplanbuch
+            section
+                .section__title
+                    h6 Männli
+                    h3.gradient Teamplanbuch
+                    h3 und Dein Team ist organisiert.
+                    p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
+                br
+                br
+                br
+                .appshowcase
+                    .appshowcase__text
+                        h4 Organisiere Vereins-Termine schnell und unkompliziert
+                        p Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.
+                    .appshowcase__img
+                        img(src='/assets/images/mockups/iphone-overview.png')
+                br
+                br
+                br
+                .appshowcase.appshowcase--reverse
+                    .appshowcase__img
+                        img(src='/assets/images/mockups/iphone-menu.png')
+                    .appshowcase__text
+                        h4 Verschaffe Dir einen Überblick über Termine und Anwesenheit
+                        p Leiter und Mitglieder können sich jederzeit mit Internet oder Handy über die Termine und die An-/Abmeldungen im Teamplanbuch informieren. Damit kann jedes Training und jede Probe zuverlässig geplant werden (Wer kommt? Wer übernimmt welche Aufgabe?).
+                br
+                br
+                br
+                .appshowcase
+                    .appshowcase__text
+                        h4 Analysiere Anwesenheit und unentschuldigtes Fernbleiben
+                        p Die jährliche Anwesenheit, Termine und unentschuldigtes Fernbleiben können mit dem Teamplanbuch mühelos ausgewertet werden. Diese Statistiken erleichtern das Erstellen von Jahresberichten und Abrechnungen.
+                    .appshowcase__img
+                        img(src='/assets/images/mockups/surfacestudio-tpb.png')
+
+            +integrations(1)
+
+            section
+                .section__title
+                    h6 iOS, Android &amp; im Web
+                    h4 Teamplanbuch, 
+                        br 
+                        | auf all Deinen Geräten.
+                    p Hol Dir die App und teste 40 Tage kostenlos.
+                .flex.apps__wrapper
+                    a(href='https://apps.apple.com/de/app/teamplanbuch2/id1198240785' target='_blank')
+                        img.apps(src='/assets/vector/apps/de/ios.svg')
+                    a(href='https://play.google.com/store/apps/details?id=com.teamplanbuch.app' target='_blank')
+                        img.apps(src='/assets/vector/apps/de/droid.svg')
+                    a(href='#')
+                        img.apps(src='/assets/vector/apps/de/web.svg')
+
+            section.section__spacer
+                .section__title
+                    h4 Die Statistiken & Zahlen
+                    p …die unsere Geschichte erzählen.
+                .flex.flex--items.section__content.facts__wrapper
+                    .flex.facts
+                        h3 1680
+                        h6 Vereine
+                    .flex.facts
+                        h3 30%
+                        h6 mehr als eine Lizenz
+                    .flex.facts
+                        .flex
+                            .gps__wrapper.flex
+                                .gps
+                                    .pulse
+                                    .dot
+                                h3.gradient#rtUsers -
+                        h6 Gerade online
+                    .flex.facts
+                        h3 2299
+                        h6 Bewertungen
+                    .flex.facts
+                        h3 1.352.428
+                        h6 Anlässe & Termine
+                .flex.timeline__wrapper
+                    .flex.facts.facts--nomargin
+                        h3 205.320
+                        .timeline__item
+                            .timeline__dot
+                        h6 Registrierte Mitglieder
+                    .timeline
+                    .flex.facts.facts--nomargin
+                        h3 106
+                        .timeline__item
+                            .timeline__dot
+                        h6 in 👆🏼 Ländern
+                    .timeline.timeline--mod
+                    .flex.facts.facts--nomargin
+                        h3 12.300
+                        .timeline__item
+                            .timeline__dot
+                        h6 Senden sich täglich Über 👆🏼 Nachrichten
+
+        include /_includes/_endofbody.pug
+
+    +footer('de', 'bright')
