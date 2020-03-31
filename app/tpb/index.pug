@@ -62,21 +62,16 @@ html(lang="de")
                             ion-icon(name="ios-arrow-round-forward")
             
         main#teamplanbuch
-            section
-                .section__title
-                    //-h6 Männli
-                    h3.gradient Teamplanbuch
-                    h3 und Dein Team ist organisiert.
-                    p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Organisiere Vereins-Termine schnell und unkompliziert
-                        p Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-overview.png')
+            section.margin-bottom--0
+                .section__inner
+                    .section__content.section__content--50.padding-right--64
+                        .section__title.section__title--ltr
+                            //-h6 Männli
+                            h3.gradient Teamplanbuch
+                            h3 und Dein Team ist organisiert.
+                            p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
+                    .section__content.section__content--50.section__content--image
+                        img(src='/assets/images/mockups/iphone-menu.png')
             
             +integrations(1)
             section
@@ -93,6 +88,14 @@ html(lang="de")
                         img.apps(src='/assets/vector/apps/de/droid.svg')
                     a(href='#')
                         img.apps(src='/assets/vector/apps/de/web.svg')
+            
+            section
+                .appshowcase
+                    .appshowcase__text
+                        h4 Organisiere Vereins-Termine schnell und unkompliziert
+                        p Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.
+                    .appshowcase__img
+                        img(src='/assets/images/mockups/iphone-overview.png')
             
             section
                 .appshowcase.appshowcase--reverse
