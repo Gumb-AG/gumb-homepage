@@ -56,6 +56,10 @@
         &--50
             flex: 0 0 50%
 
+        &--33
+            flex: 0 0 33.33%
+            margin-bottom: 40px
+
         &--row
             display: flex
             width: 100%
@@ -137,12 +141,6 @@
 
         @media (max-width: 1390px)
             padding-left: 0px
-
-        //@media (max-width: 1060px)
-            padding-left: 25px
-
-        //@media (max-width: 700px)
-            padding-left: 0
 
 .padding-top
     padding-top: 8px
@@ -380,6 +378,25 @@
         background: $nebula
         border-radius: 50%
 
+// Pricing
+.pricing
+
+    & .section__tube
+        padding: 18px
+
+        &:hover
+            background-color: #f3f4f5
+            @include animate()
+
+            & .pricing__info
+                visibility: visible
+
+        & > p:first-child
+            min-height: 125px
+
+    &__info
+        visibility: hidden
+
 // Gradient
 .gradient
     background: $gradient
@@ -426,6 +443,18 @@
 // Misc
 .clickable
     cursor: pointer
+
+.check
+    display: flex
+    padding-bottom: 10px
+
+    & *
+        color: $nebula
+
+    & ion-icon
+        font-size: 24px
+        min-width: 24px
+        padding-top: 5px
 
 // Google Maps integration
 .map
