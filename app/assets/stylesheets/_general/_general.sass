@@ -58,7 +58,8 @@
 
         &--33
             flex: 0 0 33.33%
-            margin-bottom: 40px
+            margin-top: 90px
+            margin-bottom: 0
 
         &--row
             display: flex
@@ -160,6 +161,9 @@
 
 .margin-top
     margin-top: 8px
+
+    &--0
+        margin-top: 0
 
     &--16
         margin-top: 16px
@@ -383,6 +387,8 @@
 
     & .section__tube
         padding: 18px
+        height: 100%
+        @include animate()
 
         &:hover
             background-color: #f3f4f5
@@ -455,6 +461,7 @@
         font-size: 24px
         min-width: 24px
         padding-top: 5px
+        color: $primary
 
 // Google Maps integration
 .map
