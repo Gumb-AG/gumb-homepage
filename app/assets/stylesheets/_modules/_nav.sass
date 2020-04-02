@@ -51,6 +51,7 @@
 
         &__item
             display: inline-flex
+            align-items: center
             color: white
             font-size: 15px
             white-space: nowrap
@@ -77,6 +78,8 @@
 
             &--cta
                 white-space: nowrap
+                border-radius: 19px
+                background: $gradient
             
                 &:hover
                     @include animate()
@@ -116,6 +119,18 @@
 
         &--dark a
             color: $dark !important
+
+    &__buttons
+        display: flex
+        flex: 0 0 15%
+        align-items: center
+        justify-content: flex-end
+
+        @media (max-width: 915px)
+            flex: 0 0 18%
+
+        @media (max-width: 480px)
+            flex: 0 0 38%
 
     &__wrapper
 

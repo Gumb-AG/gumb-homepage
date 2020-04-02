@@ -170,6 +170,9 @@
 .margin-right
     margin-right: 8px
 
+    &--16
+        margin-right: 16px
+
 .margin-top
     margin-top: 8px
 
@@ -210,6 +213,9 @@
 
     &--m
         width: 14px
+
+    &--l-fs
+        font-size: 18px
 
 // Appstore logos
 .apps
@@ -252,12 +258,15 @@
 
     &--shadow
         box-shadow: 0px 2px 20px #141d2538
-        background-color: white
+        background: white !important
+        color: $dark !important
+        @include animate()
 
         &:hover
             color: white
-            background: $primary !important
-        
+            box-shadow: 0px 2px 25px #141d254d
+            @include animate()
+
     &--icon
         display: flex
         align-items: center
