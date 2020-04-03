@@ -27,6 +27,7 @@ html(lang="de")
 
         script(src='/assets/javascript/interactive.js' type='text/javascript' async)
         script(src='/assets/javascript/nav.js' type='text/javascript' async)
+        script(src='/assets/javascript/overlay.js' type='text/javascript' async)
 
         link(href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet")
 
@@ -58,8 +59,37 @@ html(lang="de")
                             option(value='#') Home
 
                     nav.nav__buttons
-                        a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.margin-right--16 Login
+                        a.nav__navigation__item.nav__navigation__item--cta.btn.btn--shadow.margin-right--16#login Login
                         a.nav__navigation__item.nav__navigation__item--cta.btn Kostenlos ausprobieren
+
+        .overlay#loginOverlay
+            .close
+                ion-icon.dark(name="ios-close-circle-outline" size="large")
+
+            form(action="https://www3.teamplanbuch.ch/spb/buch/login-register/dologin.php" method="post")
+                .section__title.padding-bottom--64
+                    h4 Login
+                    p Schnell und sicher in Dein 
+                        b.gradient Teamplanbuch
+                        |  einloggen.
+                br
+                input(type="hidden" name="userLogin" value="")
+                .floating
+                    input#input__username.floating__input(name='username' type='text' placeholder='Deine E-Mail-Adresse')
+                    label.floating__label(for='input__username' data-content='Username')
+                    span.hide
+                        | Username
+                .floating
+                    input#input__password.floating__input(type='password' name='passwort' placeholder='Dein Passwort')
+                    label.floating__label(for='input__password' data-content='Password')
+                    span.hide Password
+                br
+                .section__title
+                    button.nav__navigation__item.nav__navigation__item--cta.btn 
+                        ion-icon.padding-right(name="ios-lock")
+                        | Einloggen
+                    br
+                    a(href='https://www.teamplanbuch.ch/passwort/' target='_blank') Passwort vergessen?
             
         main#teamplanbuch
             section.margin-bottom--0
@@ -246,7 +276,7 @@ html(lang="de")
                                         p= feature
                                 br
                                 .pricing__info
-                                    p Die Lizenz lässt sich via unseren Support beliebig nach oben hin anpassen.
+                                    p Die Lizenz lässt sich via unserem Support beliebig nach oben hin anpassen.
 
                 .section__title
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.margin-top--16.startChat Jetzt 40 Tage kostenlos ausprobieren
