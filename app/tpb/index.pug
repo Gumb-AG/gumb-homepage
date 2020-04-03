@@ -37,6 +37,8 @@ html(lang="de")
     body
         +beacon('de')
 
+        iframe(name="tpbProxy" src="")#tpbProxy
+        
         header.header__tpb
             .nav__wrapper
                 nav.nav
@@ -66,7 +68,7 @@ html(lang="de")
             .close
                 ion-icon.dark(name="ios-close-circle-outline" size="large")
 
-            form(action="https://www3.teamplanbuch.ch/spb/buch/login-register/dologin.php" method="post")
+            form(action="https://www.teamplanbuch.ch/spb/buch/login-register/dologin.php" method="post" target="tpbProxy")#loginForm
                 .section__title.padding-bottom--64
                     h4 Login
                     p Schnell und sicher in Dein 
@@ -192,7 +194,7 @@ html(lang="de")
                             h3 und Dein Team ist organisiert.
                             p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
                             br
-                            .form.registerStep#registerInline
+                            .registerStep#registerInline
                                 form.flex.flex--items(action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post")
                                     input(type="hidden" name="userRegister" value="1")
                                     .floating
@@ -382,8 +384,8 @@ html(lang="de")
                                 .pricing__info
                                     p Die Lizenz lässt sich via unserem Support beliebig nach oben hin anpassen.
 
-                .section__title
-                    a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.margin-top--16.startChat Jetzt 40 Tage kostenlos ausprobieren
+                .section__title.margin-top--55
+                    a.nav__navigation__item.nav__navigation__item--cta.btn Jetzt 40 Tage kostenlos ausprobieren
                     p Transparente Kosten durch einen fixen Pauschalpreis und kulanter Abo-Service. Keine Bezahldaten nötig.
 
         include /_includes/_endofbody.pug

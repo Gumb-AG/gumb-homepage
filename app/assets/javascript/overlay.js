@@ -4,11 +4,13 @@ $(function () {
 
     // Login Overlay
     $('#login').click(function () {
+        $('.overlay').removeClass('flex');
         $('#loginOverlay').addClass('flex');
     });
 
     // Probeabo Overlay
     $('#try').click(function () {
+        $('.overlay').removeClass('flex');
         $('#tryOverlay').addClass('flex');
 
         // Hide 2nd step
@@ -29,6 +31,11 @@ $(function () {
     // Close (all) Overlay(s)
     $('.close').click(function () {
         $('.overlay').removeClass('flex');
+    });
+
+    $('#loginForm').bind('submit', function () {
+        // Show iFrame
+        $('#tpbProxy').show();
     });
 
     // Original Login & Register code from teamplanbuch.ch (modified)
@@ -76,10 +83,17 @@ $(function () {
                 url: $(this).attr('action'),
                 data: $(this).serialize(),
                 success: function (data) {
-                    if (data == "1")
+                    if (data == "1") {
                         console.log('Probeabo erfolgreich erstellt. Du kannst dich nun anmelden!');
-                    else
+
+                        // Fire success message
+                        
+                        // Open Login
+                        $('#login').click();
+                    }
+                    else {
                         console.log('Ein Fehler bei der Erstellung des Probeabos ist aufgetreten!');
+                    }
                 },
                 dataType: 'html',
                 crossDomain: false,
