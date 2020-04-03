@@ -1,4 +1,4 @@
-input {
+input, select {
     background: none;
     border-width: 0;
     display: block;
@@ -39,7 +39,7 @@ legend {
 }
 
 .floating {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     background-color: var(--field__background);
     transition: background-color 0.2s ease;
     border-top-left-radius: 4px;
