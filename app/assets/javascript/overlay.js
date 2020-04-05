@@ -87,12 +87,19 @@ $(function () {
                         console.log('Probeabo erfolgreich erstellt. Du kannst dich nun anmelden!');
 
                         // Fire success message
-                        
+                        Beacon('show-message', 'd2682787-58df-4a42-8fe5-c7064d02c496');
+
+                        // Transfer credentials (email)
+                        $('#input__username').val( $('#input__email').val() );
+
                         // Open Login
                         $('#login').click();
                     }
                     else {
                         console.log('Ein Fehler bei der Erstellung des Probeabos ist aufgetreten!');
+
+                        // Fire failure message
+                        Beacon('show-message', '244f0dfc-3b51-4b26-ae07-06004c6ec4c7');
                     }
                 },
                 dataType: 'html',
