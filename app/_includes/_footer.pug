@@ -1,6 +1,6 @@
 include ../_mixins/_extensions/_googlemaps.pug
 
-mixin footer(lang, theme)
+mixin footer(lang, theme, page)
     if lang == 'de'
         if theme == 'bright'
             footer
@@ -37,14 +37,24 @@ mixin footer(lang, theme)
                             p.footer__meta © Gumb AG
                         div
                             b.padding-bottom.nebula Navigation
-                            p
-                                a(href='/') Home
-                            p
-                                a(href='/about.html') Über uns
-                            p
-                                a(href='/mission-vision.html') Warum & Wie
-                            p
-                                a(href='/community.html') Community
+                            if page != 'tpb'
+                                p
+                                    a(href='/') Home
+                                p
+                                    a(href='/about.html') Über uns
+                                p
+                                    a(href='/mission-vision.html') Warum & Wie
+                                p
+                                    a(href='/community.html') Community
+                            else
+                                p
+                                    a(href='#') Start
+                                p
+                                    a(href='#preise') Abos und Preise
+                                p
+                                    a(href='#statistiken') Statistiken
+                                p
+                                    a.startChat Hilfe
                         div
                             b.padding-bottom.nebula Über Gumb
                             p

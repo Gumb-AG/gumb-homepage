@@ -1,6 +1,7 @@
 mixin stats(lang)
-    section.section__spacer
-        if lang == 'de'
+    if lang == 'de'
+        div#statistiken
+        section.section__spacer
             .section__title
                 h4 Die Statistiken & Zahlen
                 p …die unsere Geschichte erzählen.
@@ -43,7 +44,9 @@ mixin stats(lang)
                     .timeline__item
                         .timeline__dot
                     h6 Senden sich täglich Über 👆🏼 Nachrichten
-        else
+    else
+        div#statistics
+        section.section__spacer
             .section__title
                 h4 The stats and figures
                 p …that tell our story.
