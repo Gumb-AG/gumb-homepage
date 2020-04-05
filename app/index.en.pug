@@ -4,6 +4,7 @@ include _mixins/_extensions/_integrations.pug
 
 include _mixins/_stats.pug
 include _mixins/_appshowcase.pug
+include _mixins/_getapp.pug
 
 doctype html
 html(lang="en")
@@ -43,21 +44,7 @@ html(lang="en")
             +appshowcase('en')
 
             +integrations(1)
-
-            section
-                .section__title
-                    h6 iOS, Android & web
-                    h4 Teamplanbuch, 
-                        br 
-                        | on all your devices.
-                    p Get the app and test it 40 days for free.
-                .flex.apps__wrapper
-                    a(href='https://apps.apple.com/de/app/teamplanbuch2/id1198240785' target='_blank')
-                        img.apps(src='/assets/vector/apps/en/ios.svg')
-                    a(href='https://play.google.com/store/apps/details?id=com.teamplanbuch.app' target='_blank')
-                        img.apps(src='/assets/vector/apps/en/droid.svg')
-                    a(href='https://www3.teamplanbuch.ch/startseite' target='_blank')
-                        img.apps(src='/assets/vector/apps/en/web.svg')
+            +getapp('en')
 
             section.section__spacer
                 .section__title
