@@ -1,0 +1,96 @@
+mixin pricing(lang)
+    if lang == 'de'
+        div#preise
+        section.section__spacer
+            .section__title
+                h6 Jahreslizenzen
+                h4 Abos und Preise
+                p Für jede Gruppierung das passende dabei!
+            .section__inner.pricing
+                .section__content.section__content--33
+                    a(href='#')
+                        .section__tube
+                            h6 Probeabo
+                            h3 Kostenlos
+                            br
+                            each feature in ['Alle Funktionen der Basislizenz', '40 Tage unverbindlich und ohne Einschränkungen testen', 'Die Apps für das iPhone und Android Smartphones stehen als kostenloser Download im AppStore und Google PlayStore zur Verfügung']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p Du kannst das Teamplanbuch 40 Tage lang völlig kostenlos und unverbindlich testen. Wenn Du das Teamplanbuch weiter nutzen möchtest kannst Du jederzeit im Buch eine Lizenz bestellen.
+                .section__content.section__content--33
+                    a(href='#')
+                        .section__tube
+                            h6 Basislizenz
+                            h3 80 CHF / 65 € pro Jahr
+                            br
+                            each feature in ['1 Teamplanbuch', 'Kostenlose App für iPhone und Android', 'Integrierte E-Mail-Funktion vereinfacht und beschleunigt die Kommunikation im Team', 'Automatische Erinnerungsmail für einen bevorstehenden Termin', 'Einschreibefrist für Termine festlegbar', 'Pinnwand, um Infos zu posten', 'Passwortgeschützter Zugang + modernste Verschlüsselung', 'Eltern-und-Kind-Login möglich', 'Übersichtliche Spiel- & Trainingsplanung', 'Einbindung der Termine in Homepage des Vereins', 'Synchronisation mit persönlichem Kalender (Outlook, iCal , Google, etc.)', 'Spezialfunktionen für Vereine mit mehreren Teams', 'Über 100 weitere nützliche Funktionen']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p Die Basislizenz ist ausreichend für die meisten Teams. Mit dieser Lizenz kannst Du Dein Team in bis zu 20 Gruppen unterteilen und bis zu 100 Personen verwalten.
+                                p Du kannst diese Lizenz jederzeit auf die Basislizenz Plus upgraden.
+                .section__content.section__content--33
+                    a(href='#')
+                        .section__tube
+                            h6 Basislizenz Plus
+                            h3 125CHF / 96€ p.a.
+                            br
+                            each feature in ['Alle Funktionen der Basislizenz', '2 Teamplanbücher', 'Zusätzlich einzelne Gruppen von Ereignissen ausschliessen. Dies ermöglicht Dir gemischte Teams in einem Buch zu verwalten sowie nur bestimmte Gruppen zu einem Ereignis aufzubieten']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p Mit der Basislizenz Plus hast Du zusätzlicher zu einer zweiten Lizenz zudem noch weitere Funktionen.
+                                p Du kannst diese Lizenz jederzeit auf eine Vereinslizenz upgraden.
+
+            .section__inner.pricing
+                .section__content.section__content--33.margin-top--0
+                    a(href='#')
+                        .section__tube
+                            h6 3er Vereinslizenz
+                            h3 165 CHF / 127 € pro Jahr
+                            br
+                            each feature in ['Alle Funktionen der Basislizenz Plus', '3 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p Du kannst diese Lizenz jederzeit von 3 Teamplanbücher (Lizenzen) auf 5 upgraden.
+                                p Die Vereinslizenz kombiniert alle verfügbaren Funktionen mit einem anpassbaren und progressiv günstiger werdenden Abonnement.
+                .section__content.section__content--33.margin-top--0
+                    a(href='#')
+                        .section__tube
+                            h6 5er Vereinslizenz
+                            h3 215 CHF / 165 € pro Jahr
+                            br
+                            each feature in ['Alle Funktionen der Basislizenz Plus', '5 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p Du kannst diese Lizenz jederzeit von 5 Teamplanbücher (Lizenzen) auf 10 upgraden.
+                .section__content.section__content--33.margin-top--0
+                    a(href='#')
+                        .section__tube
+                            h6 10er Vereinslizenz
+                            h3 250 CHF / 192 € pro Jahr
+                            br
+                            each feature in ['Alle Funktionen der Basislizenz Plus', '10 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden', 'Individuelle Erweiterbarkeit der Lizenzen über 10 hinaus für 20 CHF / 16 € ']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p Die Lizenz lässt sich via unserem Support beliebig nach oben hin anpassen.
+
+            .section__title.margin-top--55
+                a.nav__navigation__item.nav__navigation__item--cta.btn Jetzt 40 Tage kostenlos ausprobieren
+                p Transparente Kosten durch einen fixen Pauschalpreis und kulanter Abo-Service. Keine Bezahldaten nötig.
