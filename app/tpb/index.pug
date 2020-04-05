@@ -43,17 +43,22 @@ html(lang="de")
             .nav__wrapper
                 nav.nav
                     a.nav__brand(href='#')
-                        img.logo(src='/assets/images/tpb-maennli.png')
+                        img.logo.logo--tpb(src='/assets/images/tpb-maennli.png')
                     nav.nav__navigation.nav__navigation--de
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Start
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Abos und Preise
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='https://gumb.ch' target=_blank) Unternehmen
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.startChat Hilfe
 
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='https://www.facebook.com/teamplanbuch/' target='_blank')
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.padding-right--4-i(href='https://www.facebook.com/teamplanbuch/' target='_blank')
                             ion-icon.icon--l-fs(name="logo-facebook")
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.padding-right--4-i.padding-left--4-i(href='https://www.linkedin.com/company/gumb/' target='_blank')
+                            ion-icon.icon--l-fs(name="logo-linkedin")
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.padding-left--4-i(href='https://twitter.com/GumbApp' target='_blank')
+                            ion-icon.icon--l-fs(name="logo-twitter")
                         
-                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass Switch to English
+                        
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass EN
                             ion-icon(name="ios-arrow-round-forward")
                         
                         //-select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
