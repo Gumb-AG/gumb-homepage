@@ -1,5 +1,8 @@
 include _includes/_global.pug
+
 include _mixins/_extensions/_integrations.pug
+
+include _mixins/_stats.pug
 
 doctype html
 html(lang="de")
@@ -107,49 +110,7 @@ html(lang="de")
                     p Ganz gleich ob im Verein oder im großen Unternehmen. Durch unsere Softwarelösungen & Apps wird Team- & Eventmanagement mühelos und einfach. Auch in Ihrer Organisation!
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat.margin-top--30 Wir freuen uns auf Ihre Nachricht!
 
-            section.section__spacer
-                .section__title
-                    h4 Die Statistiken & Zahlen
-                    p …die unsere Geschichte erzählen.
-                .flex.flex--items.section__content.facts__wrapper
-                    .flex.facts
-                        h3 1680
-                        h6 Vereine
-                    .flex.facts
-                        h3 30%
-                        h6 mehr als eine Lizenz
-                    .flex.facts
-                        .flex
-                            .gps__wrapper.flex
-                                .gps
-                                    .pulse
-                                    .dot
-                                h3.gradient#rtUsers -
-                        h6 Gerade online
-                    .flex.facts
-                        h3 2299
-                        h6 Bewertungen
-                    .flex.facts
-                        h3 1.352.428
-                        h6 Anlässe & Termine
-                .flex.timeline__wrapper
-                    .flex.facts.facts--nomargin
-                        h3 205.320
-                        .timeline__item
-                            .timeline__dot
-                        h6 Registrierte Mitglieder
-                    .timeline
-                    .flex.facts.facts--nomargin
-                        h3 106
-                        .timeline__item
-                            .timeline__dot
-                        h6 in 👆🏼 Ländern
-                    .timeline.timeline--mod
-                    .flex.facts.facts--nomargin
-                        h3 12.300
-                        .timeline__item
-                            .timeline__dot
-                        h6 Senden sich täglich Über 👆🏼 Nachrichten
+            +stats('de')
 
         include /_includes/_endofbody.pug
         script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js')

@@ -1,5 +1,8 @@
 include _includes/_global.pug
+
 include _mixins/_extensions/_integrations.pug
+
+include _mixins/_stats.pug
 
 doctype html
 html(lang="en")
@@ -107,49 +110,8 @@ html(lang="en")
                     p No matter whether in a club or a large company. Our software solutions & apps enable effortless and simple team & event management. Perfect for your organization!
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat.margin-top--30 We are looking forward to your message!
 
-            section.section__spacer
-                .section__title
-                    h4 The stats and figures
-                    p …that tell our story.
-                .flex.section__content.facts__wrapper
-                    .flex.facts
-                        h3 1680
-                        h6 Clubs
-                    .flex.facts
-                        h3 30%
-                        h6 more than one license
-                    .flex.facts
-                        .flex
-                            .gps__wrapper.flex
-                                .gps
-                                    .pulse
-                                    .dot
-                                h3.gradient#rtUsers -
-                        h6 Currently online
-                    .flex.facts
-                        h3 2299
-                        h6 Reviews
-                    .flex.facts
-                        h3 1.352.428
-                        h6 Meetings & Events
-                .flex.timeline__wrapper
-                    .flex.facts.facts--nomargin
-                        h3 205.320
-                        .timeline__item
-                            .timeline__dot
-                        h6 Registered members
-                    .timeline
-                    .flex.facts.facts--nomargin
-                        h3 106
-                        .timeline__item
-                            .timeline__dot
-                        h6 in 👆🏼 countries
-                    .timeline.timeline--mod
-                    .flex.facts.facts--nomargin
-                        h3 12.300
-                        .timeline__item
-                            .timeline__dot
-                        h6 send 👆🏼 messages every day
+            +stats('en')
+
         include /_includes/_endofbody.pug
         script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js')
         script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/617753/ThreeOrbitControls.js')
