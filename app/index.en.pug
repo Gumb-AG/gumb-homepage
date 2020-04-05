@@ -3,6 +3,7 @@ include _includes/_global.pug
 include _mixins/_extensions/_integrations.pug
 
 include _mixins/_stats.pug
+include _mixins/_appshowcase.pug
 
 doctype html
 html(lang="en")
@@ -38,39 +39,8 @@ html(lang="en")
                                     b Learn more
 
         main#teamplanbuch
-            section
-                .section__title
-                    h6 OUR FIRST APP
-                    h3.gradient Teamplanbuch
-                    h3 and your team is organized.
-                    p With the online game, event and training planner for teams, clubs and associations you can organize yourself and your team easily and quickly. Teamplanbuch is our scheduling app and is available for all your devices.
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Organize club dates quick and easy
-                        p Teamplanbuch enables easy registration and cancellation for trainings, games, rehearsals, events or meetings. It eliminates the back and forth emails. It avoids hectic phone-calls and chats shortly before upcoming appointments.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-overview.png')
-                br
-                br
-                br
-                .appshowcase.appshowcase--reverse
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-menu.png')
-                    .appshowcase__text
-                        h4 Get an overview of appointments and attendance
-                        p Leaders and members can inform themselves at any time about the dates and the registration/deregistration. This allows each training session, event and rehearsal to be reliably planned (Who attends? Who does what?).
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Analyze attendance and unexcused absence
-                        p The annual attendance, appointments and unexcused absences can be easily evaluated within a few seconds. These statistics facilitate the creation of annual reports and accounts.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/surfacestudio-tpb.png')
+
+            +appshowcase('en')
 
             +integrations(1)
 

@@ -5,6 +5,7 @@ include /_mixins/_extensions/_integrations.pug
 include /_mixins/_extensions/_googlemaps.pug
 
 include /_mixins/_stats.pug
+include /_mixins/_appshowcase.pug
 
 doctype html
 html(lang="de")
@@ -232,30 +233,7 @@ html(lang="de")
                     a(href='#')
                         img.apps(src='/assets/vector/apps/de/web.svg')
             
-            section
-                .appshowcase
-                    .appshowcase__text
-                        h4 Organisiere Vereins-Termine schnell und unkompliziert
-                        p Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-overview.png')
-            
-            section
-                .appshowcase.appshowcase--reverse
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-menu.png')
-                    .appshowcase__text
-                        h4 Verschaffe Dir einen Überblick über Termine und Anwesenheit
-                        p Leiter und Mitglieder können sich jederzeit mit Internet oder Handy über die Termine und die An-/Abmeldungen im Teamplanbuch informieren. Damit kann jedes Training und jede Probe zuverlässig geplant werden (Wer kommt? Wer übernimmt welche Aufgabe?).
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Analysiere Anwesenheit und unentschuldigtes Fernbleiben
-                        p Die jährliche Anwesenheit, Termine und unentschuldigtes Fernbleiben können mit dem Teamplanbuch mühelos ausgewertet werden. Diese Statistiken erleichtern das Erstellen von Jahresberichten und Abrechnungen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/surfacestudio-tpb.png')
+            +appshowcase('de', 'notitle')
 
             +stats('de')
             

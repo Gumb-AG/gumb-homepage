@@ -3,6 +3,7 @@ include _includes/_global.pug
 include _mixins/_extensions/_integrations.pug
 
 include _mixins/_stats.pug
+include _mixins/_appshowcase.pug
 
 doctype html
 html(lang="de")
@@ -38,39 +39,8 @@ html(lang="de")
                                     b Direkt zur App
             
         main#teamplanbuch
-            section
-                .section__title
-                    h6 Unsere erste App
-                    h3.gradient Teamplanbuch
-                    h3 und Dein Team ist organisiert.
-                    p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Organisiere Vereins-Termine schnell und unkompliziert
-                        p Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-overview.png')
-                br
-                br
-                br
-                .appshowcase.appshowcase--reverse
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-menu.png')
-                    .appshowcase__text
-                        h4 Verschaffe Dir einen Überblick über Termine und Anwesenheit
-                        p Leiter und Mitglieder können sich jederzeit mit Internet oder Handy über die Termine und die An-/Abmeldungen im Teamplanbuch informieren. Damit kann jedes Training und jede Probe zuverlässig geplant werden (Wer kommt? Wer übernimmt welche Aufgabe?).
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Analysiere Anwesenheit und unentschuldigtes Fernbleiben
-                        p Die jährliche Anwesenheit, Termine und unentschuldigtes Fernbleiben können mit dem Teamplanbuch mühelos ausgewertet werden. Diese Statistiken erleichtern das Erstellen von Jahresberichten und Abrechnungen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/surfacestudio-tpb.png')
+            
+            +appshowcase('de')
 
             +integrations(1)
 
