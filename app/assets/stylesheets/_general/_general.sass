@@ -82,20 +82,12 @@
         @media (max-width: 1160px)
             align-items: center
 
-// Header
-.header
-
-    &__tpb
-        height: 20%
-        padding-top: 20px
-        padding-bottom: 0
-
 // Logo & TPB-Branding
 .logo
     height: 45px
 
     &--tpb
-        height: 55px
+        height: 55px !important
 
     @media (max-width: 480px)
         height: 35px
@@ -445,6 +437,9 @@
         align-items: center
         text-align: center
         @include animate()
+
+        @media (max-width: 390px)
+            padding: 30px 20px
 
         &:hover
             background-color: #f3f4f5

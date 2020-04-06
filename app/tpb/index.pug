@@ -37,6 +37,7 @@ html(lang="de")
         link(href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet")
 
         link(rel='stylesheet' href='/assets/stylesheets/artofgumb.css')
+        link(rel='stylesheet' href='/assets/stylesheets/pagespecific/tpb.css')
         
         title Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften · Teamplanbuch
 
@@ -50,7 +51,13 @@ html(lang="de")
                 nav.nav
                     a.nav__brand(href='#')
                         img.logo.logo--tpb(src='/assets/images/tpb-maennli.png')
-                    nav.nav__navigation.nav__navigation--de
+                    nav.nav__navigation
+                        select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
+                            option(value='#' selected) Navigation
+                            option(value='#') Start
+                            option(value='#preise') Abos und Preise
+                            option(value='https://gumb.ch') Unternehmen
+                        
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Start
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#preise') Abos und Preise
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='https://gumb.ch' target=_blank) Unternehmen
@@ -65,10 +72,6 @@ html(lang="de")
                         
                         a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='/index.en.html') EN
                             ion-icon(name="ios-arrow-round-forward")
-                        
-                        //-select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
-                            option(value='#' selected) Navigation
-                            option(value='#') Home
 
                     nav.nav__buttons
                         a.nav__navigation__item.nav__navigation__item--cta.btn.btn--shadow.margin-right--16#login Login
