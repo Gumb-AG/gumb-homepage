@@ -117,5 +117,125 @@ mixin pricing(lang)
                                 p Die Lizenz lässt sich via unserem Support beliebig nach oben hin anpassen.
 
             .section__title.margin-top--55
-                a.nav__navigation__item.nav__navigation__item--cta.btn Jetzt 40 Tage kostenlos ausprobieren
+                a.nav__navigation__item.nav__navigation__item--cta.btn.try Jetzt 40 Tage kostenlos ausprobieren
                 p Transparente Kosten durch einen fixen Pauschalpreis und kulanter Abo-Service. Keine Bezahldaten nötig.
+    else
+        div#pricing
+        section.section__spacer
+            .section__title
+                h6 Annual licenses
+                h4 Subscriptions and prices
+                p The right plan for every group!
+            
+            .toggle
+                p.toggle__item.toggle__item--active#chf CHF
+                p.toggle__item#eur €
+
+            .section__inner.pricing
+                .section__content.section__content--33
+                    a(href='#')
+                        .section__tube
+                            h6 Trial
+                            h3 Free
+                            br
+                            each feature in ['All functions of the basic license', 'Test for 40 days without any obligation and without restrictions', 'Apps for your iPhone or Android devices are available as free downloads in the Apple AppStore and Google PlayStore']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p You can test the Teamplanbuch for 40 days completely free of charge and without obligation. If you want to continue using the Teamplanbuch, you can order a license at any time in the book.
+                .section__content.section__content--33
+                    a(href='#')
+                        .section__tube
+                            h6 Basic Licence
+                            h3
+                                sup CHF
+                                span.chf 80
+                                span.eur 65
+                                span.sub per Year
+                            br
+                            each feature in ['1 Teamplanbuch', 'Free app for iPhone and Android', 'Integrated e-mail function simplifies and speeds up communication in your team', 'Automatic reminder-e-mail for upcoming appointments', 'Registration deadline for appointments', 'Bulletin board to post information', 'Password-protected access & state-of-the-art encryption', 'Parent and child login-option', 'Clear game and training planning', "Integration of dates in the club's homepage", 'Synchronization with personal calendar (Outlook, iCal, Google, etc.)', 'Special functions for clubs with multiple teams', 'Over 100 other useful functions']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p The basic license is sufficient for most teams. With this license you can divide your team into up to 20 groups and manage up to 100 people.
+                                p You can upgrade this license to the "Basic License Plus" at any time.
+                .section__content.section__content--33
+                    a(href='#')
+                        .section__tube
+                            h6 Basic License Plus
+                            h3
+                                sup CHF
+                                span.chf 125
+                                span.eur 96
+                                span.sub per Year
+                            br
+                            each feature in ['Alle Funktionen der Basislizenz', '2 Teamplanbücher', 'Zusätzlich einzelne Gruppen von Ereignissen ausschliessen. Dies ermöglicht Dir gemischte Teams in einem Buch zu verwalten sowie nur bestimmte Gruppen zu einem Ereignis aufzubieten']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p With the "Basic License Plus" you have additional functions in addition to a second license.
+                                p You can upgrade this license to a "Club License" at any time.
+
+            .section__inner.pricing
+                .section__content.section__content--33.margin-top--0
+                    a(href='#')
+                        .section__tube
+                            h6 3 Club Licenses
+                            h3
+                                sup CHF
+                                span.chf 165
+                                span.eur 127
+                                span.sub per Year
+                            br
+                            each feature in ['All functions of the "Basic License Plus"', '3 Teamplanbuch Licences', 'Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p You can upgrade this license from 3 licenses to 5 at any time.
+                                p The "Club License" combines all available functions with a customizable and progressively cheaper subscription model.
+                .section__content.section__content--33.margin-top--0
+                    a(href='#')
+                        .section__tube
+                            h6 5 Club Licenses
+                            h3
+                                sup CHF
+                                span.chf 215
+                                span.eur 165
+                                span.sub per Year
+                            br
+                            each feature in ['All functions of the "Basic License Plus"', '5 Teamplanbuch Licences', 'Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p You can upgrade this license from 5 licenses to 10 at any time.
+                .section__content.section__content--33.margin-top--0
+                    a(href='#')
+                        .section__tube
+                            h6 10 Club Licenses
+                            h3
+                                sup CHF
+                                span.chf 250
+                                span.eur 192
+                                span.sub per Year
+                            br
+                            each feature in ['All functions of the "Basic License Plus"', '10 Teamplanbuch Licences', 'Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily', 'Individual license-expandability for large clubs above 10 licenses for 20 CHF / 16 € each']
+                                .check
+                                    ion-icon.padding-right--4(name="ios-checkmark")
+                                    p= feature
+                            br
+                            .pricing__info
+                                p The license can be adjusted upwards via our support.
+
+            .section__title.margin-top--55
+                a.nav__navigation__item.nav__navigation__item--cta.btn.try Try it now free for 40 days
+                p Transparent costs thanks to a fixed flat rate and great subscription support-service. No payment data required.

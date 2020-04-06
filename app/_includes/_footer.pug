@@ -209,14 +209,24 @@ mixin footer(lang, theme, page)
                             p.footer__meta © Gumb AG
                         div
                             b.padding-bottom.nebula Navigation
-                            p
-                                a(href='/index.en.html') Home
-                            p
-                                a(href='/about.en.html') About us
-                            p
-                                a(href='/mission-vision.en.html') Why & How
-                            p
-                                a(href='/community.en.html') Community
+                            if page != 'tpb'
+                                p
+                                    a(href='/index.en.html') Home
+                                p
+                                    a(href='/about.en.html') About us
+                                p
+                                    a(href='/mission-vision.en.html') Why & How
+                                p
+                                    a(href='/community.en.html') Community
+                            else
+                                p
+                                    a(href='#') Start
+                                p
+                                    a(href='#pricing') Subscriptions and prices
+                                p
+                                    a(href='#statistics') Statistics
+                                p
+                                    a.startChat Help
                         div
                             b.padding-bottom.nebula About Gumb
                             p
