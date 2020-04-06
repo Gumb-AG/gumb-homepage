@@ -42,6 +42,9 @@ $(function () {
     $('#loginForm').bind('submit', function () {
         // Show iFrame
         $('#tpbProxy').show();
+
+        // Hide HTML-Overflow-y (underlying Website)
+        $('html').css('overflow-y', 'hidden');
     });
 
     // Original Password-Reset code from "view-source:https://www.teamplanbuch.ch/passwort/" (slightly modified)
