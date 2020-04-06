@@ -87,7 +87,7 @@ html(lang="de")
                 br
                 input(type="hidden" name="userLogin" value="")
                 .floating
-                    input#input__username.floating__input(name='username' type='text' placeholder='Deine E-Mail-Adresse' required)
+                    input#input__username.floating__input(name='username' type='email' placeholder='Deine E-Mail-Adresse' required)
                     label.floating__label(for='input__username' data-content='Deine E-Mail-Adresse')
                     span.hide
                         | Deine E-Mail-Adresse
@@ -101,8 +101,28 @@ html(lang="de")
                         ion-icon.padding-right(name="ios-lock")
                         | Einloggen
                     br
-                    a(href='https://www.teamplanbuch.ch/passwort/' target='_blank') Passwort vergessen?
+                    a#passReset Passwort vergessen?
 
+        .overlay#resetOverlay
+            .close
+                ion-icon.dark(name="ios-close-circle-outline" size="large")
+
+            .section__title.padding-bottom--64
+                h4 Passwort zurücksetzen
+                p Kein Problem! Trage Deine E-Mail Adresse ein und wir senden Dir eine E-Mail zum Zurücksetzen Deines Kennwortes.
+            .form
+                form
+                    .floating
+                        input#reset__email.floating__input(name='reset-email' type='email' placeholder='Deine E-Mail-Adresse' required)
+                        label.floating__label(for='reset__email' data-content='Deine E-Mail-Adresse')
+                        span.hide
+                            | Deine E-Mail-Adresse
+                    br
+                    .section__title
+                        button.nav__navigation__item.nav__navigation__item--cta.btn
+                            ion-icon.padding-right(name="ios-finger-print" size="small")
+                            | E-Mail zurücksetzen
+        
         .overlay#tryOverlay
             .close
                 ion-icon.dark(name="ios-close-circle-outline" size="large")
@@ -116,7 +136,7 @@ html(lang="de")
                 form(action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post")
                     input(type="hidden" name="userRegister" value="1")
                     .floating
-                        input#input__email.floating__input(name='email' type='text' placeholder='Deine E-Mail-Adresse' required)
+                        input#input__email.floating__input(name='email' type='email' placeholder='Deine E-Mail-Adresse' required)
                         label.floating__label(for='input__email' data-content='Deine E-Mail-Adresse')
                         span.hide
                             | Deine E-Mail-Adresse
