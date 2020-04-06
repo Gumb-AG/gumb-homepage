@@ -6,6 +6,11 @@ mixin pricing(lang)
                 h6 Jahreslizenzen
                 h4 Abos und Preise
                 p Für jede Gruppierung das passende dabei!
+            
+            .toggle
+                p.toggle__item.toggle__item--active#chf CHF
+                p.toggle__item#eur €
+
             .section__inner.pricing
                 .section__content.section__content--33
                     a(href='#')
@@ -24,7 +29,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Basislizenz
-                            h3 80 CHF / 65 € pro Jahr
+                            h3
+                                sup CHF
+                                span.chf 80
+                                span.eur 65
+                                span.sub pro Jahr
                             br
                             each feature in ['1 Teamplanbuch', 'Kostenlose App für iPhone und Android', 'Integrierte E-Mail-Funktion vereinfacht und beschleunigt die Kommunikation im Team', 'Automatische Erinnerungsmail für einen bevorstehenden Termin', 'Einschreibefrist für Termine festlegbar', 'Pinnwand, um Infos zu posten', 'Passwortgeschützter Zugang + modernste Verschlüsselung', 'Eltern-und-Kind-Login möglich', 'Übersichtliche Spiel- & Trainingsplanung', 'Einbindung der Termine in Homepage des Vereins', 'Synchronisation mit persönlichem Kalender (Outlook, iCal , Google, etc.)', 'Spezialfunktionen für Vereine mit mehreren Teams', 'Über 100 weitere nützliche Funktionen']
                                 .check
@@ -38,7 +47,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Basislizenz Plus
-                            h3 125CHF / 96€ p.a.
+                            h3
+                                sup CHF
+                                span.chf 125
+                                span.eur 96
+                                span.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz', '2 Teamplanbücher', 'Zusätzlich einzelne Gruppen von Ereignissen ausschliessen. Dies ermöglicht Dir gemischte Teams in einem Buch zu verwalten sowie nur bestimmte Gruppen zu einem Ereignis aufzubieten']
                                 .check
@@ -54,7 +67,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 3er Vereinslizenz
-                            h3 165 CHF / 127 € pro Jahr
+                            h3
+                                sup CHF
+                                span.chf 165
+                                span.eur 127
+                                span.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz Plus', '3 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden']
                                 .check
@@ -68,7 +85,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 5er Vereinslizenz
-                            h3 215 CHF / 165 € pro Jahr
+                            h3
+                                sup CHF
+                                span.chf 215
+                                span.eur 165
+                                span.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz Plus', '5 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden']
                                 .check
@@ -81,7 +102,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 10er Vereinslizenz
-                            h3 250 CHF / 192 € pro Jahr
+                            h3
+                                sup CHF
+                                span.chf 250
+                                span.eur 192
+                                span.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz Plus', '10 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden', 'Individuelle Erweiterbarkeit der Lizenzen über 10 hinaus für 20 CHF / 16 € ']
                                 .check

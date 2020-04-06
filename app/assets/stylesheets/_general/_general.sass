@@ -71,7 +71,6 @@
         &--image
             margin: 0 !important
             justify-content: center
-            margin-top: -40px !important
 
             & img
                 height: 650px
@@ -228,6 +227,10 @@
 .bold
     font-weight: 600
 
+.sub
+    font-size: 20px
+    padding-left: 5px
+
 // Icons
 .icon
     width: 50px
@@ -255,7 +258,7 @@
             flex-flow: column
             padding-top: 30px
 
-// Takes an anchortag, creates a button 
+// Takes an anchortag, creates a button
 .btn
     background-color: $primary
     padding: 9px 18px 9px 18px
@@ -455,6 +458,10 @@
 
     &__info
         visibility: hidden
+
+    // Hide non-selected currencies
+    & .eur
+        display: none
 
 // Gradient
 .gradient

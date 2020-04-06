@@ -78,4 +78,25 @@ $(function() {
 
     // Simulate Realtime Users
     $('#rtUsers').text( Math.round( Math.random() * (250 - 70) + 70) );
+
+    // Toggle
+    var pricing = $('.pricing');
+
+    $('#eur').click(function(){
+        pricing.find('sup').text('€');
+        pricing.find('.eur').show();
+        pricing.find('.chf').hide();
+        
+        $('#chf').removeClass('toggle__item--active');
+        $(this).addClass('toggle__item--active');
+    });
+
+    $('#chf').click(function(){
+        pricing.find('sup').text('CHF');
+        pricing.find('.chf').show();
+        pricing.find('.eur').hide();
+
+        $('#eur').removeClass('toggle__item--active');
+        $(this).addClass('toggle__item--active');
+    });
 });
