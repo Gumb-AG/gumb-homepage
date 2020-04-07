@@ -17,13 +17,13 @@ $(function () {
         $('#resetOverlay').addClass('flex');
     });
 
+    // Hide 2nd register-step in "Probeabo Overlay"
+    $('#register2').hide();
+
     // Probeabo Overlay
     $('.try').click(function () {
         $('.overlay').removeClass('flex');
         $('#tryOverlay').addClass('flex');
-
-        // Hide 2nd step
-        $('#register2').hide();
     });
 
     // Go directly to register step 2 when signing up via the header
