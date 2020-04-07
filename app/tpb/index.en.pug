@@ -131,7 +131,7 @@ html(lang="en")
                 ion-icon.dark(name="ios-close-circle-outline" size="large")
 
             .section__title.padding-bottom--64
-                h4 Probeabo starten
+                h4 Register to begin your trial
                 p Test the 
                     b.gradient Teamplanbuch
                     |   40 days for free.
@@ -161,19 +161,10 @@ html(lang="en")
                     .floating
                         select#input__clubcategory.floating__input(name='vereinsart' type='text' placeholder='Vereinsart' required)
                             option(value='Sonstiges' selected disabled) Select club type
-                            option(value='Musik') Music
-                            option(value='Fussball') Soccer
-                            option(value='Handball') Handball
-                            option(value='Eishockey') Eishockey
-                            option(value='American Football') American Football
-                            option(value='Badminton') Badminton
-                            option(value='Baseball') Baseball
-                            option(value='Basketball') Basketball
-                            option(value='Beachball') Beachball
-                            option(value='Cricket') Cricket
-                            option(value='Curling') Curling
-                            option(value='Sonstiges') Other
-                        label.floating__label(for='input__clubcategory' data-content='Vereinsart')
+                            each opt in ['Musik', 'Fussball', 'Handball', 'Eishockey', 'American Football', 'Badminton', 'Baseball', 'Basketball', 'Beachball', 'Cricket', 'Curling', 'Eishockey', 'Eiskunstlauf', 'Familie', 'Faustball', 'Fechten', 'Football', 'Freunde', 'Fussball', 'Geräteturnen', 'Guggenmusik', 'Handball', 'Inlinehockey', 'Hornusser', 'Kirche', 'Korbball', 'Kultur', 'Kunstturnen', 'Langlaufclub', 'Minigolf', 'Musik', 'Rollhockey', 'Rugby', 'Segeln', 'Skiclub', 'Spass', 'Squash', 'Streethockey', 'Studentenvereinigung', 'Turnverein', 'Tennis', 'Tiere', 'Tischtennis', 'Unihockey', 'Veloclub', 'Volleyball', 'Walking', 'Wasserball', 'Sonstiges']
+                                option(value= opt)= opt
+
+                        label.floating__label(for='input__clubcategory' data-content='Club type')
                         span.hide
                             | Club type
                     br
