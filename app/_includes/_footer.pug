@@ -91,7 +91,10 @@ mixin footer(lang, theme, page)
                             ion-icon(name="logo-github")
 
                     .footer__legal
-                        a.footer__meta(href="/impressum.html") Impressum & Datenschutz
+                        if page != 'tpb'
+                            a.footer__meta(href="/impressum.html") Impressum & Datenschutz
+                        else
+                            a.footer__meta(href="https://gumb.ch/impressum" target='_blank') Impressum & Datenschutz
         else
             footer.footer--dark.darkmode
                 .contact
@@ -263,7 +266,10 @@ mixin footer(lang, theme, page)
                             ion-icon(name="logo-github")
 
                     .footer__legal
-                        a.footer__meta(href="/impressum.en.html") Imprint & Data protection
+                        if page != 'tpb'
+                            a.footer__meta(href="/impressum.en.html") Imprint & Data protection
+                        else
+                            a.footer__meta(href="https://gumb.ch/impressum.en" target='_blank') Imprint & Data protection
 
         else
             footer.footer--dark.darkmode
