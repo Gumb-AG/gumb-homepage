@@ -1,5 +1,7 @@
 include ../_mixins/_extensions/_googlemaps.pug
 
+-var env = 'https://gumb.ch/'
+
 mixin footer(lang, theme, page)
     if lang == 'de'
         if theme == 'bright'
@@ -41,11 +43,11 @@ mixin footer(lang, theme, page)
                                 p
                                     a(href='/') Home
                                 p
-                                    a(href='/about.html') Über uns
+                                    a(href='/about') Über uns
                                 p
-                                    a(href='/mission-vision.html') Warum & Wie
+                                    a(href='/mission-vision') Warum & Wie
                                 p
-                                    a(href='/community.html') Community
+                                    a(href='/community') Community
                             else
                                 p
                                     a(href='#') Start
@@ -58,15 +60,15 @@ mixin footer(lang, theme, page)
                         div
                             b.padding-bottom.nebula Über Gumb
                             p
-                                a(href='/about.html#team') Unser Team
+                                a(href=env + 'about#team') Unser Team
                             p
-                                a(href='/mission-vision.html') Mission & Vision
+                                a(href=env + 'mission-vision') Mission & Vision
                             p
-                                a(href='/about.html#milestones') Unsere Geschichte
+                                a(href=env + 'about#milestones') Unsere Geschichte
                         div
                             b.padding-bottom.nebula Kontakt & Feedback
                             p
-                                a(href='/community.html#social') Soziale Kanäle
+                                a(href=env + 'community#social') Soziale Kanäle
                             p
                                 a.startChat Schreibe uns
                             p
@@ -92,9 +94,9 @@ mixin footer(lang, theme, page)
 
                     .footer__legal
                         if page != 'tpb'
-                            a.footer__meta(href="/impressum.html") Impressum & Datenschutz
+                            a.footer__meta(href="/impressum") Impressum & Datenschutz
                         else
-                            a.footer__meta(href="https://gumb.ch/impressum" target='_blank') Impressum & Datenschutz
+                            a.footer__meta(href=env + "impressum" target='_blank') Impressum & Datenschutz
         else
             footer.footer--dark.darkmode
                 .contact
@@ -133,23 +135,23 @@ mixin footer(lang, theme, page)
                             p
                                 a(href='/') Home
                             p
-                                a(href='/about.html') Über uns
+                                a(href='/about') Über uns
                             p
-                                a(href='/mission-vision.html') Warum & Wie
+                                a(href='/mission-vision') Warum & Wie
                             p
-                                a(href='/community.html') Community
+                                a(href='/community') Community
                         div
                             b.padding-bottom Über Gumb
                             p
-                                a(href='/about.html#team') Unser Team
+                                a(href='/about#team') Unser Team
                             p
-                                a(href='/mission-vision.html') Mission & Vision
+                                a(href='/mission-vision') Mission & Vision
                             p
-                                a(href='/about.html#milestones') Unsere Geschichte
+                                a(href='/about#milestones') Unsere Geschichte
                         div
                             b.padding-bottom Kontakt & Feedback
                             p
-                                a(href='/community.html#social') Soziale Kanäle
+                                a(href='/community#social') Soziale Kanäle
                             p
                                 a.startChat Schreibe uns
                             p
@@ -174,7 +176,7 @@ mixin footer(lang, theme, page)
                             ion-icon(name="logo-github")
 
                     .footer__legal
-                        a.footer__meta(href="/impressum.html") Impressum & Datenschutz
+                        a.footer__meta(href="/impressum") Impressum & Datenschutz
 
     else
         if theme == 'bright'
@@ -206,7 +208,7 @@ mixin footer(lang, theme, page)
                 .footer.footer--bright
                     .footer__inner
                         div
-                            a.nav__brand.padding-bottom(href='/index.en.html')
+                            a.nav__brand.padding-bottom(href='/index.en')
                                 img.logo.padding-bottom(src='/assets/vector/gumb.svg')
                             p.footer__meta All rights reserved.
                             p.footer__meta © Gumb AG
@@ -214,13 +216,13 @@ mixin footer(lang, theme, page)
                             b.padding-bottom.nebula Navigation
                             if page != 'tpb'
                                 p
-                                    a(href='/index.en.html') Home
+                                    a(href='/index.en') Home
                                 p
-                                    a(href='/about.en.html') About us
+                                    a(href='/about.en') About us
                                 p
-                                    a(href='/mission-vision.en.html') Why & How
+                                    a(href='/mission-vision.en') Why & How
                                 p
-                                    a(href='/community.en.html') Community
+                                    a(href='/community.en') Community
                             else
                                 p
                                     a(href='#') Start
@@ -233,15 +235,15 @@ mixin footer(lang, theme, page)
                         div
                             b.padding-bottom.nebula About Gumb
                             p
-                                a(href='/about.en.html#team') Our Team
+                                a(href=env + 'about.en#team') Our Team
                             p
-                                a(href='/mission-vision.en.html') Mission & Vision
+                                a(href=env + 'mission-vision.en') Mission & Vision
                             p
-                                a(href='/about.en.html#milestones') Our History
+                                a(href=env + 'about.en#milestones') Our History
                         div
                             b.padding-bottom.nebula Contact & Feedback
                             p
-                                a(href='/community.en.html#social') Social Media
+                                a(href=env + 'community.en#social') Social Media
                             p
                                 a.startChat Contact us
                             p
@@ -267,9 +269,9 @@ mixin footer(lang, theme, page)
 
                     .footer__legal
                         if page != 'tpb'
-                            a.footer__meta(href="/impressum.en.html") Imprint & Data protection
+                            a.footer__meta(href="impressum.en") Imprint & Data protection
                         else
-                            a.footer__meta(href="https://gumb.ch/impressum.en" target='_blank') Imprint & Data protection
+                            a.footer__meta(href=env + "impressum.en" target='_blank') Imprint & Data protection
 
         else
             footer.footer--dark.darkmode
@@ -300,32 +302,32 @@ mixin footer(lang, theme, page)
                 .footer
                     .footer__inner
                         div
-                            a.nav__brand.padding-bottom(href='/index.en.html')
+                            a.nav__brand.padding-bottom(href='/index.en')
                                 img.logo.padding-bottom(src='/assets/vector/gumb.svg')
                             p.footer__meta All rights reserved.
                             p.footer__meta © Gumb AG
                         div
                             b.padding-bottom Navigation
                             p
-                                a(href='/index.en.html') Home
+                                a(href='/index.en') Home
                             p
-                                a(href='/about.en.html') About us
+                                a(href='/about.en') About us
                             p
-                                a(href='/mission-vision.en.html') Why & How
+                                a(href='/mission-vision.en') Why & How
                             p
-                                a(href='/community.en.html') Community
+                                a(href='/community.en') Community
                         div
                             b.padding-bottom About Gumb
                             p
-                                a(href='/about.en.html#team') Our Team
+                                a(href='/about.en#team') Our Team
                             p
-                                a(href='/mission-vision.en.html') Mission & Vision
+                                a(href='/mission-vision.en') Mission & Vision
                             p
-                                a(href='/about.en.html#milestones') Our History
+                                a(href='/about.en#milestones') Our History
                         div
                             b.padding-bottom Contact & Feedback
                             p
-                                a(href='/community.en.html#social') Social Media
+                                a(href='/community.en#social') Social Media
                             p
                                 a.startChat Contact us
                             p
@@ -350,4 +352,4 @@ mixin footer(lang, theme, page)
                             ion-icon(name="logo-github")
 
                     .footer__legal
-                        a.footer__meta(href="/impressum.en.html") Imprint & Data protection
+                        a.footer__meta(href="/impressum.en") Imprint & Data protection
