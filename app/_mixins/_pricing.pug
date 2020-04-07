@@ -16,7 +16,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Probeabo
-                            h3 Kostenlos
+                            .currency__wrapper
+                                sup CHF
+                                span.currency.chf 0
+                                span.currency.eur 0
+                                p.sub für 40 Tage
                             br
                             each feature in ['Alle Funktionen der Basislizenz', '40 Tage unverbindlich und ohne Einschränkungen testen', 'Die Apps für das iPhone und Android Smartphones stehen als kostenloser Download im AppStore und Google PlayStore zur Verfügung']
                                 .check
@@ -29,11 +33,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Basislizenz
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 80
-                                span.eur 65
-                                span.sub pro Jahr
+                                span.currency.chf 80
+                                span.currency.eur 65
+                                p.sub pro Jahr
                             br
                             each feature in ['1 Teamplanbuch', 'Kostenlose App für iPhone und Android', 'Integrierte E-Mail-Funktion vereinfacht und beschleunigt die Kommunikation im Team', 'Automatische Erinnerungsmail für einen bevorstehenden Termin', 'Einschreibefrist für Termine festlegbar', 'Pinnwand, um Infos zu posten', 'Passwortgeschützter Zugang + modernste Verschlüsselung', 'Eltern-und-Kind-Login möglich', 'Übersichtliche Spiel- & Trainingsplanung', 'Einbindung der Termine in Homepage des Vereins', 'Synchronisation mit persönlichem Kalender (Outlook, iCal , Google, etc.)', 'Spezialfunktionen für Vereine mit mehreren Teams', 'Über 100 weitere nützliche Funktionen']
                                 .check
@@ -47,11 +51,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Basislizenz Plus
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 125
-                                span.eur 96
-                                span.sub pro Jahr
+                                span.currency.chf 125
+                                span.currency.eur 96
+                                p.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz', '2 Teamplanbücher', 'Zusätzlich einzelne Gruppen von Ereignissen ausschliessen. Dies ermöglicht Dir gemischte Teams in einem Buch zu verwalten sowie nur bestimmte Gruppen zu einem Ereignis aufzubieten']
                                 .check
@@ -67,11 +71,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 3er Vereinslizenz
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 165
-                                span.eur 127
-                                span.sub pro Jahr
+                                span.currency.chf 165
+                                span.currency.eur 127
+                                p.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz Plus', '3 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden']
                                 .check
@@ -85,11 +89,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 5er Vereinslizenz
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 215
-                                span.eur 165
-                                span.sub pro Jahr
+                                span.currency.chf 215
+                                span.currency.eur 165
+                                p.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz Plus', '5 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden']
                                 .check
@@ -102,11 +106,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 10er Vereinslizenz
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 250
-                                span.eur 192
-                                span.sub pro Jahr
+                                span.currency.chf 250
+                                span.currency.eur 192
+                                p.sub pro Jahr
                             br
                             each feature in ['Alle Funktionen der Basislizenz Plus', '10 Teamplanbücher', 'Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden', 'Individuelle Erweiterbarkeit der Lizenzen über 10 hinaus für 20 CHF / 16 € ']
                                 .check
@@ -136,7 +140,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Trial
-                            h3 Free
+                            .currency__wrapper
+                                sup CHF
+                                span.currency.chf 0
+                                span.currency.eur 0
+                                p.sub for 40 days
                             br
                             each feature in ['All functions of the basic license', 'Test for 40 days without any obligations and without restrictions', 'Apps for your iPhone or Android devices are available as free downloads in the Apple AppStore and Google PlayStore']
                                 .check
@@ -149,11 +157,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Basic Licence
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 80
-                                span.eur 65
-                                span.sub per Year
+                                span.currency.chf 80
+                                span.currency.eur 65
+                                p.sub per Year
                             br
                             each feature in ['1 Teamplanbuch Licence', 'Free app for iPhone and Android', 'Integrated e-mail function simplifies and speeds up communication in your team', 'Automatic reminder-e-mail for upcoming appointments', 'Registration deadline for appointments', 'Bulletin board to post information', 'Password-protected access & state-of-the-art encryption', 'Parent and child login-option', 'Clear game and training planning', "Integration of dates in the club's homepage", 'Synchronization with personal calendar (Outlook, iCal, Google, etc.)', 'Special functions for clubs with multiple teams', 'Over 100 other useful functions']
                                 .check
@@ -167,11 +175,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 Basic License Plus
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 125
-                                span.eur 96
-                                span.sub per Year
+                                span.currency.chf 125
+                                span.currency.eur 96
+                                p.sub per Year
                             br
                             each feature in ['All functions of the basic license', '2 Teamplanbuch Licences', 'Exclude individual groups from events. This allows you to manage mixed teams in one book and to only list certain groups for an event']
                                 .check
@@ -187,11 +195,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 3 Club Licenses
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 165
-                                span.eur 127
-                                span.sub per Year
+                                span.currency.chf 165
+                                span.currency.eur 127
+                                p.sub per Year
                             br
                             each feature in ['All functions of the "Basic License Plus"', '3 Teamplanbuch Licences', 'Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily']
                                 .check
@@ -205,11 +213,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 5 Club Licenses
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 215
-                                span.eur 165
-                                span.sub per Year
+                                span.currency.chf 215
+                                span.currency.eur 165
+                                p.sub per Year
                             br
                             each feature in ['All functions of the "Basic License Plus"', '5 Teamplanbuch Licences', 'Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily']
                                 .check
@@ -222,11 +230,11 @@ mixin pricing(lang)
                     a(href='#')
                         .section__tube
                             h6 10 Club Licenses
-                            h3
+                            .currency__wrapper
                                 sup CHF
-                                span.chf 250
-                                span.eur 192
-                                span.sub per Year
+                                span.currency.chf 250
+                                span.currency.eur 192
+                                p.sub per Year
                             br
                             each feature in ['All functions of the "Basic License Plus"', '10 Teamplanbuch Licences', 'Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily', 'Individual license-expandability for large clubs above 10 licenses for 20 CHF / 16 € each']
                                 .check
