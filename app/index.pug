@@ -1,5 +1,10 @@
 include _includes/_global.pug
+
 include _mixins/_extensions/_integrations.pug
+
+include _mixins/_stats.pug
+include _mixins/_appshowcase.pug
+include _mixins/_getapp.pug
 
 doctype html
 html(lang="de")
@@ -35,56 +40,11 @@ html(lang="de")
                                     b Direkt zur App
             
         main#teamplanbuch
-            section
-                .section__title
-                    h6 Unsere erste App
-                    h3.gradient Teamplanbuch
-                    h3 und Dein Team ist organisiert.
-                    p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Organisiere Vereins-Termine schnell und unkompliziert
-                        p Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-overview.png')
-                br
-                br
-                br
-                .appshowcase.appshowcase--reverse
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-menu.png')
-                    .appshowcase__text
-                        h4 Verschaffe Dir einen Überblick über Termine und Anwesenheit
-                        p Leiter und Mitglieder können sich jederzeit mit Internet oder Handy über die Termine und die An-/Abmeldungen im Teamplanbuch informieren. Damit kann jedes Training und jede Probe zuverlässig geplant werden (Wer kommt? Wer übernimmt welche Aufgabe?).
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Analysiere Anwesenheit und unentschuldigtes Fernbleiben
-                        p Die jährliche Anwesenheit, Termine und unentschuldigtes Fernbleiben können mit dem Teamplanbuch mühelos ausgewertet werden. Diese Statistiken erleichtern das Erstellen von Jahresberichten und Abrechnungen.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/surfacestudio-tpb.png')
+            
+            +appshowcase('de')
 
             +integrations(1)
-
-            section
-                .section__title
-                    h6 iOS, Android &amp; im Web
-                    h4 Teamplanbuch, 
-                        br 
-                        | auf all Deinen Geräten.
-                    p Hol Dir die App und teste 40 Tage kostenlos.
-                .flex.apps__wrapper
-                    a(href='https://apps.apple.com/de/app/teamplanbuch2/id1198240785' target='_blank')
-                        img.apps(src='/assets/vector/apps/de/ios.svg')
-                    a(href='https://play.google.com/store/apps/details?id=com.teamplanbuch.app' target='_blank')
-                        img.apps(src='/assets/vector/apps/de/droid.svg')
-                    a(href='https://www3.teamplanbuch.ch/startseite' target='_blank')
-                        img.apps(src='/assets/vector/apps/de/web.svg')
+            +getapp('de')
 
             section.section__spacer
                 .section__title
@@ -107,49 +67,7 @@ html(lang="de")
                     p Ganz gleich ob im Verein oder im großen Unternehmen. Durch unsere Softwarelösungen & Apps wird Team- & Eventmanagement mühelos und einfach. Auch in Ihrer Organisation!
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat.margin-top--30 Wir freuen uns auf Ihre Nachricht!
 
-            section.section__spacer
-                .section__title
-                    h4 Die Statistiken & Zahlen
-                    p …die unsere Geschichte erzählen.
-                .flex.flex--items.section__content.facts__wrapper
-                    .flex.facts
-                        h3 1680
-                        h6 Vereine
-                    .flex.facts
-                        h3 30%
-                        h6 mehr als eine Lizenz
-                    .flex.facts
-                        .flex
-                            .gps__wrapper.flex
-                                .gps
-                                    .pulse
-                                    .dot
-                                h3.gradient#rtUsers -
-                        h6 Gerade online
-                    .flex.facts
-                        h3 2299
-                        h6 Bewertungen
-                    .flex.facts
-                        h3 1.352.428
-                        h6 Anlässe & Termine
-                .flex.timeline__wrapper
-                    .flex.facts.facts--nomargin
-                        h3 205.320
-                        .timeline__item
-                            .timeline__dot
-                        h6 Registrierte Mitglieder
-                    .timeline
-                    .flex.facts.facts--nomargin
-                        h3 106
-                        .timeline__item
-                            .timeline__dot
-                        h6 in 👆🏼 Ländern
-                    .timeline.timeline--mod
-                    .flex.facts.facts--nomargin
-                        h3 12.300
-                        .timeline__item
-                            .timeline__dot
-                        h6 Senden sich täglich Über 👆🏼 Nachrichten
+            +stats('de')
 
         include /_includes/_endofbody.pug
         script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js')

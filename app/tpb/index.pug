@@ -1,0 +1,252 @@
+include /_includes/_extensions/_beacon.pug
+include /_includes/_nav.pug
+include /_includes/_footer.pug
+
+include /_mixins/_extensions/_integrations.pug
+include /_mixins/_extensions/_googlemaps.pug
+
+include /_mixins/_stats.pug
+include /_mixins/_appshowcase.pug
+include /_mixins/_getapp.pug
+include /_mixins/_pricing.pug
+
+doctype html
+html(lang="de")
+    head
+        meta(charset='utf-8')
+        meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+        meta(name="theme-color" content="#1fc2c2")
+        meta(name='mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='application-name' content='Teamplanbuch')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black')
+        meta(name='apple-mobile-web-app-title' content='Teamplanbuch')
+        meta(name='msapplication-TileColor' content='#1b1b1c')
+        meta(name='theme-color' content='#1fc2c2')
+        meta(property='og:title' content='Teamplanbuch')
+        meta(property='og:type' content='website')
+        meta(property='og:url' content='https://www3.teamplanbuch.ch')
+        link(rel="icon" type="image/png" href="/assets/images/favicon-tpb.png")
+
+        meta(name='description' content='Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften')
+        meta(name='keywords' content='vereins software, organisations software, vernetzen, team, team software, teamplanung, teamplanbuch, mannschaft, club, gruppen, wachsen, vernetzen ,meetings, termine, terminkalender, planung, vereinsverwaltung, vereinsarbeit, vereinsverwaltung, terminplaner, verbände, gemeinschaft, gemeinsam, gesellschaft, zusammen, mitgliederverwaltung')
+        meta(property='og:description' content='Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften. Jetzt 40 Tage kostenlos testen!')
+        
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+
+        script(src='/assets/javascript/interactive.js' type='text/javascript' async)
+        script(src='/assets/javascript/nav.js' type='text/javascript' async)
+        script(src='/assets/javascript/overlay.js' type='text/javascript' async)
+
+        link(href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet")
+
+        link(rel='stylesheet' href='/assets/stylesheets/artofgumb.css')
+        link(rel='stylesheet' href='/assets/stylesheets/pagespecific/tpb.css')
+        
+        title Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften · Teamplanbuch
+
+    body
+        +beacon('de')
+
+        iframe(name="tpbProxy" src="")#tpbProxy
+        
+        header.header__tpb
+            .nav__wrapper
+                nav.nav
+                    a.nav__brand(href='#')
+                        img.logo.logo--tpb(src='/assets/images/tpb-maennli.png')
+                    nav.nav__navigation
+                        select.nav__navigation__select.nav__navigation__item.select--dark#mobileNav
+                            option(value='#' selected) Navigation
+                            option(value='#') Start
+                            option(value='#preise') Abos und Preise
+                            option(value='https://gumb.ch') Unternehmen
+                        
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#') Start
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='#preise') Abos und Preise
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='https://gumb.ch' target=_blank) Unternehmen
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.startChat Hilfe
+
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.padding-right--4-i(href='https://www.facebook.com/teamplanbuch/' target='_blank')
+                            ion-icon.icon--l-fs(name="logo-facebook")
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.padding-right--4-i.padding-left--4-i(href='https://www.linkedin.com/company/gumb/' target='_blank')
+                            ion-icon.icon--l-fs(name="logo-linkedin")
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass.padding-left--4-i(href='https://twitter.com/GumbApp' target='_blank')
+                            ion-icon.icon--l-fs(name="logo-twitter")
+                        
+                        a.nav__navigation__item.nav__navigation__item--dark.btn.btn--glass(href='https://www3.teamplanbuch.ch/index.en.html') EN
+                            ion-icon(name="ios-arrow-round-forward")
+
+                    nav.nav__buttons
+                        a.nav__navigation__item.nav__navigation__item--cta.btn.btn--shadow.margin-right--16#login Login
+                        a.nav__navigation__item.nav__navigation__item--cta.btn.try Kostenlos ausprobieren
+
+        .overlay#loginOverlay
+            .close
+                ion-icon.dark(name="ios-close-circle-outline" size="large")
+
+            form(action="https://www.teamplanbuch.ch/spb/buch/login-register/dologin.php" method="post" target="tpbProxy")#loginForm
+                .section__title.padding-bottom--64
+                    h4 Login
+                    p Schnell und sicher in Dein 
+                        b.gradient Teamplanbuch
+                        |  einloggen.
+                br
+                input(type="hidden" name="userLogin" value="")
+                .floating
+                    input#input__username.floating__input(name='username' type='email' placeholder='Deine E-Mail-Adresse' required)
+                    label.floating__label(for='input__username' data-content='Deine E-Mail-Adresse')
+                    span.hide
+                        | Deine E-Mail-Adresse
+                .floating
+                    input#input__password.floating__input(type='password' name='passwort' placeholder='Dein Passwort' required)
+                    label.floating__label(for='input__password' data-content='Dein Passwort')
+                    span.hide Dein Passwort
+                br
+                .section__title
+                    button.nav__navigation__item.nav__navigation__item--cta.btn 
+                        ion-icon.padding-right(name="ios-lock")
+                        | Einloggen
+                    br
+                    a#passReset Passwort vergessen?
+
+        .overlay#resetOverlay
+            .close
+                ion-icon.dark(name="ios-close-circle-outline" size="large")
+
+            .section__title.padding-bottom--64
+                h4 Passwort zurücksetzen
+                p Kein Problem! Trage Deine E-Mail Adresse ein und wir senden Dir eine E-Mail zum Zurücksetzen Deines Kennwortes.
+            .form
+                form
+                    .floating
+                        input#reset__email.floating__input(name='reset-email' type='email' placeholder='Deine E-Mail-Adresse' required)
+                        label.floating__label(for='reset__email' data-content='Deine E-Mail-Adresse')
+                        span.hide
+                            | Deine E-Mail-Adresse
+                    br
+                    .section__title
+                        button.nav__navigation__item.nav__navigation__item--cta.btn
+                            ion-icon.padding-right(name="ios-finger-print" size="small")
+                            | Passwort zurücksetzen
+        
+        .overlay#tryOverlay
+            .close
+                ion-icon.dark(name="ios-close-circle-outline" size="large")
+
+            .section__title.padding-bottom--64
+                h4 Probeabo starten
+                p Teste das 
+                    b.gradient Teamplanbuch
+                    |   40 Tage lang völlig kostenlos und unverbindlich!
+            .form.registerStep#register
+                form(action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post")
+                    input(type="hidden" name="userRegister" value="1")
+                    .floating
+                        input#input__email.floating__input(name='email' type='email' placeholder='Deine E-Mail-Adresse' required)
+                        label.floating__label(for='input__email' data-content='Deine E-Mail-Adresse')
+                        span.hide
+                            | Deine E-Mail-Adresse
+                    br
+                    .section__title
+                        button.nav__navigation__item.nav__navigation__item--cta.btn
+                            | Los
+                            ion-icon.padding-left(name="ios-arrow-round-forward" size="small")
+            
+            .form.registerStep#register2
+                form(action="https://www3.teamplanbuch.ch/spb/buch/login-register/doConfirmNewBook.php" method="post")
+                    input(type="hidden" name="clubregister" value="1")
+                    .floating
+                        input#input__clubname.floating__input(name='vereinsname' type='text' placeholder='Vereinsname' required)
+                        label.floating__label(for='input__clubname' data-content='Vereinsname')
+                        span.hide
+                            | Vereinsname
+                    br
+                    .floating
+                        select#input__clubcategory.floating__input(name='vereinsart' type='text' placeholder='Vereinsart' required)
+                            option(value='Sonstiges' selected disabled) Vereinsart auswählen
+                            each opt in ['Musik', 'Fussball', 'Handball', 'Eishockey', 'American Football', 'Badminton', 'Baseball', 'Basketball', 'Beachball', 'Cricket', 'Curling', 'Eishockey', 'Eiskunstlauf', 'Familie', 'Faustball', 'Fechten', 'Football', 'Freunde', 'Fussball', 'Geräteturnen', 'Guggenmusik', 'Handball', 'Inlinehockey', 'Hornusser', 'Kirche', 'Korbball', 'Kultur', 'Kunstturnen', 'Langlaufclub', 'Minigolf', 'Musik', 'Rollhockey', 'Rugby', 'Segeln', 'Skiclub', 'Spass', 'Squash', 'Streethockey', 'Studentenvereinigung', 'Turnverein', 'Tennis', 'Tiere', 'Tischtennis', 'Unihockey', 'Veloclub', 'Volleyball', 'Walking', 'Wasserball', 'Sonstiges']
+                                option(value= opt)= opt
+
+                        label.floating__label(for='input__clubcategory' data-content='Vereinsart')
+                        span.hide
+                            | Vereinsart
+                    br
+                    .floating
+                        select#input__clubcountry.floating__input(name='land' type='text' placeholder='Land wählen' required)
+                            option(value='Schweiz' selected) Schweiz
+                            option(value='Deutschland') Deutschland
+                            option(value='Österreich') Österreich
+                            option(value='Schweiz') Anderes Land
+                        label.floating__label(for='input__clubcountry' data-content='Land wählen')
+                        span.hide
+                            | Land wählen
+                    br
+                    br
+                    p Trage als erste Person gleich Dich ein
+                    br
+                    .floating
+                        input#input__surname.floating__input(name='vorname' type='text' placeholder='Vorname' required)
+                        label.floating__label(for='input__surname' data-content='Vorname')
+                        span.hide
+                            | Vorname
+                    br
+                    .floating
+                        input#input__name.floating__input(name='name' type='text' placeholder='Name' required)
+                        label.floating__label(for='input__name' data-content='Name')
+                        span.hide
+                            | Name
+                    br
+                    .floating
+                        input#input__clubpassword.floating__input(name='passwort1' type='password' placeholder='Dein Passwort' required)
+                        label.floating__label(for='input__clubpassword' data-content='Dein Passwort')
+                        span.hide
+                            | Dein Passwort
+                    br
+                    .floating
+                        input#input__reclubpassword.floating__input(name='passwort2' type='password' placeholder='Passwort wiederholen' required)
+                        label.floating__label(for='input__reclubpassword' data-content='Passwort wiederholen')
+                        span.hide
+                            | Passwort wiederholen
+                    br
+                    .section__title
+                        button.nav__navigation__item.nav__navigation__item--cta.btn 
+                            | Teamplanbuch öffnen
+                            ion-icon.padding-left(name="ios-arrow-round-forward" size="small")
+            
+        main#teamplanbuch
+            section.margin-bottom--0
+                .section__inner
+                    .section__content.section__content--50.padding-right--64
+                        .section__title.section__title--ltr
+                            h3.gradient Teamplanbuch
+                            h3 und Dein Team ist organisiert.
+                            p Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.
+                            br
+                            .registerStep#registerInline
+                                form.flex.flex--items(action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post")
+                                    input(type="hidden" name="userRegister" value="1")
+                                    .floating
+                                        input#input__inlineEmail.floating__input(name='email' type='text' placeholder='Deine E-Mail-Adresse' required autocomplete='off')
+                                        label.floating__label(for='input__inlineEmail' data-content='Deine E-Mail-Adresse')
+                                        span.hide
+                                            | Deine E-Mail-Adresse
+                                    button.nav__navigation__item.nav__navigation__item--cta.btn.margin-left--16#registerNext
+                                        | 40 Tage Probeabo starten!
+                                        ion-icon.padding-left(name="ios-arrow-round-forward" size="small")
+
+                    .section__content.section__content--50.section__content--image
+                        img(src='/assets/images/mockups/iphone-menu.png')
+            
+            +integrations(1)
+            +getapp('de')
+            
+            +appshowcase('de', 'notitle')
+
+            +stats('de')
+            
+            +pricing('de')
+
+        include /_includes/_endofbody.pug
+
+    +footer('de', 'bright', 'tpb')

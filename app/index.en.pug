@@ -1,5 +1,10 @@
 include _includes/_global.pug
+
 include _mixins/_extensions/_integrations.pug
+
+include _mixins/_stats.pug
+include _mixins/_appshowcase.pug
+include _mixins/_getapp.pug
 
 doctype html
 html(lang="en")
@@ -35,56 +40,11 @@ html(lang="en")
                                     b Learn more
 
         main#teamplanbuch
-            section
-                .section__title
-                    h6 OUR FIRST APP
-                    h3.gradient Teamplanbuch
-                    h3 and your team is organized.
-                    p With the online game, event and training planner for teams, clubs and associations you can organize yourself and your team easily and quickly. Teamplanbuch is our scheduling app and is available for all your devices.
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Organize club dates quick and easy
-                        p Teamplanbuch enables easy registration and cancellation for trainings, games, rehearsals, events or meetings. It eliminates the back and forth emails. It avoids hectic phone-calls and chats shortly before upcoming appointments.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-overview.png')
-                br
-                br
-                br
-                .appshowcase.appshowcase--reverse
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/iphone-menu.png')
-                    .appshowcase__text
-                        h4 Get an overview of appointments and attendance
-                        p Leaders and members can inform themselves at any time about the dates and the registration/deregistration. This allows each training session, event and rehearsal to be reliably planned (Who attends? Who does what?).
-                br
-                br
-                br
-                .appshowcase
-                    .appshowcase__text
-                        h4 Analyze attendance and unexcused absence
-                        p The annual attendance, appointments and unexcused absences can be easily evaluated within a few seconds. These statistics facilitate the creation of annual reports and accounts.
-                    .appshowcase__img
-                        img(src='/assets/images/mockups/surfacestudio-tpb.png')
+
+            +appshowcase('en')
 
             +integrations(1)
-
-            section
-                .section__title
-                    h6 iOS, Android & web
-                    h4 Teamplanbuch, 
-                        br 
-                        | on all your devices.
-                    p Get the app and test it 40 days for free.
-                .flex.apps__wrapper
-                    a(href='https://apps.apple.com/de/app/teamplanbuch2/id1198240785' target='_blank')
-                        img.apps(src='/assets/vector/apps/en/ios.svg')
-                    a(href='https://play.google.com/store/apps/details?id=com.teamplanbuch.app' target='_blank')
-                        img.apps(src='/assets/vector/apps/en/droid.svg')
-                    a(href='https://www3.teamplanbuch.ch/startseite' target='_blank')
-                        img.apps(src='/assets/vector/apps/en/web.svg')
+            +getapp('en')
 
             section.section__spacer
                 .section__title
@@ -107,49 +67,8 @@ html(lang="en")
                     p No matter whether in a club or a large company. Our software solutions & apps enable effortless and simple team & event management. Perfect for your organization!
                     a.nav__navigation__item.nav__navigation__item--dark.nav__navigation__item--cta.btn.btn--shadow.startChat.margin-top--30 We are looking forward to your message!
 
-            section.section__spacer
-                .section__title
-                    h4 The stats and figures
-                    p …that tell our story.
-                .flex.section__content.facts__wrapper
-                    .flex.facts
-                        h3 1680
-                        h6 Clubs
-                    .flex.facts
-                        h3 30%
-                        h6 more than one license
-                    .flex.facts
-                        .flex
-                            .gps__wrapper.flex
-                                .gps
-                                    .pulse
-                                    .dot
-                                h3.gradient#rtUsers -
-                        h6 Currently online
-                    .flex.facts
-                        h3 2299
-                        h6 Reviews
-                    .flex.facts
-                        h3 1.352.428
-                        h6 Meetings & Events
-                .flex.timeline__wrapper
-                    .flex.facts.facts--nomargin
-                        h3 205.320
-                        .timeline__item
-                            .timeline__dot
-                        h6 Registered members
-                    .timeline
-                    .flex.facts.facts--nomargin
-                        h3 106
-                        .timeline__item
-                            .timeline__dot
-                        h6 in 👆🏼 countries
-                    .timeline.timeline--mod
-                    .flex.facts.facts--nomargin
-                        h3 12.300
-                        .timeline__item
-                            .timeline__dot
-                        h6 send 👆🏼 messages every day
+            +stats('en')
+
         include /_includes/_endofbody.pug
         script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js')
         script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/617753/ThreeOrbitControls.js')

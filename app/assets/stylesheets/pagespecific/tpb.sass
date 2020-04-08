@@ -1,0 +1,102 @@
+// Header
+.header
+
+    &__tpb
+        height: 20%
+        padding-top: 20px
+        padding-bottom: 0
+
+        @media (max-width: 670px)
+            padding-left: 20px
+            padding-right: 20px
+
+// Navigation
+.nav__navigation
+
+    @media (max-width: 1000px)
+        flex: 1 0 auto !important
+
+    &__item
+        display: inline-flex !important
+
+    & .btn
+        
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
+
+            @media (max-width: 1080px)
+                display: none !important
+
+        @media (max-width: 850px)
+            display: none !important
+
+    & select
+        display: none !important
+
+        @media (max-width: 1080px)
+            display: inline-flex !important
+            min-width: fit-content
+
+        @media (max-width: 536px)
+            display: none !important
+
+.nav
+    
+    @media (max-width: 370px)
+        flex-flow: column
+        height: 130px
+
+// Main
+main
+
+    & .section__content--50
+
+        &:first-child
+            
+            @media (max-width: 950px)
+                flex: 0 0 70%
+
+        &:last-child
+            
+            @media (max-width: 950px)
+                flex: 0 0 30%
+                align-items: center
+
+            & img
+                
+                @media (max-width: 950px)
+                    height: 400px
+
+                @media (max-width: 900px)
+                    height: 350px
+
+                @media (max-width: 810px)
+                    height: 300px
+
+        &.padding-right--64
+            
+            @media (max-width: 1000px)
+                padding-right: 0
+
+        & .registerStep
+
+            & form
+                
+                @media (max-width: 570px)
+                    flex-flow: column
+
+// Pricing
+.pricing
+
+    @media (max-width: 1010px)
+        flex-flow: column
+        align-items: center
+
+    &__info
+
+        @media (max-width: 1010px)
+            visibility: visible
+
+    & .section__content--33
+
+        @media (max-width: 1010px)
+            margin-top: 40px

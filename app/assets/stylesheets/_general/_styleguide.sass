@@ -32,8 +32,8 @@ h2
         font-size: 25px !important
 
 h3
-    font: 700 45px/55px Lato
-    color: #304659
+    font: 700 55px/65px Lato
+    color: $nebula
     z-index: 1
 
     @media (max-width: 460px)
@@ -41,9 +41,9 @@ h3
         line-height: 40px
 
 h4
-    font: 700 40px/45px Lato
+    font: 700 45px/50px Lato
     letter-spacing: 0
-    color: #304659
+    color: $nebula
     padding-bottom: 10px
     max-width: 580px
 
@@ -53,7 +53,7 @@ h4
 h5
     font: 700 25px/30px Lato
     letter-spacing: 0
-    color: #304659
+    color: $nebula
 
 h6
     display: inline-block
@@ -87,6 +87,12 @@ b
     font: 700 17px/25px Lato
     color: #F5F9FC
 
+sup
+    font: 400 17px/25px Lato
+    align-self: flex-start
+    padding-top: 15px
+    padding-right: 5px
+
 // DOM-Textelements on dark background
 .darkmode
 
@@ -103,6 +109,10 @@ header
     padding: 34px 80px 34px 80px
     overflow: hidden
     min-height: 95px
+
+    @media (max-width: 1210px)
+        padding-left: 40px
+        padding-right: 40px
     
     @media (max-width: 1100px)
         padding-left: 3em
@@ -200,8 +210,8 @@ video
     @media (max-width: 340px)
         height: 90%
 
-// Select
-select
+// Mobile Nav
+nav select
     margin-right: 16px
     padding: 0 3px 0 0 !important
     height: 32px
