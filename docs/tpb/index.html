@@ -1,0 +1,897 @@
+
+<!-- HelpScout Beacon integration (Chat)--><!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#1fc2c2">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Teamplanbuch">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Teamplanbuch">
+    <meta name="msapplication-TileColor" content="#1b1b1c">
+    <meta name="theme-color" content="#1fc2c2">
+    <meta property="og:title" content="Teamplanbuch">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www3.teamplanbuch.ch">
+    <link rel="icon" type="image/png" href="/assets/images/favicon-tpb.png">
+    <meta name="description" content="Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften">
+    <meta name="keywords" content="vereins software, organisations software, vernetzen, team, team software, teamplanung, teamplanbuch, mannschaft, club, gruppen, wachsen, vernetzen ,meetings, termine, terminkalender, planung, vereinsverwaltung, vereinsarbeit, vereinsverwaltung, terminplaner, verbände, gemeinschaft, gemeinsam, gesellschaft, zusammen, mitgliederverwaltung">
+    <meta property="og:description" content="Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften. Jetzt 40 Tage kostenlos testen!">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/assets/javascript/interactive.js" type="text/javascript" async></script>
+    <script src="/assets/javascript/nav.js" type="text/javascript" async></script>
+    <script src="/assets/javascript/overlay.js" type="text/javascript" async></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stylesheets/artofgumb.css">
+    <link rel="stylesheet" href="/assets/stylesheets/pagespecific/tpb.css">
+    <title>Der Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften · Teamplanbuch</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      !function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
+      window.Beacon('init', '1cf66f3e-d475-4b3e-b29a-146879ef9105')
+    </script>
+    <script>
+      $(function() {
+          $('.startChat').click(function(){
+              Beacon('open');
+          });
+      });
+    </script>
+    <iframe name="tpbProxy" src="" id="tpbProxy"></iframe>
+    <header class="header__tpb">
+      <div class="nav__wrapper">
+        <nav class="nav"><a class="nav__brand" href="#"><img class="logo logo--tpb" src="/assets/images/tpb-maennli.png"></a>
+          <nav class="nav__navigation">
+            <select class="nav__navigation__select nav__navigation__item select--dark" id="mobileNav">
+              <option value="#" selected>Navigation</option>
+              <option value="#">Start</option>
+              <option value="#preise">Abos und Preise</option>
+              <option value="https://gumb.ch">Unternehmen</option>
+            </select><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="#">Start</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="#preise">Abos und Preise</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="https://gumb.ch">Unternehmen</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass startChat">Hilfe</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass padding-right--4-i" href="https://www.facebook.com/teamplanbuch/" target="_blank">
+              <ion-icon class="icon--l-fs" name="logo-facebook"></ion-icon></a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass padding-right--4-i padding-left--4-i" href="https://www.linkedin.com/company/gumb/" target="_blank">
+              <ion-icon class="icon--l-fs" name="logo-linkedin"></ion-icon></a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass padding-left--4-i" href="https://twitter.com/GumbApp" target="_blank">
+              <ion-icon class="icon--l-fs" name="logo-twitter"></ion-icon></a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="https://www3.teamplanbuch.ch/index.en.html">EN
+              <ion-icon name="ios-arrow-round-forward"></ion-icon></a>
+          </nav>
+          <nav class="nav__buttons"><a class="nav__navigation__item nav__navigation__item--cta btn btn--shadow margin-right--16" id="login">Login</a><a class="nav__navigation__item nav__navigation__item--cta btn try">Kostenlos ausprobieren</a></nav>
+        </nav>
+      </div>
+    </header>
+    <div class="overlay" id="loginOverlay">
+      <div class="close">
+        <ion-icon class="dark" name="ios-close-circle-outline" size="large"></ion-icon>
+      </div>
+      <form action="https://www.teamplanbuch.ch/spb/buch/login-register/dologin.php" method="post" target="tpbProxy" id="loginForm">
+        <div class="section__title padding-bottom--64">
+          <h4>Login</h4>
+          <p>Schnell und sicher in Dein <b class="gradient">Teamplanbuch</b> einloggen.</p>
+        </div><br>
+        <input type="hidden" name="userLogin" value="">
+        <div class="floating">
+          <input class="floating__input" id="input__username" name="username" type="email" placeholder="Deine E-Mail-Adresse" required>
+          <label class="floating__label" for="input__username" data-content="Deine E-Mail-Adresse"></label><span class="hide">Deine E-Mail-Adresse</span>
+        </div>
+        <div class="floating">
+          <input class="floating__input" id="input__password" type="password" name="passwort" placeholder="Dein Passwort" required>
+          <label class="floating__label" for="input__password" data-content="Dein Passwort"></label><span class="hide">Dein Passwort</span>
+        </div><br>
+        <div class="section__title">
+          <button class="nav__navigation__item nav__navigation__item--cta btn"> 
+            <ion-icon class="padding-right" name="ios-lock"></ion-icon>Einloggen
+          </button><br><a id="passReset">Passwort vergessen?</a>
+        </div>
+      </form>
+    </div>
+    <div class="overlay" id="resetOverlay">
+      <div class="close">
+        <ion-icon class="dark" name="ios-close-circle-outline" size="large"></ion-icon>
+      </div>
+      <div class="section__title padding-bottom--64">
+        <h4>Passwort zurücksetzen</h4>
+        <p>Kein Problem! Trage Deine E-Mail Adresse ein und wir senden Dir eine E-Mail zum Zurücksetzen Deines Kennwortes.</p>
+      </div>
+      <div class="form">
+        <form>
+          <div class="floating">
+            <input class="floating__input" id="reset__email" name="reset-email" type="email" placeholder="Deine E-Mail-Adresse" required>
+            <label class="floating__label" for="reset__email" data-content="Deine E-Mail-Adresse"></label><span class="hide">Deine E-Mail-Adresse</span>
+          </div><br>
+          <div class="section__title">
+            <button class="nav__navigation__item nav__navigation__item--cta btn">
+              <ion-icon class="padding-right" name="ios-finger-print" size="small"></ion-icon>Passwort zurücksetzen
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="overlay" id="tryOverlay">
+      <div class="close">
+        <ion-icon class="dark" name="ios-close-circle-outline" size="large"></ion-icon>
+      </div>
+      <div class="section__title padding-bottom--64">
+        <h4>Probeabo starten</h4>
+        <p>Teste das <b class="gradient">Teamplanbuch</b>  40 Tage lang völlig kostenlos und unverbindlich!</p>
+      </div>
+      <div class="form registerStep" id="register">
+        <form action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post">
+          <input type="hidden" name="userRegister" value="1">
+          <div class="floating">
+            <input class="floating__input" id="input__email" name="email" type="email" placeholder="Deine E-Mail-Adresse" required>
+            <label class="floating__label" for="input__email" data-content="Deine E-Mail-Adresse"></label><span class="hide">Deine E-Mail-Adresse</span>
+          </div><br>
+          <div class="section__title">
+            <button class="nav__navigation__item nav__navigation__item--cta btn">Los
+              <ion-icon class="padding-left" name="ios-arrow-round-forward" size="small"></ion-icon>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="form registerStep" id="register2">
+        <form action="https://www3.teamplanbuch.ch/spb/buch/login-register/doConfirmNewBook.php" method="post">
+          <input type="hidden" name="clubregister" value="1">
+          <div class="floating">
+            <input class="floating__input" id="input__clubname" name="vereinsname" type="text" placeholder="Vereinsname" required>
+            <label class="floating__label" for="input__clubname" data-content="Vereinsname"></label><span class="hide">Vereinsname</span>
+          </div><br>
+          <div class="floating">
+            <select class="floating__input" id="input__clubcategory" name="vereinsart" type="text" placeholder="Vereinsart" required>
+              <option value="Sonstiges" selected disabled>Vereinsart auswählen</option>
+              <option value="Musik">Musik</option>
+              <option value="Fussball">Fussball</option>
+              <option value="Handball">Handball</option>
+              <option value="Eishockey">Eishockey</option>
+              <option value="American Football">American Football</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Baseball">Baseball</option>
+              <option value="Basketball">Basketball</option>
+              <option value="Beachball">Beachball</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Curling">Curling</option>
+              <option value="Eishockey">Eishockey</option>
+              <option value="Eiskunstlauf">Eiskunstlauf</option>
+              <option value="Familie">Familie</option>
+              <option value="Faustball">Faustball</option>
+              <option value="Fechten">Fechten</option>
+              <option value="Football">Football</option>
+              <option value="Freunde">Freunde</option>
+              <option value="Fussball">Fussball</option>
+              <option value="Geräteturnen">Geräteturnen</option>
+              <option value="Guggenmusik">Guggenmusik</option>
+              <option value="Handball">Handball</option>
+              <option value="Inlinehockey">Inlinehockey</option>
+              <option value="Hornusser">Hornusser</option>
+              <option value="Kirche">Kirche</option>
+              <option value="Korbball">Korbball</option>
+              <option value="Kultur">Kultur</option>
+              <option value="Kunstturnen">Kunstturnen</option>
+              <option value="Langlaufclub">Langlaufclub</option>
+              <option value="Minigolf">Minigolf</option>
+              <option value="Musik">Musik</option>
+              <option value="Rollhockey">Rollhockey</option>
+              <option value="Rugby">Rugby</option>
+              <option value="Segeln">Segeln</option>
+              <option value="Skiclub">Skiclub</option>
+              <option value="Spass">Spass</option>
+              <option value="Squash">Squash</option>
+              <option value="Streethockey">Streethockey</option>
+              <option value="Studentenvereinigung">Studentenvereinigung</option>
+              <option value="Turnverein">Turnverein</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Tiere">Tiere</option>
+              <option value="Tischtennis">Tischtennis</option>
+              <option value="Unihockey">Unihockey</option>
+              <option value="Veloclub">Veloclub</option>
+              <option value="Volleyball">Volleyball</option>
+              <option value="Walking">Walking</option>
+              <option value="Wasserball">Wasserball</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+            <label class="floating__label" for="input__clubcategory" data-content="Vereinsart"></label><span class="hide">Vereinsart</span>
+          </div><br>
+          <div class="floating">
+            <select class="floating__input" id="input__clubcountry" name="land" type="text" placeholder="Land wählen" required>
+              <option value="Schweiz" selected>Schweiz</option>
+              <option value="Deutschland">Deutschland</option>
+              <option value="Österreich">Österreich</option>
+              <option value="Schweiz">Anderes Land</option>
+            </select>
+            <label class="floating__label" for="input__clubcountry" data-content="Land wählen"></label><span class="hide">Land wählen</span>
+          </div><br><br>
+          <p>Trage als erste Person gleich Dich ein</p><br>
+          <div class="floating">
+            <input class="floating__input" id="input__surname" name="vorname" type="text" placeholder="Vorname" required>
+            <label class="floating__label" for="input__surname" data-content="Vorname"></label><span class="hide">Vorname</span>
+          </div><br>
+          <div class="floating">
+            <input class="floating__input" id="input__name" name="name" type="text" placeholder="Name" required>
+            <label class="floating__label" for="input__name" data-content="Name"></label><span class="hide">Name</span>
+          </div><br>
+          <div class="floating">
+            <input class="floating__input" id="input__clubpassword" name="passwort1" type="password" placeholder="Dein Passwort" required>
+            <label class="floating__label" for="input__clubpassword" data-content="Dein Passwort"></label><span class="hide">Dein Passwort</span>
+          </div><br>
+          <div class="floating">
+            <input class="floating__input" id="input__reclubpassword" name="passwort2" type="password" placeholder="Passwort wiederholen" required>
+            <label class="floating__label" for="input__reclubpassword" data-content="Passwort wiederholen"></label><span class="hide">Passwort wiederholen</span>
+          </div><br>
+          <div class="section__title">
+            <button class="nav__navigation__item nav__navigation__item--cta btn">
+               Teamplanbuch öffnen
+              <ion-icon class="padding-left" name="ios-arrow-round-forward" size="small"></ion-icon>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main id="teamplanbuch">
+      <section class="margin-bottom--0">
+        <div class="section__inner">
+          <div class="section__content section__content--50 padding-right--64">
+            <div class="section__title section__title--ltr">
+              <h3 class="gradient">Teamplanbuch</h3>
+              <h3>und Dein Team ist organisiert.</h3>
+              <p>Mit dem Online Spiel- und Trainingsplaner für Vereine, Clubs und Mannschaften organisierst du Dich und Dein Team einfach und schnell. Teamplanbuch ist unsere Terminverwaltungs-App und ist für all Deine Geräte verfügbar.</p><br>
+              <div class="registerStep" id="registerInline">
+                <form class="flex flex--items" action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post">
+                  <input type="hidden" name="userRegister" value="1">
+                  <div class="floating">
+                    <input class="floating__input" id="input__inlineEmail" name="email" type="text" placeholder="Deine E-Mail-Adresse" required autocomplete="off">
+                    <label class="floating__label" for="input__inlineEmail" data-content="Deine E-Mail-Adresse"></label><span class="hide">Deine E-Mail-Adresse</span>
+                  </div>
+                  <button class="nav__navigation__item nav__navigation__item--cta btn margin-left--16" id="registerNext">40 Tage Probeabo starten!
+                    <ion-icon class="padding-left" name="ios-arrow-round-forward" size="small"></ion-icon>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="section__content section__content--50 section__content--image"><img src="/assets/images/mockups/iphone-menu.png"></div>
+        </div>
+      </section>
+      <ul class="integration-list" id="integration-list">
+        <li><img src="/assets/images/clubs/1.png"/></li>
+        <li><img src="/assets/images/clubs/2.png"/></li>
+        <li><img src="/assets/images/clubs/3.png"/></li>
+        <li><img src="/assets/images/clubs/4.png"/></li>
+        <li><img src="/assets/images/clubs/5.png"/></li>
+        <li><img src="/assets/images/clubs/6.png"/></li>
+        <li><img src="/assets/images/clubs/7.png"/></li>
+        <li><img src="/assets/images/clubs/8.png"/></li>
+        <li><img src="/assets/images/clubs/9.png"/></li>
+        <li><img src="/assets/images/clubs/10.png"/></li>
+        <li><img src="/assets/images/clubs/11.png"/></li>
+        <li><img src="/assets/images/clubs/12.png"/></li>
+        <li><img src="/assets/images/clubs/13.png"/></li>
+        <li><img src="/assets/images/clubs/14.png"/></li>
+        <li><img src="/assets/images/clubs/15.png"/></li>
+        <li><img src="/assets/images/clubs/16.png"/></li>
+        <li><img src="/assets/images/clubs/17.png"/></li>
+        <li><img src="/assets/images/clubs/18.png"/></li>
+        <li><img src="/assets/images/clubs/19.png"/></li>
+        <li><img src="/assets/images/clubs/20.png"/></li>
+      </ul>
+      <section>
+        <div class="section__title">
+          <h6>iOS, Android &amp; im Web</h6>
+          <h4>Teamplanbuch, <br/>auf all Deinen Geräten.</h4>
+          <p>Hol Dir die App und teste 40 Tage kostenlos.</p>
+        </div>
+        <div class="flex apps__wrapper"><a href="https://apps.apple.com/de/app/teamplanbuch2/id1198240785" target="_blank"><img class="apps" src="/assets/vector/apps/de/ios.svg"/></a><a href="https://play.google.com/store/apps/details?id=com.teamplanbuch.app" target="_blank"><img class="apps" src="/assets/vector/apps/de/droid.svg"/></a><a href="https://www3.teamplanbuch.ch/" target="_blank"><img class="apps" src="/assets/vector/apps/de/web.svg"/></a>
+        </div>
+      </section>
+      <section>
+        <div class="appshowcase">
+          <div class="appshowcase__text">
+            <h4>Organisiere Vereins-Termine schnell und unkompliziert</h4>
+            <p>Das Teamplanbuch ermöglicht eine einfache An- und Abmeldung für Trainings, Spiele, Proben, Auftritte oder Sitzungen. Es erspart ewiges Hin-und-Her per E-Mail. Es vermeidet hektische Telefonate und Chats kurz vor anstehenden Terminen.</p>
+          </div>
+          <div class="appshowcase__img"><img src="/assets/images/mockups/iphone-overview.png"/></div>
+        </div>
+        <div class="appshowcase appshowcase--reverse">
+          <div class="appshowcase__img"><img src="/assets/images/mockups/iphone-menu.png"/></div>
+          <div class="appshowcase__text">
+            <h4>Verschaffe Dir einen Überblick über Termine und Anwesenheit</h4>
+            <p>Leiter und Mitglieder können sich jederzeit mit Internet oder Handy über die Termine und die An-/Abmeldungen im Teamplanbuch informieren. Damit kann jedes Training und jede Probe zuverlässig geplant werden (Wer kommt? Wer übernimmt welche Aufgabe?).</p>
+          </div>
+        </div><br/><br/><br/>
+        <div class="appshowcase">
+          <div class="appshowcase__text">
+            <h4>Analysiere Anwesenheit und unentschuldigtes Fernbleiben</h4>
+            <p>Die jährliche Anwesenheit, Termine und unentschuldigtes Fernbleiben können mit dem Teamplanbuch mühelos ausgewertet werden. Diese Statistiken erleichtern das Erstellen von Jahresberichten und Abrechnungen.</p>
+          </div>
+          <div class="appshowcase__img"><img src="/assets/images/mockups/surfacestudio-tpb.png"/></div>
+        </div>
+      </section>
+      <div id="statistiken"></div>
+      <section class="section__spacer">
+        <div class="section__title">
+          <h4>Die Statistiken & Zahlen</h4>
+          <p>…die unsere Geschichte erzählen.</p>
+        </div>
+        <div class="flex flex--items section__content facts__wrapper">
+          <div class="flex facts">
+            <h4>1680</h4>
+            <h6>Vereine</h6>
+          </div>
+          <div class="flex facts">
+            <h4>30%</h4>
+            <h6>mehr als eine Lizenz</h6>
+          </div>
+          <div class="flex facts">
+            <div class="flex">
+              <div class="gps__wrapper flex">
+                <div class="gps">
+                  <div class="pulse"></div>
+                  <div class="dot"></div>
+                </div>
+                <h4 class="gradient" id="rtUsers">-</h4>
+              </div>
+            </div>
+            <h6>Gerade online</h6>
+          </div>
+          <div class="flex facts">
+            <h4>2299</h4>
+            <h6>Bewertungen</h6>
+          </div>
+          <div class="flex facts">
+            <h4>1.352.428</h4>
+            <h6>Anlässe & Termine</h6>
+          </div>
+        </div>
+        <div class="flex timeline__wrapper">
+          <div class="flex facts facts--nomargin">
+            <h4>205.320</h4>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+            </div>
+            <h6>Registrierte Mitglieder</h6>
+          </div>
+          <div class="timeline"></div>
+          <div class="flex facts facts--nomargin">
+            <h4>106</h4>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+            </div>
+            <h6>nutzen Gumb & Teamplanbuch in 👆🏼 Ländern und</h6>
+          </div>
+          <div class="timeline timeline--mod"></div>
+          <div class="flex facts facts--nomargin">
+            <h4>12.300</h4>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+            </div>
+            <h6>senden sich täglich Über 👆🏼 Nachrichten</h6>
+          </div>
+        </div>
+      </section>
+      <div id="preise"></div>
+      <section class="section__spacer">
+        <div class="section__title">
+          <h6>Jahreslizenzen</h6>
+          <h4>Abos und Preise</h4>
+          <p>Für jede Gruppierung das passende dabei!</p>
+        </div>
+        <div class="toggle">
+          <p class="toggle__item toggle__item--active" id="chf">CHF</p>
+          <p class="toggle__item" id="eur">€</p>
+        </div>
+        <div class="section__inner pricing">
+          <div class="section__content section__content--33"><a href="#">
+              <div class="section__tube">
+                <h6>Probeabo</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">0</span><span class="currency eur">0</span>
+                  <p class="sub">für 40 Tage</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Alle Funktionen der Basislizenz</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>40 Tage unverbindlich und ohne Einschränkungen testen</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Die Apps für das iPhone und Android Smartphones stehen als kostenloser Download im AppStore und Google PlayStore zur Verfügung</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>Du kannst das Teamplanbuch 40 Tage lang völlig kostenlos und unverbindlich testen. Wenn Du das Teamplanbuch weiter nutzen möchtest kannst Du jederzeit im Buch eine Lizenz bestellen.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33"><a href="#">
+              <div class="section__tube">
+                <h6>Basislizenz</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">80</span><span class="currency eur">65</span>
+                  <p class="sub">pro Jahr</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>1 Teamplanbuch</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Kostenlose App für iPhone und Android</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Integrierte E-Mail-Funktion vereinfacht und beschleunigt die Kommunikation im Team</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Automatische Erinnerungsmail für einen bevorstehenden Termin</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Einschreibefrist für Termine festlegbar</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Pinnwand, um Infos zu posten</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Passwortgeschützter Zugang + modernste Verschlüsselung</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Eltern-und-Kind-Login möglich</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Übersichtliche Spiel- &amp; Trainingsplanung</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Einbindung der Termine in Homepage des Vereins</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Synchronisation mit persönlichem Kalender (Outlook, iCal , Google, etc.)</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Spezialfunktionen für Vereine mit mehreren Teams</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Über 100 weitere nützliche Funktionen</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>Die Basislizenz ist ausreichend für die meisten Teams. Mit dieser Lizenz kannst Du Dein Team in bis zu 20 Gruppen unterteilen und bis zu 100 Personen verwalten.</p>
+                  <p>Du kannst diese Lizenz jederzeit auf die Basislizenz Plus upgraden.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33"><a href="#">
+              <div class="section__tube">
+                <h6>Basislizenz Plus</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">125</span><span class="currency eur">96</span>
+                  <p class="sub">pro Jahr</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Alle Funktionen der Basislizenz</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>2 Teamplanbücher</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Zusätzlich einzelne Gruppen von Ereignissen ausschliessen. Dies ermöglicht Dir gemischte Teams in einem Buch zu verwalten sowie nur bestimmte Gruppen zu einem Ereignis aufzubieten</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>Mit der Basislizenz Plus hast Du zusätzlicher zu einer zweiten Lizenz zudem noch weitere Funktionen.</p>
+                  <p>Du kannst diese Lizenz jederzeit auf eine Vereinslizenz upgraden.</p>
+                </div>
+              </div></a></div>
+        </div>
+        <div class="section__inner pricing">
+          <div class="section__content section__content--33 margin-top--0"><a href="#">
+              <div class="section__tube">
+                <h6>3er Vereinslizenz</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">165</span><span class="currency eur">127</span>
+                  <p class="sub">pro Jahr</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Alle Funktionen der Basislizenz Plus</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>3 Teamplanbücher</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>Du kannst diese Lizenz jederzeit von 3 Teamplanbücher (Lizenzen) auf 5 upgraden.</p>
+                  <p>Die Vereinslizenz kombiniert alle verfügbaren Funktionen mit einem anpassbaren und progressiv günstiger werdenden Abonnement.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33 margin-top--0"><a href="#">
+              <div class="section__tube">
+                <h6>5er Vereinslizenz</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">215</span><span class="currency eur">165</span>
+                  <p class="sub">pro Jahr</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Alle Funktionen der Basislizenz Plus</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>5 Teamplanbücher</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>Du kannst diese Lizenz jederzeit von 5 Teamplanbücher (Lizenzen) auf 10 upgraden.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33 margin-top--0"><a href="#">
+              <div class="section__tube">
+                <h6>10er Vereinslizenz</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">250</span><span class="currency eur">192</span>
+                  <p class="sub">pro Jahr</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Alle Funktionen der Basislizenz Plus</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>10 Teamplanbücher</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Buchmatrix - Mit der Buchmatrix können alle Teammitglieder über alle Bücher hinweg schnell, übersichtlich und einfach verwaltet werden</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Individuelle Erweiterbarkeit der Lizenzen über 10 hinaus für 20 CHF / 16 € </p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>Die Lizenz lässt sich via unserem Support beliebig nach oben hin anpassen.</p>
+                </div>
+              </div></a></div>
+        </div>
+        <div class="section__title margin-top--55"><a class="nav__navigation__item nav__navigation__item--cta btn try">Jetzt 40 Tage kostenlos ausprobieren</a>
+          <p>Transparente Kosten durch einen fixen Pauschalpreis und kulanter Abo-Service. Keine Bezahldaten nötig.</p>
+        </div>
+      </section>
+    </main>
+    <!-- Scripts that should run at the end of the body tag-->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      window.flow = function() {
+          var sizes = ["s", "m", "l"],
+              iconLWidth = 256,
+              container = document.getElementById("integration-list"),
+              icons = document.querySelectorAll("#integration-list img"),
+              resizeTimer,
+              w,
+              h;
+          function init() {
+              w = container.offsetWidth;
+              h = container.offsetHeight;
+              icons.forEach(function(icon, i) {
+                  var size = sizes[Math.ceil(Math.random() * 3) -1];
+                  TweenMax.set(
+                      icon, {
+                          attr: {class: size},
+                          y: R(50, h - 150),
+                          x: R(w, w + 50)
+                      }
+                  );
+                  animate(icon, i);
+              });
+          }
+          // animate x and y values at different rates
+          function animate(element, i) {
+              TweenMax.to(
+                  element,
+                  R(110,120),
+                  {
+                      x: -1500,
+                      ease: Linear.easeNone,
+                      repeat:-1,
+                      delay: -115 / icons.length * i
+                  }
+              );
+              TweenMax.to(
+                  element,
+                  R(6,16),
+                  {
+                      y: '+=50',
+                      repeat: -1,
+                      yoyo: true,
+                      ease: Sine.easeInOut,
+                      delay: R(-16, -6)
+                  }
+              );
+              };
+              function R(min,max) {
+                  return min + Math.random() * (max-min)
+              };
+              return {
+                  init: init
+              }
+      }().init();
+    </script>
+  </body>
+  <footer>
+    <div class="contact contact--bright">
+      <div class="contact__nav contact__nav--bright"><a class="contact__navItem contact__navItem--active">Kontakt</a></div>
+      <div class="contact__inner">
+        <div><b class="padding-bottom nebula">Adresse</b>
+          <p>Büsingerstrasse 5</p>
+          <p>8203 Schaffhausen</p>
+          <p>Schweiz</p>
+        </div>
+        <div><b class="padding-bottom nebula">E-Mail</b>
+          <p><a href="mailto:info@gumb.ch">info@gumb.ch</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Phone</b>
+          <p><a href="tel:+41445867002">+41 44 586 70 02</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Kontaktiere uns direkt</b><a class="nav__navigation__item nav__navigation__item--dark nav__navigation__item--cta btn btn--shadow startChat">Chatte mit uns!</a></div>
+      </div>
+    </div>
+    <div class="map" id="map"></div>
+    <script>
+      // Styles a map in dark mode
+      var mapStyle = [
+          {
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#212121"
+              }
+              ]
+          },
+          {
+              "elementType": "labels.icon",
+              "stylers": [
+              {
+                  "visibility": "off"
+              }
+              ]
+          },
+          {
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+              {
+                  "color": "#212121"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative.country",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#9e9e9e"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative.land_parcel",
+              "stylers": [
+              {
+                  "visibility": "off"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative.locality",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#bdbdbd"
+              }
+              ]
+          },
+          {
+              "featureType": "poi",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#181818"
+              }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#616161"
+              }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "labels.text.stroke",
+              "stylers": [
+              {
+                  "color": "#1b1b1b"
+              }
+              ]
+          },
+          {
+              "featureType": "road",
+              "elementType": "geometry.fill",
+              "stylers": [
+              {
+                  "color": "#2c2c2c"
+              }
+              ]
+          },
+          {
+              "featureType": "road",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#8a8a8a"
+              }
+              ]
+          },
+          {
+              "featureType": "road.arterial",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#373737"
+              }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#3c3c3c"
+              }
+              ]
+          },
+          {
+              "featureType": "road.highway.controlled_access",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#4e4e4e"
+              }
+              ]
+          },
+          {
+              "featureType": "road.local",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#616161"
+              }
+              ]
+          },
+          {
+              "featureType": "transit",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#000000"
+              }
+              ]
+          },
+          {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#3d3d3d"
+              }
+              ]
+          }
+          ]
+    </script>
+    <script>
+      function initMap() {
+          var myLatLng = {lat: 47.69680416745027, lng: 8.658911600000012};
+          var map = new google.maps.Map(document.getElementById('map'), {
+              center: myLatLng,
+              zoom: 12,
+              styles: mapStyle
+          });
+      
+          var mapPin = '/assets/vector/gumb-brand-pin.svg';
+          var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Hallo Welt vom Gumb HQ, Schaffhausen, Schweiz!',
+              icon: mapPin
+          });
+      
+          google.maps.event.addListener(marker, 'click', function() {
+              window.open('https://www.google.com/maps/place/Gumb+AG/@47.6968533,8.6567239,17z/data=!3m1!4b1!4m5!3m4!1s0x479a81c3d5deaaab:0xfc528db9ac381fa6!8m2!3d47.6968533!4d8.6589126');
+          });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKPMva5EwfeAxsjh03q0cdeHXDzf-OJQ4&amp;callback=initMap" async="async" defer="defer"></script>
+    <div class="footer footer--bright">
+      <div class="footer__inner">
+        <div><a class="nav__brand padding-bottom" href="/"><img class="logo padding-bottom" src="/assets/vector/gumb.svg"/></a>
+          <p class="footer__meta">Alle Rechte vorbehalten.</p>
+          <p class="footer__meta">© Gumb AG</p>
+        </div>
+        <div><b class="padding-bottom nebula">Navigation</b>
+          <p><a href="#">Start</a></p>
+          <p><a href="#preise">Abos und Preise</a></p>
+          <p><a href="#statistiken">Statistiken</a></p>
+          <p><a class="startChat">Hilfe</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Über Gumb</b>
+          <p><a href="https://gumb.ch/about#team">Unser Team</a></p>
+          <p><a href="https://gumb.ch/mission-vision">Mission & Vision</a></p>
+          <p><a href="https://gumb.ch/about#milestones">Unsere Geschichte</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Kontakt & Feedback</b>
+          <p><a href="https://gumb.ch/community#social">Soziale Kanäle</a></p>
+          <p><a class="startChat">Schreibe uns</a></p>
+          <p><a href="https://www.google.com/maps/place/Gumb+AG/@47.6968533,8.6567239,17z/data=!3m1!4b1!4m5!3m4!1s0x479a81c3d5deaaab:0xfc528db9ac381fa6!8m2!3d47.6968533!4d8.6589126" target="_blank">Besuche uns in Schaffhausen, CH</a></p>
+        </div>
+      </div>
+      <div class="footer__social"><a class="padding-right" href="https://www.facebook.com/gumbapp/" target="_blank"> 
+          <ion-icon name="logo-facebook"></ion-icon></a><a class="padding-right" href="https://www.linkedin.com/company/gumb/" target="_blank"> 
+          <ion-icon name="logo-linkedin"></ion-icon></a><a class="padding-right" href="https://twitter.com/GumbApp" target="_blank"> 
+          <ion-icon name="logo-twitter"></ion-icon></a><a class="padding-right" href="https://www.xing.com/companies/gumbag" target="_blank">
+          <ion-icon name="logo-xing"></ion-icon></a><a class="padding-right" href="https://www.instagram.com/gumbapp/" target="_blank"> 
+          <ion-icon name="logo-instagram"></ion-icon></a>
+        <div class="wall wall--bright margin-right"></div><a class="padding-right" href="https://github.com/jonathanarbely/gumbag" target="_blank"> 
+          <ion-icon name="logo-github"></ion-icon></a>
+      </div>
+      <div class="footer__legal"><a class="footer__meta" href="https://gumb.ch/impressum" target="_blank">Impressum & Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+</html>

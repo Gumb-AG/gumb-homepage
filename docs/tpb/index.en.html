@@ -1,0 +1,898 @@
+
+<!-- HelpScout Beacon integration (Chat)--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#1fc2c2">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Teamplanbuch">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Teamplanbuch">
+    <meta name="msapplication-TileColor" content="#1b1b1c">
+    <meta name="theme-color" content="#1fc2c2">
+    <meta property="og:title" content="Teamplanbuch">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www3.teamplanbuch.ch">
+    <link rel="icon" type="image/png" href="/assets/images/favicon-tpb.png">
+    <meta name="description" content="The online game and training planner for groups, clubs and teams">
+    <meta name="keywords" content="club software, organizational software, network, team, team software, team planning, team plan book, team, club, groups, grow, network, meetings, dates, diary, planning, club management, club work, club management, organizer, associations, community, together, society , together, member management">
+    <meta property="og:description" content="The online game and training planner for groups, clubs and teams. Start your free 40-day trial today!">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/assets/javascript/interactive.js" type="text/javascript" async></script>
+    <script src="/assets/javascript/nav.js" type="text/javascript" async></script>
+    <script src="/assets/javascript/overlay.js" type="text/javascript" async></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stylesheets/artofgumb.css">
+    <link rel="stylesheet" href="/assets/stylesheets/pagespecific/tpb.css">
+    <title>The online game and training planner for groups, clubs and teams · Teamplanbuch</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      !function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
+      window.Beacon('init', '10baf522-bb09-42c0-afba-c88fcc1c7a6a')
+      
+    </script>
+    <script>
+      $(function() {
+          $('.startChat').click(function(){
+              Beacon('open');
+          });
+      });
+    </script>
+    <iframe name="tpbProxy" src="" id="tpbProxy"></iframe>
+    <header class="header__tpb">
+      <div class="nav__wrapper">
+        <nav class="nav"><a class="nav__brand" href="#"><img class="logo logo--tpb" src="/assets/images/tpb-maennli.png"></a>
+          <nav class="nav__navigation">
+            <select class="nav__navigation__select nav__navigation__item select--dark" id="mobileNav">
+              <option value="#" selected>Menu</option>
+              <option value="#">Start</option>
+              <option value="#pricing">Subscriptions & prices</option>
+              <option value="https://gumb.ch">Company</option>
+            </select><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="#">Start</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="#pricing">Subscriptions and prices</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="https://gumb.ch">Company</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass startChat">Help</a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass padding-right--4-i" href="https://www.facebook.com/teamplanbuch/" target="_blank">
+              <ion-icon class="icon--l-fs" name="logo-facebook"></ion-icon></a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass padding-right--4-i padding-left--4-i" href="https://www.linkedin.com/company/gumb/" target="_blank">
+              <ion-icon class="icon--l-fs" name="logo-linkedin"></ion-icon></a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass padding-left--4-i" href="https://twitter.com/GumbApp" target="_blank">
+              <ion-icon class="icon--l-fs" name="logo-twitter"></ion-icon></a><a class="nav__navigation__item nav__navigation__item--dark btn btn--glass" href="https://www3.teamplanbuch.ch/">DE
+              <ion-icon name="ios-arrow-round-forward"></ion-icon></a>
+          </nav>
+          <nav class="nav__buttons"><a class="nav__navigation__item nav__navigation__item--cta btn btn--shadow margin-right--16" id="login">Login</a><a class="nav__navigation__item nav__navigation__item--cta btn try">Try free</a></nav>
+        </nav>
+      </div>
+    </header>
+    <div class="overlay" id="loginOverlay">
+      <div class="close">
+        <ion-icon class="dark" name="ios-close-circle-outline" size="large"></ion-icon>
+      </div>
+      <form action="https://www.teamplanbuch.ch/spb/buch/login-register/dologin.php" method="post" target="tpbProxy" id="loginForm">
+        <div class="section__title padding-bottom--64">
+          <h4>Easy & Safe</h4>
+          <p>Login into your <b class="gradient">Teamplanbuch</b>.</p>
+        </div><br>
+        <input type="hidden" name="userLogin" value="">
+        <div class="floating">
+          <input class="floating__input" id="input__username" name="username" type="email" placeholder="Your E-Mail-Address" required>
+          <label class="floating__label" for="input__username" data-content="Your E-Mail-Address"></label><span class="hide">Your E-Mail-Address</span>
+        </div>
+        <div class="floating">
+          <input class="floating__input" id="input__password" type="password" name="passwort" placeholder="Your Password" required>
+          <label class="floating__label" for="input__password" data-content="Your Password"></label><span class="hide">Your Password</span>
+        </div><br>
+        <div class="section__title">
+          <button class="nav__navigation__item nav__navigation__item--cta btn"> 
+            <ion-icon class="padding-right" name="ios-lock"></ion-icon>Login
+          </button><br><a id="passReset">Forgot your password?</a>
+        </div>
+      </form>
+    </div>
+    <div class="overlay" id="resetOverlay">
+      <div class="close">
+        <ion-icon class="dark" name="ios-close-circle-outline" size="large"></ion-icon>
+      </div>
+      <div class="section__title padding-bottom--64">
+        <h4>Reset password</h4>
+        <p>Don't worry! Just enter your E-Mail-Address and we will send you a brand new one right into your inbox.</p>
+      </div>
+      <div class="form">
+        <form>
+          <div class="floating">
+            <input class="floating__input" id="reset__email" name="reset-email" type="email" placeholder="Your E-Mail-Address" required>
+            <label class="floating__label" for="reset__email" data-content="Your E-Mail-Address"></label><span class="hide">Your E-Mail-Address</span>
+          </div><br>
+          <div class="section__title">
+            <button class="nav__navigation__item nav__navigation__item--cta btn">
+              <ion-icon class="padding-right" name="ios-finger-print" size="small"></ion-icon>Reset password
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="overlay" id="tryOverlay">
+      <div class="close">
+        <ion-icon class="dark" name="ios-close-circle-outline" size="large"></ion-icon>
+      </div>
+      <div class="section__title padding-bottom--64">
+        <h4>Register to begin your trial</h4>
+        <p>Test the <b class="gradient">Teamplanbuch</b>  40 days for free.</p>
+      </div>
+      <div class="form registerStep" id="register">
+        <form action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post">
+          <input type="hidden" name="userRegister" value="1">
+          <div class="floating">
+            <input class="floating__input" id="input__email" name="email" type="email" placeholder="Your E-Mail-Address" required>
+            <label class="floating__label" for="input__email" data-content="Your E-Mail-Address"></label><span class="hide">Your E-Mail-Address</span>
+          </div><br>
+          <div class="section__title">
+            <button class="nav__navigation__item nav__navigation__item--cta btn">Go
+              <ion-icon class="padding-left" name="ios-arrow-round-forward" size="small"></ion-icon>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="form registerStep" id="register2">
+        <form action="https://www3.teamplanbuch.ch/spb/buch/login-register/doConfirmNewBook.php" method="post">
+          <input type="hidden" name="clubregister" value="1">
+          <div class="floating">
+            <input class="floating__input" id="input__clubname" name="vereinsname" type="text" placeholder="Club name" required>
+            <label class="floating__label" for="input__clubname" data-content="Club name"></label><span class="hide">Club name</span>
+          </div><br>
+          <div class="floating">
+            <select class="floating__input" id="input__clubcategory" name="vereinsart" type="text" placeholder="Vereinsart" required>
+              <option value="Sonstiges" selected disabled>Select club type</option>
+              <option value="Musik">Musik</option>
+              <option value="Fussball">Fussball</option>
+              <option value="Handball">Handball</option>
+              <option value="Eishockey">Eishockey</option>
+              <option value="American Football">American Football</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Baseball">Baseball</option>
+              <option value="Basketball">Basketball</option>
+              <option value="Beachball">Beachball</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Curling">Curling</option>
+              <option value="Eishockey">Eishockey</option>
+              <option value="Eiskunstlauf">Eiskunstlauf</option>
+              <option value="Familie">Familie</option>
+              <option value="Faustball">Faustball</option>
+              <option value="Fechten">Fechten</option>
+              <option value="Football">Football</option>
+              <option value="Freunde">Freunde</option>
+              <option value="Fussball">Fussball</option>
+              <option value="Geräteturnen">Geräteturnen</option>
+              <option value="Guggenmusik">Guggenmusik</option>
+              <option value="Handball">Handball</option>
+              <option value="Inlinehockey">Inlinehockey</option>
+              <option value="Hornusser">Hornusser</option>
+              <option value="Kirche">Kirche</option>
+              <option value="Korbball">Korbball</option>
+              <option value="Kultur">Kultur</option>
+              <option value="Kunstturnen">Kunstturnen</option>
+              <option value="Langlaufclub">Langlaufclub</option>
+              <option value="Minigolf">Minigolf</option>
+              <option value="Musik">Musik</option>
+              <option value="Rollhockey">Rollhockey</option>
+              <option value="Rugby">Rugby</option>
+              <option value="Segeln">Segeln</option>
+              <option value="Skiclub">Skiclub</option>
+              <option value="Spass">Spass</option>
+              <option value="Squash">Squash</option>
+              <option value="Streethockey">Streethockey</option>
+              <option value="Studentenvereinigung">Studentenvereinigung</option>
+              <option value="Turnverein">Turnverein</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Tiere">Tiere</option>
+              <option value="Tischtennis">Tischtennis</option>
+              <option value="Unihockey">Unihockey</option>
+              <option value="Veloclub">Veloclub</option>
+              <option value="Volleyball">Volleyball</option>
+              <option value="Walking">Walking</option>
+              <option value="Wasserball">Wasserball</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+            <label class="floating__label" for="input__clubcategory" data-content="Club type"></label><span class="hide">Club type</span>
+          </div><br>
+          <div class="floating">
+            <select class="floating__input" id="input__clubcountry" name="land" type="text" placeholder="Select your country" required>
+              <option value="Schweiz" selected>Switzerland</option>
+              <option value="Deutschland">Germany</option>
+              <option value="Österreich">Austria</option>
+              <option value="Schweiz">Other Country</option>
+            </select>
+            <label class="floating__label" for="input__clubcountry" data-content="Select your country"></label><span class="hide">Select your country</span>
+          </div><br><br>
+          <p>Please enter your personal details</p><br>
+          <div class="floating">
+            <input class="floating__input" id="input__surname" name="vorname" type="text" placeholder="First name" required>
+            <label class="floating__label" for="input__surname" data-content="First name"></label><span class="hide">First name</span>
+          </div><br>
+          <div class="floating">
+            <input class="floating__input" id="input__name" name="name" type="text" placeholder="Surname" required>
+            <label class="floating__label" for="input__name" data-content="Surname"></label><span class="hide">Surname</span>
+          </div><br>
+          <div class="floating">
+            <input class="floating__input" id="input__clubpassword" name="passwort1" type="password" placeholder="Your Password" required>
+            <label class="floating__label" for="input__clubpassword" data-content="Your Password"></label><span class="hide">Your Password</span>
+          </div><br>
+          <div class="floating">
+            <input class="floating__input" id="input__reclubpassword" name="passwort2" type="password" placeholder="Your Password (again)" required>
+            <label class="floating__label" for="input__reclubpassword" data-content="Your Password (again)"></label><span class="hide">Your Password (again)</span>
+          </div><br>
+          <div class="section__title">
+            <button class="nav__navigation__item nav__navigation__item--cta btn">
+               Open your personal Teamplanbuch
+              <ion-icon class="padding-left" name="ios-arrow-round-forward" size="small"></ion-icon>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <main id="teamplanbuch">
+      <section class="margin-bottom--0">
+        <div class="section__inner">
+          <div class="section__content section__content--50 padding-right--64">
+            <div class="section__title section__title--ltr">
+              <h3 class="gradient">Teamplanbuch</h3>
+              <h3>and your team is organized.</h3>
+              <p>With the online game, event and training planner for teams, clubs and associations you can organize yourself and your team easily and quickly. Teamplanbuch is our scheduling app and is available for all your devices.</p><br>
+              <div class="registerStep" id="registerInline">
+                <form class="flex flex--items" action="https://www3.teamplanbuch.ch/tools/mailing/doRegister.php" method="post">
+                  <input type="hidden" name="userRegister" value="1">
+                  <div class="floating">
+                    <input class="floating__input" id="input__inlineEmail" name="email" type="text" placeholder="Your E-Mail-Address" required autocomplete="off">
+                    <label class="floating__label" for="input__inlineEmail" data-content="Your E-Mail-Address"></label><span class="hide">Your E-Mail-Address</span>
+                  </div>
+                  <button class="nav__navigation__item nav__navigation__item--cta btn margin-left--16" id="registerNext">Start your free 40-day trial
+                    <ion-icon class="padding-left" name="ios-arrow-round-forward" size="small"></ion-icon>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="section__content section__content--50 section__content--image"><img src="/assets/images/mockups/iphone-menu.png"></div>
+        </div>
+      </section>
+      <ul class="integration-list" id="integration-list">
+        <li><img src="/assets/images/clubs/1.png"/></li>
+        <li><img src="/assets/images/clubs/2.png"/></li>
+        <li><img src="/assets/images/clubs/3.png"/></li>
+        <li><img src="/assets/images/clubs/4.png"/></li>
+        <li><img src="/assets/images/clubs/5.png"/></li>
+        <li><img src="/assets/images/clubs/6.png"/></li>
+        <li><img src="/assets/images/clubs/7.png"/></li>
+        <li><img src="/assets/images/clubs/8.png"/></li>
+        <li><img src="/assets/images/clubs/9.png"/></li>
+        <li><img src="/assets/images/clubs/10.png"/></li>
+        <li><img src="/assets/images/clubs/11.png"/></li>
+        <li><img src="/assets/images/clubs/12.png"/></li>
+        <li><img src="/assets/images/clubs/13.png"/></li>
+        <li><img src="/assets/images/clubs/14.png"/></li>
+        <li><img src="/assets/images/clubs/15.png"/></li>
+        <li><img src="/assets/images/clubs/16.png"/></li>
+        <li><img src="/assets/images/clubs/17.png"/></li>
+        <li><img src="/assets/images/clubs/18.png"/></li>
+        <li><img src="/assets/images/clubs/19.png"/></li>
+        <li><img src="/assets/images/clubs/20.png"/></li>
+      </ul>
+      <section>
+        <div class="section__title">
+          <h6>iOS, Android & web</h6>
+          <h4>Teamplanbuch, <br/>on all your devices.</h4>
+          <p>Get the app and test it 40 days for free.</p>
+        </div>
+        <div class="flex apps__wrapper"><a href="https://apps.apple.com/de/app/teamplanbuch2/id1198240785" target="_blank"><img class="apps" src="/assets/vector/apps/en/ios.svg"/></a><a href="https://play.google.com/store/apps/details?id=com.teamplanbuch.app" target="_blank"><img class="apps" src="/assets/vector/apps/en/droid.svg"/></a><a href="https://www3.teamplanbuch.ch/" target="_blank"><img class="apps" src="/assets/vector/apps/en/web.svg"/></a>
+        </div>
+      </section>
+      <section>
+        <div class="appshowcase">
+          <div class="appshowcase__text">
+            <h4>Organize club dates quick and easy</h4>
+            <p>Teamplanbuch enables easy registration and cancellation for trainings, games, rehearsals, events or meetings. It eliminates the back and forth emails. It avoids hectic phone-calls and chats shortly before upcoming appointments.</p>
+          </div>
+          <div class="appshowcase__img"><img src="/assets/images/mockups/iphone-overview.png"/></div>
+        </div>
+        <div class="appshowcase appshowcase--reverse">
+          <div class="appshowcase__img"><img src="/assets/images/mockups/iphone-menu.png"/></div>
+          <div class="appshowcase__text">
+            <h4>Get an overview of appointments and attendance</h4>
+            <p>Leaders and members can inform themselves at any time about the dates and the registration/deregistration. This allows each training session, event and rehearsal to be reliably planned (Who attends? Who does what?).</p>
+          </div>
+        </div><br/><br/><br/>
+        <div class="appshowcase">
+          <div class="appshowcase__text">
+            <h4>Analyze attendance and unexcused absence</h4>
+            <p>The annual attendance, appointments and unexcused absences can be easily evaluated within a few seconds. These statistics facilitate the creation of annual reports and accounts.</p>
+          </div>
+          <div class="appshowcase__img"><img src="/assets/images/mockups/surfacestudio-tpb.png"/></div>
+        </div>
+      </section>
+      <div id="statistics"></div>
+      <section class="section__spacer">
+        <div class="section__title">
+          <h4>The stats and figures</h4>
+          <p>…that tell our story.</p>
+        </div>
+        <div class="flex section__content facts__wrapper">
+          <div class="flex facts">
+            <h4>1680</h4>
+            <h6>Clubs</h6>
+          </div>
+          <div class="flex facts">
+            <h4>30%</h4>
+            <h6>more than one license</h6>
+          </div>
+          <div class="flex facts">
+            <div class="flex">
+              <div class="gps__wrapper flex">
+                <div class="gps">
+                  <div class="pulse"></div>
+                  <div class="dot"></div>
+                </div>
+                <h4 class="gradient" id="rtUsers">-</h4>
+              </div>
+            </div>
+            <h6>Currently online</h6>
+          </div>
+          <div class="flex facts">
+            <h4>2299</h4>
+            <h6>Reviews</h6>
+          </div>
+          <div class="flex facts">
+            <h4>1.352.428</h4>
+            <h6>Created Meetings & Events</h6>
+          </div>
+        </div>
+        <div class="flex timeline__wrapper">
+          <div class="flex facts facts--nomargin">
+            <h4>205.320</h4>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+            </div>
+            <h6>Registered members</h6>
+          </div>
+          <div class="timeline"></div>
+          <div class="flex facts facts--nomargin">
+            <h4>106</h4>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+            </div>
+            <h6>use Gumb & Teamplanbuch in 👆🏼 countries to</h6>
+          </div>
+          <div class="timeline timeline--mod"></div>
+          <div class="flex facts facts--nomargin">
+            <h4>12.300</h4>
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+            </div>
+            <h6>send 👆🏼 messages every day</h6>
+          </div>
+        </div>
+      </section>
+      <div id="pricing"></div>
+      <section class="section__spacer">
+        <div class="section__title">
+          <h6>Annual licenses</h6>
+          <h4>Subscriptions and prices</h4>
+          <p>The right plan for every group!</p>
+        </div>
+        <div class="toggle">
+          <p class="toggle__item toggle__item--active" id="chf">CHF</p>
+          <p class="toggle__item" id="eur">€</p>
+        </div>
+        <div class="section__inner pricing">
+          <div class="section__content section__content--33"><a href="#">
+              <div class="section__tube">
+                <h6>Trial</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">0</span><span class="currency eur">0</span>
+                  <p class="sub">for 40 days</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>All functions of the basic license</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Test for 40 days without any obligations and without restrictions</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Apps for your iPhone or Android devices are available as free downloads in the Apple AppStore and Google PlayStore</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>You can test the Teamplanbuch for 40 days completely free of charge and without obligation. If you want to continue using the Teamplanbuch, you can order a license at any time in the book.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33"><a href="#">
+              <div class="section__tube">
+                <h6>Basic Licence</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">80</span><span class="currency eur">65</span>
+                  <p class="sub">per Year</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>1 Teamplanbuch Licence</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Free app for iPhone and Android</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Integrated e-mail function simplifies and speeds up communication in your team</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Automatic reminder-e-mail for upcoming appointments</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Registration deadline for appointments</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Bulletin board to post information</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Password-protected access &amp; state-of-the-art encryption</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Parent and child login-option</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Clear game and training planning</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Integration of dates in the club's homepage</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Synchronization with personal calendar (Outlook, iCal, Google, etc.)</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Special functions for clubs with multiple teams</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Over 100 other useful functions</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>The basic license is sufficient for most teams. With this license you can divide your team into up to 20 groups and manage up to 100 people.</p>
+                  <p>You can upgrade this license to the "Basic License Plus" at any time.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33"><a href="#">
+              <div class="section__tube">
+                <h6>Basic License Plus</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">125</span><span class="currency eur">96</span>
+                  <p class="sub">per Year</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>All functions of the basic license</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>2 Teamplanbuch Licences</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Exclude individual groups from events. This allows you to manage mixed teams in one book and to only list certain groups for an event</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>With the "Basic License Plus" you have additional functions in addition to a second license.</p>
+                  <p>You can upgrade this license to a "Club License" at any time.</p>
+                </div>
+              </div></a></div>
+        </div>
+        <div class="section__inner pricing">
+          <div class="section__content section__content--33 margin-top--0"><a href="#">
+              <div class="section__tube">
+                <h6>3 Club Licenses</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">165</span><span class="currency eur">127</span>
+                  <p class="sub">per Year</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>All functions of the &quot;Basic License Plus&quot;</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>3 Teamplanbuch Licences</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>You can upgrade this license from 3 licenses to 5 at any time.</p>
+                  <p>The "Club License" combines all available functions with a customizable and progressively cheaper subscription model.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33 margin-top--0"><a href="#">
+              <div class="section__tube">
+                <h6>5 Club Licenses</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">215</span><span class="currency eur">165</span>
+                  <p class="sub">per Year</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>All functions of the &quot;Basic License Plus&quot;</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>5 Teamplanbuch Licences</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>You can upgrade this license from 5 licenses to 10 at any time.</p>
+                </div>
+              </div></a></div>
+          <div class="section__content section__content--33 margin-top--0"><a href="#">
+              <div class="section__tube">
+                <h6>10 Club Licenses</h6>
+                <div class="currency__wrapper"><sup>CHF</sup><span class="currency chf">250</span><span class="currency eur">192</span>
+                  <p class="sub">per Year</p>
+                </div><br/>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>All functions of the &quot;Basic License Plus&quot;</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>10 Teamplanbuch Licences</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Book matrix - With the book matrix, all team members across all books can be managed quickly, clearly and easily</p>
+                </div>
+                <div class="check">
+                  <ion-icon class="padding-right--4" name="ios-checkmark"></ion-icon>
+                  <p>Individual license-expandability for large clubs above 10 licenses for 20 CHF / 16 € each</p>
+                </div><br/>
+                <div class="pricing__info">
+                  <p>The license can be adjusted upwards via our support.</p>
+                </div>
+              </div></a></div>
+        </div>
+        <div class="section__title margin-top--55"><a class="nav__navigation__item nav__navigation__item--cta btn try">Try it now free for 40 days</a>
+          <p>Transparent costs thanks to a fixed flat rate and great subscription support-service. No payment data required.</p>
+        </div>
+      </section>
+    </main>
+    <!-- Scripts that should run at the end of the body tag-->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      window.flow = function() {
+          var sizes = ["s", "m", "l"],
+              iconLWidth = 256,
+              container = document.getElementById("integration-list"),
+              icons = document.querySelectorAll("#integration-list img"),
+              resizeTimer,
+              w,
+              h;
+          function init() {
+              w = container.offsetWidth;
+              h = container.offsetHeight;
+              icons.forEach(function(icon, i) {
+                  var size = sizes[Math.ceil(Math.random() * 3) -1];
+                  TweenMax.set(
+                      icon, {
+                          attr: {class: size},
+                          y: R(50, h - 150),
+                          x: R(w, w + 50)
+                      }
+                  );
+                  animate(icon, i);
+              });
+          }
+          // animate x and y values at different rates
+          function animate(element, i) {
+              TweenMax.to(
+                  element,
+                  R(110,120),
+                  {
+                      x: -1500,
+                      ease: Linear.easeNone,
+                      repeat:-1,
+                      delay: -115 / icons.length * i
+                  }
+              );
+              TweenMax.to(
+                  element,
+                  R(6,16),
+                  {
+                      y: '+=50',
+                      repeat: -1,
+                      yoyo: true,
+                      ease: Sine.easeInOut,
+                      delay: R(-16, -6)
+                  }
+              );
+              };
+              function R(min,max) {
+                  return min + Math.random() * (max-min)
+              };
+              return {
+                  init: init
+              }
+      }().init();
+    </script>
+  </body>
+  <footer>
+    <div class="contact contact--bright">
+      <div class="contact__nav contact__nav--bright"><a class="contact__navItem contact__navItem--active">Contact</a></div>
+      <div class="contact__inner">
+        <div><b class="padding-bottom nebula">Address</b>
+          <p>Büsingerstrasse 5</p>
+          <p>8203 Schaffhausen</p>
+          <p>Switzerland</p>
+        </div>
+        <div><b class="padding-bottom nebula">E-Mail</b>
+          <p><a href="mailto:info@gumb.ch">info@gumb.ch</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Phone</b>
+          <p><a href="tel:+41445867002">+41 44 586 70 02</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Contact us directly</b><a class="nav__navigation__item nav__navigation__item--dark nav__navigation__item--cta btn btn--shadow startChat">Start a chat!</a></div>
+      </div>
+    </div>
+    <div class="map" id="map"></div>
+    <script>
+      // Styles a map in dark mode
+      var mapStyle = [
+          {
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#212121"
+              }
+              ]
+          },
+          {
+              "elementType": "labels.icon",
+              "stylers": [
+              {
+                  "visibility": "off"
+              }
+              ]
+          },
+          {
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+              {
+                  "color": "#212121"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative.country",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#9e9e9e"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative.land_parcel",
+              "stylers": [
+              {
+                  "visibility": "off"
+              }
+              ]
+          },
+          {
+              "featureType": "administrative.locality",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#bdbdbd"
+              }
+              ]
+          },
+          {
+              "featureType": "poi",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#181818"
+              }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#616161"
+              }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "labels.text.stroke",
+              "stylers": [
+              {
+                  "color": "#1b1b1b"
+              }
+              ]
+          },
+          {
+              "featureType": "road",
+              "elementType": "geometry.fill",
+              "stylers": [
+              {
+                  "color": "#2c2c2c"
+              }
+              ]
+          },
+          {
+              "featureType": "road",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#8a8a8a"
+              }
+              ]
+          },
+          {
+              "featureType": "road.arterial",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#373737"
+              }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#3c3c3c"
+              }
+              ]
+          },
+          {
+              "featureType": "road.highway.controlled_access",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#4e4e4e"
+              }
+              ]
+          },
+          {
+              "featureType": "road.local",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#616161"
+              }
+              ]
+          },
+          {
+              "featureType": "transit",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#757575"
+              }
+              ]
+          },
+          {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+              {
+                  "color": "#000000"
+              }
+              ]
+          },
+          {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [
+              {
+                  "color": "#3d3d3d"
+              }
+              ]
+          }
+          ]
+    </script>
+    <script>
+      function initMap() {
+          var myLatLng = {lat: 47.69680416745027, lng: 8.658911600000012};
+          var map = new google.maps.Map(document.getElementById('map'), {
+              center: myLatLng,
+              zoom: 12,
+              styles: mapStyle
+          });
+      
+          var mapPin = '/assets/vector/gumb-brand-pin.svg';
+          var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Hallo Welt vom Gumb HQ, Schaffhausen, Schweiz!',
+              icon: mapPin
+          });
+      
+          google.maps.event.addListener(marker, 'click', function() {
+              window.open('https://www.google.com/maps/place/Gumb+AG/@47.6968533,8.6567239,17z/data=!3m1!4b1!4m5!3m4!1s0x479a81c3d5deaaab:0xfc528db9ac381fa6!8m2!3d47.6968533!4d8.6589126');
+          });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKPMva5EwfeAxsjh03q0cdeHXDzf-OJQ4&amp;callback=initMap" async="async" defer="defer"></script>
+    <div class="footer footer--bright">
+      <div class="footer__inner">
+        <div><a class="nav__brand padding-bottom" href="/index.en"><img class="logo padding-bottom" src="/assets/vector/gumb.svg"/></a>
+          <p class="footer__meta">All rights reserved.</p>
+          <p class="footer__meta">© Gumb AG</p>
+        </div>
+        <div><b class="padding-bottom nebula">Navigation</b>
+          <p><a href="#">Start</a></p>
+          <p><a href="#pricing">Subscriptions and prices</a></p>
+          <p><a href="#statistics">Statistics</a></p>
+          <p><a class="startChat">Help</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">About Gumb</b>
+          <p><a href="https://gumb.ch/about.en#team">Our Team</a></p>
+          <p><a href="https://gumb.ch/mission-vision.en">Mission & Vision</a></p>
+          <p><a href="https://gumb.ch/about.en#milestones">Our History</a></p>
+        </div>
+        <div><b class="padding-bottom nebula">Contact & Feedback</b>
+          <p><a href="https://gumb.ch/community.en#social">Social Media</a></p>
+          <p><a class="startChat">Contact us</a></p>
+          <p><a href="https://www.google.com/maps/place/Gumb+AG/@47.6968533,8.6567239,17z/data=!3m1!4b1!4m5!3m4!1s0x479a81c3d5deaaab:0xfc528db9ac381fa6!8m2!3d47.6968533!4d8.6589126" target="_blank">Visit us in Schaffhausen, CH</a></p>
+        </div>
+      </div>
+      <div class="footer__social"><a class="padding-right" href="https://www.facebook.com/gumbapp/" target="_blank"> 
+          <ion-icon name="logo-facebook"></ion-icon></a><a class="padding-right" href="https://www.linkedin.com/company/gumb/" target="_blank"> 
+          <ion-icon name="logo-linkedin"></ion-icon></a><a class="padding-right" href="https://twitter.com/GumbApp" target="_blank"> 
+          <ion-icon name="logo-twitter"></ion-icon></a><a class="padding-right" href="https://www.xing.com/companies/gumbag" target="_blank">
+          <ion-icon name="logo-xing"></ion-icon></a><a class="padding-right" href="https://www.instagram.com/gumbapp/" target="_blank"> 
+          <ion-icon name="logo-instagram"></ion-icon></a>
+        <div class="wall wall--bright margin-right"></div><a class="padding-right" href="https://github.com/jonathanarbely/gumbag" target="_blank"> 
+          <ion-icon name="logo-github"></ion-icon></a>
+      </div>
+      <div class="footer__legal"><a class="footer__meta" href="https://gumb.ch/impressum.en" target="_blank">Imprint & Data protection</a>
+      </div>
+    </div>
+  </footer>
+</html>

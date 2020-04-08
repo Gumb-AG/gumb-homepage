@@ -6,7 +6,7 @@ $(function() {
 
     // Fix nev when scrolling (or swiping) up
     var lastScrollTop = 0;
-    $('body').scroll(function() {
+    $(window).scroll(function() {
         var st = $(this).scrollTop();
         if (st > lastScrollTop){
             //console.log('scroll down');
@@ -15,9 +15,9 @@ $(function() {
         } else {
             //console.log('scroll up');
 
-            if ($('body').scrollTop() > 900)
+            if ($(window).scrollTop() > 900)
                 showFixedNav();
-            else if ($('body').scrollTop() < 820)
+            else if ($(window).scrollTop() < 820)
                 hideFixedNav();
         }
         lastScrollTop = st;
