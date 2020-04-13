@@ -1,3 +1,6 @@
+.tpb footer .contact__inner div {
+  min-width: 260px; }
+
 .header__tpb {
   height: 20%;
   padding-top: 20px;
