@@ -95,8 +95,9 @@ const getData = async () => {
   try {
     const results = await fetch('/assets/javascript/globe.json');
     data = await results.json();
-    return setupScene();
+    setupScene();
   } catch (error) {
+		throw error;
     return console.warn('Unable to get globe data');
   }
 };
@@ -425,11 +426,13 @@ const addLineDots = () => {
 
 const assignDotsToRandomLine = (target) => {
 	// Get a random line from the current country
-	let randomLine = Math.random() * (animations.countries.selected.children.length - 1);
-	randomLine = animations.countries.selected.children[randomLine.toFixed(0)];
+	if(animations.countries){
+		let randomLine = Math.random() * (animations.countries.selected.children.length - 1);
+		randomLine = animations.countries.selected.children[randomLine.toFixed(0)];
 
-	// Assign the random country path to the dot and set the index at 0
-	target._path = randomLine._path;
+		// Assign the random country path to the dot and set the index at 0
+		target._path = randomLine._path;
+	}
 };
 
 const reassignDotsToNewLines = () => {
@@ -532,7 +535,7 @@ const positionElements = () => {
 	for (const key in elements) {
 		const { position, element } = elements[key];
 		const { x, y } = getProjectedPosition(widthHalf, heightHalf, position);
-    
+
 		// Construct the 3D translate string
 		const elementStyle = element.style;
     const styleString = `translate3D(${x}px, ${y}px, 0)`;
@@ -577,7 +580,7 @@ const introAnimate = () => {
 			// Animate the camera at the same rate as the first dot
 			if (i === 0) {
         const { current, target } = camera.angles;
-        
+
 				const azimuthalDifference = (current.azimuthal - target.azimuthal) * dotProgress;
 				camera.controls.setAzimuthalAngle(current.azimuthal - azimuthalDifference);
 
@@ -597,12 +600,14 @@ const introAnimate = () => {
 		globeElement.material.opacity = props.alphas.globe * globeProgress;
 
 		// Fade-in the country lines
-		const lines = countries.selected.children;
-		for (let ii = 0; ii < lines.length; ii++) {
-			lines[ii].material.uniforms.opacity.value = props.alphas.lines * globeProgress;
-		}
+		if(countries.selected){
+			const lines = countries.selected.children;
+			for (let ii = 0; ii < lines.length; ii++) {
+				lines[ii].material.uniforms.opacity.value = props.alphas.lines * globeProgress;
+			}
 
-		globe.current++;
+			globe.current++;
+		}
 	}
 
 	if (dots.current >= (dots.total * 0.7) && !countries.active) {
@@ -639,8 +644,10 @@ const changeCountry = (key, init) => {
 
 	// Show the select country lines
 	animations.countries.selected = groups.lines.getObjectByName(key);
-	animations.countries.selected.visible = true;
-
+	if(animations.countries.selected != null){
+		animations.countries.selected.visible = true;
+	}
+	
 	if (!init) {
 		camera.angles.current.azimuthal = camera.controls.getAzimuthalAngle();
 		camera.angles.current.polar = camera.controls.getPolarAngle();
@@ -657,10 +664,10 @@ const changeCountry = (key, init) => {
 
 const animateCountryCycle = () => {
   const { countries } = animations;
-  
+
 	if (countries.current < countries.total) {
     const { current, target } = camera.angles;
-    
+
 		const progress = easeInOutQuad(countries.current / countries.total);
 
 		const azimuthalDifference = (current.azimuthal - target.azimuthal) * progress;
@@ -679,7 +686,7 @@ const animateCountryCycle = () => {
 
 const showNextCountry = () => {
   let { countries } = animations;
-  
+
 	countries.index++;
 	if (countries.index >= Object.keys(data.countries).length) {
 		countries.index = 0;
@@ -794,7 +801,7 @@ const returnCameraAngles = (latitude, longitude) => {
 	let azimuthal = ((latitude - props.mapSize.width) / props.mapSize.width) * Math.PI;
 	azimuthal = azimuthal + (Math.PI / 2);
 	azimuthal = azimuthal + 0.1; // Add a small offset
-	
+
 	let polar = (longitude / (props.mapSize.height * 2)) * Math.PI;
 
 	return { azimuthal, polar };
