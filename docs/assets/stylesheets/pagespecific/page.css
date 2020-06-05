@@ -82,6 +82,53 @@ header {
   .team .g33 .persona {
     margin-left: 0px; } }
 
+@media (max-width: 1390px) {
+  .team .g50:first-child {
+    padding-left: 150px; } }
+
+@media (max-width: 1210px) {
+  .team .g50:first-child {
+    padding-left: 100px; } }
+
+@media (max-width: 1074px) {
+  .team .g50:first-child {
+    padding-left: 0; } }
+
+@media (min-width: 1391px) {
+  .team .g50:last-child {
+    padding-left: 44%; } }
+
+@media (max-width: 1390px) {
+  .team .g50:last-child {
+    padding-left: 150px; } }
+
+@media (max-width: 1210px) {
+  .team .g50:last-child {
+    padding-left: 100px; } }
+
+@media (max-width: 1074px) {
+  .team .g50:last-child {
+    padding-left: 0; } }
+
+@media (max-width: 1386px) {
+  .team .g50 {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin-top: 25px !important; } }
+
+@media (max-width: 600px) {
+  .team .g50 {
+    align-self: flex-start; } }
+
+@media (max-width: 790px) {
+  .team .g50 .persona {
+    margin-left: -100px; } }
+
+@media (max-width: 600px) {
+  .team .g50 .persona {
+    margin-left: 0px; } }
+
 @media (max-width: 880px) {
   .values h3 {
     font-size: 35px;
