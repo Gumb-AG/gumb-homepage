@@ -1,4 +1,3 @@
-include ../_mixins/_extensions/_googlemaps.pug
 
 -var env = 'https://gumb.ch/'
 
@@ -23,8 +22,6 @@ mixin footer(lang, theme, page)
                                     a(href='mailto:info@gumb.ch') info@gumb.ch
                                 else
                                     a(href='mailto:helpline@teamplanbuch.ch') helpline@teamplanbuch.ch
-
-                +map('dark')
 
                 .footer.footer--bright
                     .footer__inner
@@ -108,7 +105,6 @@ mixin footer(lang, theme, page)
                             p
                                 a(href='helpline@teamplanbuch.ch') helpline@teamplanbuch.ch
 
-                +map('bright')
 
                 .footer
                     .footer__inner
@@ -184,7 +180,6 @@ mixin footer(lang, theme, page)
                                 else
                                     a(href='mailto:helpline@teamplanbuch.ch') helpline@teamplanbuch.ch
 
-                +map('dark')
 
                 .footer.footer--bright
                     .footer__inner
@@ -269,7 +264,6 @@ mixin footer(lang, theme, page)
                             p
                                 a(href='mailto:info@gumb.ch') info@gumb.ch
 
-                +map('bright')
 
                 .footer
                     .footer__inner
