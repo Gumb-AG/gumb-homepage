@@ -1,5 +1,4 @@
 
-<!-- HelpScout Beacon integration (Chat)-->
 <meta charset="utf-8"/>
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#1fc2c2"/>
@@ -47,18 +46,6 @@
     <title>Gumb · Become One, Together.</title>
   </head>
   <body>
-    <script type="text/javascript">
-      !function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
-      window.Beacon('init', '10baf522-bb09-42c0-afba-c88fcc1c7a6a')
-      
-    </script>
-    <script>
-      $(function() {
-          $('.startChat').click(function(){
-              Beacon('open');
-          });
-      });
-    </script>
     <div class="hero__globe__wrapper">
       <div class="hero__globe">
         <div class="globe js-globe">
@@ -78,7 +65,7 @@
               <option value="/mission-vision.en">Why & How</option>
               <option value="/about.en">About us</option>
               <option value="/community.en">Community</option>
-            </select><a class="nav__navigation__item nav__navigation__item--cta btn startChat">Get in touch</a>
+            </select>
           </nav>
           <nav class="nav__social"><a class="padding-right" href="https://www.facebook.com/gumbapp/" target="_blank"> 
               <ion-icon name="logo-facebook" size="small"></ion-icon></a><a class="padding-right" href="https://www.linkedin.com/company/gumb/" target="_blank"> 
@@ -188,7 +175,7 @@
         <div class="section__title business">
           <h6>Team- & event management</h6>
           <h5>Do you represent a business?</h5>
-          <p>No matter whether in a club or a large company. Our software solutions & apps enable effortless and simple team & event management. Perfect for your organization!</p><a class="nav__navigation__item nav__navigation__item--dark nav__navigation__item--cta btn btn--shadow startChat margin-top--30">We are looking forward to your message!</a>
+          <p>No matter whether in a club or a large company. Our software solutions & apps enable effortless and simple team & event management. Perfect for your organization!</p><a class="nav__navigation__item nav__navigation__item--dark nav__navigation__item--cta btn btn--shadow startChat margin-top--30" href="mailto:helpline@teamplanbuch.ch">We are looking forward to your message!</a>
         </div>
       </section>
       <div id="statistics"></div>
@@ -332,7 +319,6 @@
           <p><a href="mailto:info@gumb.ch">info@gumb.ch</a>
           </p>
         </div>
-        <div><b class="padding-bottom nebula">Contact us directly</b><br/><a class="nav__navigation__item nav__navigation__item--dark nav__navigation__item--cta btn btn--shadow startChat">Start a chat!</a></div>
       </div>
     </div>
     <div class="map" id="map"></div>
@@ -567,7 +553,6 @@
         </div>
         <div><b class="padding-bottom nebula">Contact & Feedback</b>
           <p><a href="https://gumb.ch/community.en#social">Social Media</a></p>
-          <p><a class="startChat">Contact us</a></p>
           <p><a href="https://www.google.com/maps/place/Gumb+AG/@47.6968533,8.6567239,17z/data=!3m1!4b1!4m5!3m4!1s0x479a81c3d5deaaab:0xfc528db9ac381fa6!8m2!3d47.6968533!4d8.6589126" target="_blank">Visit us in Schaffhausen, CH</a></p>
         </div>
       </div>

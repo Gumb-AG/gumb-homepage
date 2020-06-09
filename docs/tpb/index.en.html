@@ -1,5 +1,4 @@
-
-<!-- HelpScout Beacon integration (Chat)--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -22,25 +21,12 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="/assets/javascript/interactive.js" type="text/javascript" async></script>
     <script src="/assets/javascript/nav.js" type="text/javascript" async></script>
-    <script src="/assets/javascript/overlay.js" type="text/javascript" async></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/stylesheets/artofgumb.css">
     <link rel="stylesheet" href="/assets/stylesheets/pagespecific/tpb.css">
     <title>The online game and training planner for groups, clubs and teams · Teamplanbuch</title>
   </head>
   <body class="tpb">
-    <script type="text/javascript">
-      !function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
-      window.Beacon('init', '10baf522-bb09-42c0-afba-c88fcc1c7a6a')
-      
-    </script>
-    <script>
-      $(function() {
-          $('.startChat').click(function(){
-              Beacon('open');
-          });
-      });
-    </script>
     <iframe name="tpbProxy" src="about:blank" id="tpbProxy"></iframe>
     <header class="header__tpb">
       <div class="nav__wrapper">
@@ -641,7 +627,6 @@
           <p><a href="mailto:helpline@teamplanbuch.ch">helpline@teamplanbuch.ch</a>
           </p>
         </div>
-        <div><b class="padding-bottom nebula">Contact us directly</b><br/><a class="nav__navigation__item nav__navigation__item--dark nav__navigation__item--cta btn btn--shadow startChat">Start a chat!</a></div>
       </div>
     </div>
     <div class="map" id="map"></div>
@@ -876,7 +861,6 @@
         </div>
         <div><b class="padding-bottom nebula">Contact & Feedback</b>
           <p><a href="https://gumb.ch/community.en#social">Social Media</a></p>
-          <p><a class="startChat">Contact us</a></p>
           <p><a href="https://www.google.com/maps/place/Gumb+AG/@47.6968533,8.6567239,17z/data=!3m1!4b1!4m5!3m4!1s0x479a81c3d5deaaab:0xfc528db9ac381fa6!8m2!3d47.6968533!4d8.6589126" target="_blank">Visit us in Schaffhausen, CH</a></p>
         </div>
       </div>
