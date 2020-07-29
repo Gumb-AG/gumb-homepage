@@ -1023,7 +1023,7 @@ footer {
     width: 45px;
     margin-bottom: 4px; }
 
-.tile:hover ion-icon {
+.tile:hover {
   transform: scale(1.05);
 }
 
