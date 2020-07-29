@@ -1016,11 +1016,16 @@ footer {
   box-shadow: 0px 2px 30px #30465926; }
   .tile ion-icon {
     height: 50px;
-    width: 50px; }
+    width: 50px;
+    transition: .2s ease; }
   .tile img {
     height: 45px;
     width: 45px;
     margin-bottom: 4px; }
+
+.tile:hover ion-icon {
+  transform: scale(1.05);
+}
 
 .persona {
   width: 263px;
