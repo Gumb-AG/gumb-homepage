@@ -1017,14 +1017,14 @@ footer {
   .tile ion-icon {
     height: 50px;
     width: 50px;
-    transition: .2s ease; }
+    transition: .1s ease; }
   .tile img {
     height: 45px;
     width: 45px;
     margin-bottom: 4px; }
 
 .tile:hover ion-icon {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 .persona {
