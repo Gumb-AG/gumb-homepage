@@ -1016,12 +1016,15 @@ footer {
   box-shadow: 0px 2px 30px #30465926; }
   .tile ion-icon {
     height: 50px;
-    width: 50px;
-    transition: .1s ease; }
+    width: 50px; }
   .tile img {
     height: 45px;
     width: 45px;
     margin-bottom: 4px; }
+
+#social_icon {
+  transition: .1s ease;
+}
 
 .tile:hover #social_icon {
   transform: scale(1.07);
