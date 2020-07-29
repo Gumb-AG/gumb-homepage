@@ -1026,6 +1026,9 @@ footer {
 .tile:hover ion-icon {
   transform: scale(1.07);
 }
+.tile:hover .tile img {
+  transform: scale(1.07);
+}
 
 .persona {
   width: 263px;
