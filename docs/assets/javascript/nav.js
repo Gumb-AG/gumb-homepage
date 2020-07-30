@@ -14,11 +14,12 @@ $(function() {
             hideFixedNav();
         } else {
             //console.log('scroll up');
+            showFixedNav();
 
-            if ($(window).scrollTop() > 900)
-                showFixedNav();
-            else if ($(window).scrollTop() < 820)
-                hideFixedNav();
+            // if ($(window).scrollTop() > 900)
+                // showFixedNav();
+            // else if ($(window).scrollTop() < 820)
+                // hideFixedNav();
         }
         lastScrollTop = st;
     });
