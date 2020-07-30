@@ -15,9 +15,9 @@ $(function() {
         } else {
             //console.log('scroll up');
 
-            if ($(window).scrollTop() > 200)
+            if ($(window).scrollTop() > 950)
                 showFixedNav();
-            else if ($(window).scrollTop() < 200)
+            else if ($(window).scrollTop() < 800)
                 hideFixedNav();
         }
         lastScrollTop = st;
