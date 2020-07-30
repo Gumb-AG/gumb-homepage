@@ -17,7 +17,7 @@ $(function() {
 
             if ($(window).scrollTop() > 950)
                 showFixedNav();
-            else if ($(window).scrollTop() < 800)
+            else if ($(window).scrollTop() < 850)
                 hideFixedNav();
         }
         lastScrollTop = st;
